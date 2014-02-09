@@ -8,5 +8,6 @@ namespace tempor
 {
     public class Class1
     {
+
     }
 }
