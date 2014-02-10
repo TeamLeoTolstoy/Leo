@@ -5,7 +5,7 @@ using System.Text;
 
 namespace tempor
 {
-    public class GameField
+    public class GameField : GameObject
     {
     }
 }
