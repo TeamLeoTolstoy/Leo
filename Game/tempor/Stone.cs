@@ -17,12 +17,12 @@ namespace tempor
         {
             get
             {
-                throw new NotImplementedException();
+                return this.Color;
             }
 
             protected set
             {
-                throw new NotImplementedException();
+                this.Color = value;
             }
         }
 

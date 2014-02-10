@@ -7,11 +7,23 @@ namespace tempor
 {
     public class GameField : GameObject
     {
-         public GameField(char symbol, Color color)
+        public char[,] Field { get; set; }
+        public int Rows { get; set; }
+        public int Cols { get; set; }
+
+        public GameField(char symbol, Color color, int rows, int cols)
             : base(symbol, color)
         {
-
+            this.Field = new cha[rows, cols];
         }
+
+
+        public GameField(char symbol, Color color, char[,] field)
+            : base(symbol, color)
+        {
+            this.Field = field;
+        } 
+
         public override char Symbol
         {
             get
