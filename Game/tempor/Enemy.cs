@@ -7,5 +7,29 @@ namespace tempor
 {
     public class Enemy : GameObject
     {
+
+        public override char Symbol
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+            protected set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public override Color Color
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+            protected set
+            {
+                throw new NotImplementedException();
+            }
+        }
     }
 }
