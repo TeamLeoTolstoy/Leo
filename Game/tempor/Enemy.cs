@@ -7,7 +7,11 @@ namespace tempor
 {
     public class Enemy : GameObject
     {
+        public Enemy(char symbol, Color color)
+            : base(symbol, color)
+        {
 
+        }
         public override char Symbol
         {
             get
