@@ -9,6 +9,9 @@
     {
         White,
         Red,
-        Green
+        Green,
+        Blue,
+        Yellow,
+        Grey
     }
 }

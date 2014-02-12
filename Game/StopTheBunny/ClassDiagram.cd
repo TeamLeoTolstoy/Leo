@@ -3,23 +3,25 @@
   <Class Name="StopTheBunny.Airillery">
     <Position X="3" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAACABAAAAAAAAAAAAAAAAAAAAAAgAAAAQA=</HashCode>
+      <HashCode>AAABAACAAQACgBAAAAAQAAAAAAAAAACAAAAAgAIAAQA=</HashCode>
       <FileName>Airillery.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="StopTheBunny.Base" Collapsed="true">
-    <Position X="5.25" Y="0.5" Width="1.5" />
+    <Position X="7.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Base.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="StopTheBunny.Bunker" Collapsed="true">
-    <Position X="7" Y="0.5" Width="1.5" />
+    <Position X="3.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAABAACAAQACgBAAAAAQAAAAAAAAAACAAAAAgAIAAQA=</HashCode>
       <FileName>Bunker.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="StopTheBunny.Bunny" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="8.75" Y="0.5" Width="1.5" />
@@ -30,21 +32,23 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="StopTheBunny.Cannon" Collapsed="true">
-    <Position X="3.75" Y="0.5" Width="1.5" />
+    <Position X="3.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAABAACAAQACgBAAAAAQAAAAAAAAAACAAAAAgAIAAQA=</HashCode>
       <FileName>Cannon.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="StopTheBunny.Flak" Collapsed="true">
-    <Position X="5.25" Y="1.5" Width="1.5" />
+    <Position X="5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAABAACAAQACgBAAAAAQAAAAAAAAAACAAAAAgAIAAQA=</HashCode>
       <FileName>Flak.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="StopTheBunny.GameEngine" Collapsed="true">
-    <Position X="7" Y="1.5" Width="1.5" />
+    <Position X="7.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAEAAA=</HashCode>
       <FileName>GameEngine.cs</FileName>
@@ -65,21 +69,21 @@
     </TypeIdentifier>
   </Class>
   <Class Name="StopTheBunny.Path" Collapsed="true">
-    <Position X="5.5" Y="3.25" Width="1.5" />
+    <Position X="7.25" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Path.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="StopTheBunny.Player" Collapsed="true">
-    <Position X="5.25" Y="2.5" Width="1.5" />
+    <Position X="7.5" Y="2.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAABAAAAAACAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
       <FileName>Player.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="StopTheBunny.Score" Collapsed="true">
-    <Position X="7" Y="2.5" Width="1.5" />
+    <Position X="9" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Score.cs</FileName>
@@ -94,7 +98,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Struct Name="StopTheBunny.UpperLeftPoint" Collapsed="true">
-    <Position X="7" Y="3.25" Width="1.5" />
+    <Position X="8.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>UpperLeftPoint.cs</FileName>
@@ -117,7 +121,7 @@
   <Enum Name="StopTheBunny.Color" Collapsed="true">
     <Position X="6" Y="6" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAABAAAAAAAAAAAABAAAAA=</HashCode>
+      <HashCode>AAACAABAAAAAAgAAAAAAAAAABAAAAAAAAAAAADAAAAA=</HashCode>
       <FileName>Color.cs</FileName>
     </TypeIdentifier>
   </Enum>

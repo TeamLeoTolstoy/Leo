@@ -20,18 +20,16 @@ namespace StopTheBunny
                 Console.WriteLine();
             }
         }
+
         static void Main(string[] args)
         {
-            GameField field = new GameField(20, 60);
-            Turrent newTower = new Turrent();
-            field.AddTower(newTower);
-            Print(field);
-            Console.WindowWidth = field.GetColsInField;
-            Console.WindowHeight = field.GetRowsInField;
-            Console.BufferHeight = field.GetRowsInField;
-            Console.BufferWidth = field.GetColsInField;           
-
+            Airillery testTower = new Airillery();
             
+            
+            //Console.WindowWidth = field.GetColsInField;
+            //Console.WindowHeight = field.GetRowsInField;
+            //Console.BufferHeight = field.GetRowsInField;
+            //Console.BufferWidth = field.GetColsInField;                       
         }
     }
 }
