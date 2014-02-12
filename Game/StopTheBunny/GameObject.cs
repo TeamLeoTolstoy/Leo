@@ -1,5 +1,6 @@
 ﻿namespace StopTheBunny
 {
+
     public abstract class GameObject
     {
         public abstract int PositionX { get; set; }
