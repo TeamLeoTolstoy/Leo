@@ -14,5 +14,15 @@ namespace StopTheBunny
         public override char Sign { get; set; }
 
         public override Color Color { get; set; }
+
+        public override int NumberOfCols { get; set; }
+
+        public override int NumberOfRowss { get; set; }
+
+        public virtual char[,] Fire()
+        {
+
+        }
+
     }
 }
