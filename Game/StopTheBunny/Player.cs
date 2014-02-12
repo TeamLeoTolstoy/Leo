@@ -7,29 +7,6 @@ namespace StopTheBunny
 {
     public class Player : GameObject
     {
-        public override int PositionX
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public override int PositionY
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
 
         public override char Sign
         {

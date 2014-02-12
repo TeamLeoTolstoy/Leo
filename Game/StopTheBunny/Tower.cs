@@ -9,30 +9,6 @@ namespace StopTheBunny
     {
         private int damage;
 
-        public override int PositionX
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public override int PositionY
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
         public override char Sign
         {
             get
