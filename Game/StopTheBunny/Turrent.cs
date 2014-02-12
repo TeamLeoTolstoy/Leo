@@ -7,13 +7,20 @@ namespace StopTheBunny
 {
     public class Turrent : Tower
     {
-        public Turrent(int price)
-        {
-            this.Price = price;
-        }
-
 
         public override int Damage
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public override int Price
         {
             get
             {
