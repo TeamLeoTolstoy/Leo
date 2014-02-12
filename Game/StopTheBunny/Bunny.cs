@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StopTheBunny
 {
-    class Bunny : IEnemy
+    public class Bunny : IEnemy
     {
         private char symbol;
         private Color bunnyColor;
@@ -17,6 +17,12 @@ namespace StopTheBunny
         private int entryCol;
 
         public Bunny(char symbol, Color color, int health, int entryRow, int entryCol)
+        {
+            this.Symbol = symbol;
+            this.bunnyColor = color;
+            this.Health = health;
+            
+        }
 
         public int EntryCol
         {
