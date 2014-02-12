@@ -45,6 +45,7 @@
     <Compile Include="Base.cs" />
     <Compile Include="Bunker.cs" />
     <Compile Include="Cannon.cs" />
+    <Compile Include="Color.cs" />
     <Compile Include="Field.cs" />
     <Compile Include="Flak.cs" />
     <Compile Include="GameEngine.cs" />
