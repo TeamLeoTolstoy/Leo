@@ -55,7 +55,7 @@ namespace StopTheBunny
             }
         }
 
-        public override char[] ElementSize
+        public  char[] FieldSize
         {
             get
             {

@@ -11,6 +11,6 @@
 
         public abstract Color Color { get; set; }
 
-        public abstract char[] ElementSize { get; set; }
+        
     }
 }
