@@ -11,26 +11,33 @@ namespace StopTheBunny
 
         public GameField(int rows, int cols)
         {
-            this.field = new char[rows, cols];
+            this.Field = new char[rows, cols];
 
-            Console.WindowWidth = this.SizeCols;
-            Console.WindowHeight = this.SizeRows;
-            Console.BufferHeight = this.SizeRows;
-            Console.BufferWidth = this.SizeCols;
+            
         }   
      
-        public int RowsInField
+        public int GetRowsInField
         {
-            get { return this.field.GetLength(0); }
+            get { return this.Field.GetLength(0); }
         }
 
-        public int ColsInField
+        public int GetColsInField
         {
-            get { return this.field.GetLength(1); }
+            get { return this.Field.GetLength(1); }
         }
 
         public char[,] Field
         {
+            get { return this.field; }
+            set
+            {
+                if (value.GetLength(0)<0 || value.GetLength(1)<0)
+                {
+                    throw new IndexOutOfRangeException();
+                }
+
+                this.field = value;
+            }
 
         }
     }
