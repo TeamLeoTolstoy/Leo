@@ -7,7 +7,6 @@ namespace StopTheBunny
 {
     public class Turrent : Tower
     {
-
         public override int Damage
         {
             get

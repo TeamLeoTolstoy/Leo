@@ -9,30 +9,10 @@ namespace StopTheBunny
     {
         public abstract int Damage { get; set; }
 
-        public abstract int Price { get; set; }      
+        public abstract int Price { get; set; }
 
-        public override char Sign
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public override char Sign { get; set; }
 
-        public override Color Color
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public override Color Color { get; set; }
     }
 }

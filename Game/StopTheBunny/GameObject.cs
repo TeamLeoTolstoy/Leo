@@ -8,7 +8,6 @@
         public abstract char Sign { get; set; }
 
         public abstract Color Color { get; set; }
-
         
     }
 }

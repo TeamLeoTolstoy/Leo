@@ -12,6 +12,10 @@ namespace StopTheBunny
         {
             Field playField = new Field(30, 80);
             Console.ReadLine();
+
+            Turrent testTurrent = new Turrent();
+            testTurrent.Sign = '@';
+            Console.WriteLine(testTurrent.Sign);
         }
     }
 }

@@ -17,6 +17,9 @@ namespace StopTheBunny
         private int entryCol;
 
         public Bunny(char symbol, Color color, int health, int entryRow, int entryCol)
+        {
+
+        }
 
         public int EntryCol
         {
