@@ -15,6 +15,10 @@ namespace StopTheBunny
 
             Turrent testTurrent = new Turrent();           
             Console.WriteLine(testTurrent.Sign);
+            Console.WriteLine(testTurrent.Price);
+
+            Console.WriteLine(testTurrent.Damage);
+            Console.WriteLine(testTurrent.SizeOfElement.GetLength(0));
         }
     }
 }
