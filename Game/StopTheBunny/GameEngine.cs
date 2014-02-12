@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StopTheBunny
 {
-    class Program
+    class GameEngine
     {
         static void Main(string[] args)
         {
