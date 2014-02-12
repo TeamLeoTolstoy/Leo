@@ -7,6 +7,8 @@ namespace StopTheBunny
 {
     public class Tower : GameObject
     {
+        private int damage;
+
         public override int PositionX
         {
             get
@@ -64,6 +66,18 @@ namespace StopTheBunny
             set
             {
                 throw new NotImplementedException();
+            }
+        }
+
+        public int Damage
+        {
+            get { return.this.damage;}
+            set
+            {
+                if (value<0)
+                {
+                    throw new ArgumentException();
+                }
             }
         }
     }

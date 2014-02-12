@@ -3,12 +3,12 @@
 
     public abstract class GameObject
     {
-        protected int posiotionRow;
-        protected int positionCol;
+        protected int posiotionX;
+        protected int positionY;
 
-        public int PositionRow
+        public int PositionX
         {
-            get { return this.posiotionRow; }
+            get { return this.posiotionX; }
             set
             {
                 if (value<0 || value>)

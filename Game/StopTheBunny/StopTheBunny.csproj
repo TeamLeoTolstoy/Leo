@@ -55,6 +55,7 @@
     <Compile Include="Score.cs" />
     <Compile Include="Tower.cs" />
     <Compile Include="Turrent.cs" />
+    <Compile Include="UpperLeftPoint.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
