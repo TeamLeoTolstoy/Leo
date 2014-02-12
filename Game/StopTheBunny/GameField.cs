@@ -11,9 +11,7 @@ namespace StopTheBunny
 
         public GameField(int rows, int cols)
         {
-            this.Field = new char[rows, cols];
-
-            
+            this.Field = new char[rows, cols];            
         }   
      
         public int GetRowsInField
@@ -39,6 +37,20 @@ namespace StopTheBunny
                 this.field = value;
             }
 
+        }
+
+        public void AddTower(Tower newTower)
+        {
+            int towerRow = newTower.UpperLeftPoint.PositionY;
+            int towerCol = newTower.UpperLeftPoint.PositionX;
+
+            for (int row = 0; row < newTower.SizeOfElement.GetLength(0); row++)
+            {
+                for (int col = 0; col < newTower.SizeOfElement.GetLength(1); col++)
+                {
+                    this.Field[towerRow + row, towerCol + col] = newTower.Sign;
+                }
+            }
         }
     }
 }
