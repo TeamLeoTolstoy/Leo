@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StopTheBunny
 {
-    struct UpperLeftPoint
+  public  struct UpperLeftPoint
     {
         public int PositionX { get; set; }
         public int PositionY { get; set; }

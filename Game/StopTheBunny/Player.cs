@@ -5,10 +5,10 @@ using System.Text;
 
 namespace StopTheBunny
 {
-    public class Player : GameObject
+    public class Player// : GameObject
     {
 
-        public override char Sign
+        public  char Sign
         {
             get
             {
@@ -20,7 +20,7 @@ namespace StopTheBunny
             }
         }
 
-        public override Color Color
+        public  Color Color
         {
             get
             {
@@ -32,7 +32,7 @@ namespace StopTheBunny
             }
         }
 
-        public override char[] ElementSize
+        public  char[] ElementSize
         {
             get
             {

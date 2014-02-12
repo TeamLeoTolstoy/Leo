@@ -5,9 +5,11 @@ using System.Text;
 
 namespace StopTheBunny
 {
-    public class abstract Tower : GameObject
+    public abstract class  Tower : GameObject
     {
-        private int damage;
+        public abstract int Damage { get; set; }
+
+        public abstract int Price { get; set; }      
 
         public override char Sign
         {
@@ -30,30 +32,6 @@ namespace StopTheBunny
             set
             {
                 throw new NotImplementedException();
-            }
-        }
-
-        public override char[] ElementSize
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public int Damage
-        {
-            get { return.this.damage;}
-            set
-            {
-                if (value<0)
-                {
-                    throw new ArgumentException();
-                }
             }
         }
     }

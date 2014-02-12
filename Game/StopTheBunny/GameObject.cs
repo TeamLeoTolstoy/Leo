@@ -3,7 +3,7 @@
 
     public abstract class GameObject
     {
-        public UpperLeftPoint UpperLeftPoint { get; set; }
+        public abstract UpperLeftPoint UpperLeftPoint { get; set; }
 
         public abstract char Sign { get; set; }
 

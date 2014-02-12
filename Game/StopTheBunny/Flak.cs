@@ -5,7 +5,7 @@ using System.Text;
 
 namespace StopTheBunny
 {
-    public class Flak : Tower
+    public class Flak // Tower
     {
     }
 }
