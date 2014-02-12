@@ -7,20 +7,23 @@ namespace StopTheBunny
 {
     public class Turrent : GameObject, ITower
     {
-        private int damage=50;
+        private int damage = 50;
         private int price = 100;
         private char sign = '#';
         private char[,] sizeOfElement = new char[2, 2];
         private Color color = Color.Red;
 
-        public char[,] SizeOfElement
+        public override char[,] SizeOfElement
         {
             get
             {
                 return this.sizeOfElement;
             }
         }
-        public override int Damage
+
+        public override UpperLeftPoint UpperLeftPoint { get; set; }
+
+        public int Damage
         {
             get
             {
@@ -28,12 +31,12 @@ namespace StopTheBunny
             }
         }
 
-        public override int Price
+        public int Price
         {
             get
             {
                 return this.price;
-            }          
+            }
         }
 
         public override char Sign
@@ -44,17 +47,11 @@ namespace StopTheBunny
             }
         }
 
-        public UpperLeftPoint UpperLeftPoint { get; set; }
-   
-        public Color Color
+        public override Color Color
         {
             get
             {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
+                return this.color;
             }
         }
     }

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace StopTheBunny
 {
-    public class GameField //: GameObject
+    public class GameField 
     {
         private char[,] field;
 
@@ -39,18 +39,5 @@ namespace StopTheBunny
 
         }
 
-        public void AddTower(Tower newTower)
-        {
-            int towerRow = newTower.UpperLeftPoint.PositionY;
-            int towerCol = newTower.UpperLeftPoint.PositionX;
-
-            for (int row = 0; row < newTower.SizeOfElement.GetLength(0); row++)
-            {
-                for (int col = 0; col < newTower.SizeOfElement.GetLength(1); col++)
-                {
-                    this.Field[towerRow + row, towerCol + col] = newTower.Sign;
-                }
-            }
-        }
     }
 }
