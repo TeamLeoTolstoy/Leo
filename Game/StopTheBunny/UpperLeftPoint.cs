@@ -11,7 +11,7 @@ namespace StopTheBunny
         public int PositionX { get; set; }
         public int PositionY { get; set; }
 
-        public UpperLeftPoint(int x, int y):this()
+        public UpperLeftPoint(int x, int y) : this()
         {
             this.PositionX = x;
             this.PositionY = y;

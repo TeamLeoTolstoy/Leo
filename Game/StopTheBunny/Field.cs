@@ -7,41 +7,17 @@ namespace StopTheBunny
 {
     public class Field //: GameObject
     {
+        public readonly int SizeRows;
+        public readonly int SizeCols;
 
-        public  char Sign
+        public Field(int rows, int cols)
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public  Color Color
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public  char[] FieldSize
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
+            this.SizeRows = rows;
+            this.SizeCols = cols;
+            Console.WindowWidth = this.SizeCols;
+            Console.WindowHeight = this.SizeRows;
+            Console.BufferHeight = this.SizeRows;
+            Console.BufferWidth = this.SizeCols;
+        }        
     }
 }
