@@ -13,6 +13,8 @@ namespace StopTheBunny
         private char[,] sizeOfElement = new char[2, 2];
         private Color color = Color.Grey;
 
+
+
         public override UpperLeftPoint UpperLeftPoint { get; set; }
 
         public override char[,] SizeOfElement

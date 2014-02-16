@@ -16,19 +16,20 @@ namespace StopTheBunny
         private int entryRow;
         private int entryCol;
 
-<<<<<<< HEAD
+//<<<<<<< HEAD
         public Bunny(char symbol, Color color, int health, int entryRow, int entryCol)
         {
             this.Symbol = symbol;
             this.bunnyColor = color;
             this.Health = health;
-            
-=======
-        public Bunny(char symbol, Color color, int health, int entryRow, int entryCol)
-        {
-
->>>>>>> 993c3ff0ee8f6cc52226eb557ce7ba8d334885d3
         }
+            
+//=======
+//        public Bunny(char symbol, Color color, int health, int entryRow, int entryCol)
+//        {
+
+////>>>>>>> 993c3ff0ee8f6cc52226eb557ce7ba8d334885d3
+//        }
 
         public int EntryCol
         {

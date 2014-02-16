@@ -26,7 +26,7 @@
   <Class Name="StopTheBunny.Bunny" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="8.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AABICAAgAIAAIAAAAAAAgAAAAIAAAAAAAAEIAAABSAg=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Bunny.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
@@ -34,10 +34,9 @@
   <Class Name="StopTheBunny.Cannon" Collapsed="true">
     <Position X="3.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAABAACAAQACgBAAAAAQAAAAAAAAAACAAAAAgAIAAQA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Cannon.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
   <Class Name="StopTheBunny.Flak" Collapsed="true">
     <Position X="5" Y="2.75" Width="1.5" />
@@ -121,7 +120,7 @@
   <Enum Name="StopTheBunny.Color" Collapsed="true">
     <Position X="6" Y="6" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAABAAAAAAgAAAAAAAAAABAAAAAAAAAAAADAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAABAAAAAAAAAAAABAAAAA=</HashCode>
       <FileName>Color.cs</FileName>
     </TypeIdentifier>
   </Enum>

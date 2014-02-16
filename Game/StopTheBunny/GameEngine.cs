@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace StopTheBunny
@@ -24,12 +25,21 @@ namespace StopTheBunny
         static void Main(string[] args)
         {
             Airillery testTower = new Airillery();
-            
-            
-            //Console.WindowWidth = field.GetColsInField;
-            //Console.WindowHeight = field.GetRowsInField;
-            //Console.BufferHeight = field.GetRowsInField;
-            //Console.BufferWidth = field.GetColsInField;                       
+            GameField field = new GameField(30, 80);
+
+            Console.WindowWidth = field.GetColsInField;
+            Console.WindowHeight = field.GetRowsInField;
+            Console.BufferHeight = field.GetRowsInField;
+            Console.BufferWidth = field.GetColsInField;
+
+            Logo.SignBunny();
+            Logo.Name();
+            Thread.Sleep(2000);
+
+            Console.Clear();
+
+            Menu.ShowMenu();
+
         }
     }
 }
