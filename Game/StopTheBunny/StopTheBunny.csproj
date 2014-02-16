@@ -55,7 +55,7 @@
     <Compile Include="ITower.cs" />
     <Compile Include="Logo.cs" />
     <Compile Include="Menu.cs" />
-    <Compile Include="Menu.Icons.cs" />
+    <Compile Include="MenuIcons.cs" />
     <Compile Include="Path.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
