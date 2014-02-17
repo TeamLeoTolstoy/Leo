@@ -16,6 +16,7 @@
 
         public abstract int MatRow { get; }
         public abstract int MatCol { get; }
+        public abstract string[,] GetImage();
 
         //public Logo()
         //{
@@ -52,22 +53,17 @@
                 this.logoMatrix = value;
             }
         }
-        
-        public abstract string[,] GetImage();
 
         public void RenderAll()
         {
-            for (int i = 0; i < this.TopLeft.PositionY; i++)
+            for (int row = 0; row < this.TopLeft.PositionY; row++)
             {
-                for (int j = 0; j < this.TopLeft.PositionX; j++)
+                for (int col = 0; col < this.TopLeft.PositionX; col++)
                 {
-                    Console.Write(this.GetImage()[i,j]);
+                    Console.Write(this.GetImage()[row,col]);
                 }
                 Console.WriteLine();
             }
-        }
-
-
-        
+        }       
     }
 }

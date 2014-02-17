@@ -34,16 +34,7 @@ namespace StopTheBunny.Logos
 
                 for (int col = 0; col < this.LogoMatrix.GetLength(1); col++)
                 {
-                    if (
-                        (row == 0 || row == matrixSizeY - 1) && (col >= 7 && col <= 13) ||
-                        (col == 0 || col == matrixSizeX - 1) && (row >= 7 && row <= 13) ||
-                        (row == 1 || row == matrixSizeY - 2) && (col == 6 || col == 14) ||
-                        (col == 1 || col == matrixSizeX - 2) && (row == 6 || row == 14) ||
-                        (row == 2) && (col == 5 || col == 15) ||
-                        (col == 2 || col == matrixSizeX - 3) && (row == 5 || row == 15) ||
-                        (row == 3) && (col == 4 || col == 16) ||
-                        (col == 3 || col == matrixSizeY - 4) && (row == 4 || row == 16) ||
-                        (row == 17 && (col == 4 || col == 16)))
+                    if (IsX(row,col))
                     {
                         this.LogoMatrix[row, col] = "X";
                     }
@@ -65,8 +56,7 @@ namespace StopTheBunny.Logos
                         this.LogoMatrix[row, col] = "^";
                         Console.ForegroundColor = ConsoleColor.Red;
                     }
-                    else if ((row == 2 && ((col == 6 || col == 7) || (col == 13 || col == 14)) ||
-                        row == 17 && ((col >= 3 && col <= 5) || (col >= 15 && col <= 17))))
+                    else if (IsUnderscore(row,col))
                     {
                         Console.ForegroundColor = ConsoleColor.White;
                         this.LogoMatrix[row, col] = "_";
@@ -108,8 +98,60 @@ namespace StopTheBunny.Logos
                         this.LogoMatrix[row, col] = ".";
                         Console.ForegroundColor = ConsoleColor.Red;
                     }
-                    else if (
-                        (row == 3 && (col == 6 || col == 8)) ||
+                    else if (IsLeftSlash(row,col))    
+                    {
+                        Console.ForegroundColor = ConsoleColor.White;
+                        this.LogoMatrix[row, col] = "\\";
+                        Console.ForegroundColor = ConsoleColor.Red;
+                    }
+                    else if (IsRightSlash(row,col))
+                    {
+                        Console.ForegroundColor = ConsoleColor.White;
+                        this.LogoMatrix[row, col] = "/";
+                        Console.ForegroundColor = ConsoleColor.Red;
+                    }
+                    else
+                    {
+                        this.LogoMatrix[row, col] = " ";
+                    }
+                }
+            }
+            Console.ForegroundColor = ConsoleColor.White;
+            return this.LogoMatrix;
+        }
+
+        private bool IsX(int row, int col)
+        {
+            if ((row == 0 || row == matrixSizeY - 1) && (col >= 7 && col <= 13) ||
+                        (col == 0 || col == matrixSizeX - 1) && (row >= 7 && row <= 13) ||
+                        (row == 1 || row == matrixSizeY - 2) && (col == 6 || col == 14) ||
+                        (col == 1 || col == matrixSizeX - 2) && (row == 6 || row == 14) ||
+                        (row == 2) && (col == 5 || col == 15) ||
+                        (col == 2 || col == matrixSizeX - 3) && (row == 5 || row == 15) ||
+                        (row == 3) && (col == 4 || col == 16) ||
+                        (col == 3 || col == matrixSizeY - 4) && (row == 4 || row == 16) ||
+                        (row == 17 && (col == 4 || col == 16)))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        private bool IsUnderscore(int row, int col)
+        {
+            if ((row == 2 && ((col == 6 || col == 7) || (col == 13 || col == 14)) ||
+                        row == 17 && ((col >= 3 && col <= 5) || (col >= 15 && col <= 17))))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        private bool IsLeftSlash(int row, int col)
+        {
+            if ((row == 3 && (col == 6 || col == 8)) ||
                         (row == 4 && (col == 7 || col == 9) ||
                         (row == 5 && col == 8) ||
                         (row == 6 && col == 12) ||
@@ -125,13 +167,16 @@ namespace StopTheBunny.Logos
                         (row == 16 && col == 5) ||
                         (row == 17 && col == 6) ||
                         (row == 18 && col == 11)))
-                    {
-                        Console.ForegroundColor = ConsoleColor.White;
-                        this.LogoMatrix[row, col] = "\\";
-                        Console.ForegroundColor = ConsoleColor.Red;
-                    }
-                    else if (
-                        (row == 3 && (col == 12 || col == 14)) ||
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        private bool IsRightSlash(int row, int col)
+        {
+            if ((row == 3 && (col == 12 || col == 14)) ||
                         (row == 4 && (col == 11 || col == 13) ||
                         (row == 5 && col == 12) ||
                         (row == 6 && col == 8) ||
@@ -147,19 +192,11 @@ namespace StopTheBunny.Logos
                         (row == 16 && col == 15) ||
                         (row == 17 && col == 14) ||
                         (row == 18 && col == 9)))
-                    {
-                        Console.ForegroundColor = ConsoleColor.White;
-                        this.LogoMatrix[row, col] = "/";
-                        Console.ForegroundColor = ConsoleColor.Red;
-                    }
-                    else
-                    {
-                        this.LogoMatrix[row, col] = " ";
-                    }
-                }
+            {
+                return true;
             }
-            Console.ForegroundColor = ConsoleColor.White;
-            return this.LogoMatrix;
+
+            return false;
         }
     }
 }
