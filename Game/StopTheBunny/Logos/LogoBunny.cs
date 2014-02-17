@@ -9,28 +9,34 @@ namespace StopTheBunny.Logos
 {
     public class LogoBunny : Logo, IRenderable
     {
-        private int positionX = 5;
-        private int positionY = 30;
-        private const int matrixSizeX = 21;
-        private const int matrixSizeY = 21;
+        private int positionCol = 5;
+        private int positionRow = 30;
+        private const int matrixSizeCol = 21;
+        private const int matrixSizeRow = 21;
 
         public LogoBunny()
         {
-            this.TopLeft = new MatrixCoords(positionY, positionX);
+            this.TopLeft = new MatrixCoords(positionRow, positionCol);
             this.LogoMatrix= new string[this.MatRow, this.MatCol];
         }
 
-        public override int MatRow { get { return matrixSizeY; } }
-        public override int MatCol { get { return matrixSizeX; } }
+        public override int MatRow { get { return matrixSizeRow; } }
+        public override int MatCol { get { return matrixSizeCol; } }
 
         public override string[,] GetImage()
         {
             //string[,] matrix = new string[this.matrixSizeY, matrixSizeX];
             Console.ForegroundColor = ConsoleColor.Red;
+            //Console.WriteLine(Console.WindowHeight);
+            //Console.WriteLine(Console.WindowWidth);
 
             for (int row = 0; row < this.LogoMatrix.GetLength(0); row++)
             {
-                Console.SetCursorPosition(this.positionY, this.positionX++);
+                if (this.positionCol<Console.WindowWidth && this.positionRow<Console.WindowHeight)
+                {
+                    Console.SetCursorPosition(this.positionRow, this.positionCol);
+                    this.positionCol++;
+                }
 
                 for (int col = 0; col < this.LogoMatrix.GetLength(1); col++)
                 {
@@ -122,14 +128,14 @@ namespace StopTheBunny.Logos
 
         private bool IsX(int row, int col)
         {
-            if ((row == 0 || row == matrixSizeY - 1) && (col >= 7 && col <= 13) ||
-                        (col == 0 || col == matrixSizeX - 1) && (row >= 7 && row <= 13) ||
-                        (row == 1 || row == matrixSizeY - 2) && (col == 6 || col == 14) ||
-                        (col == 1 || col == matrixSizeX - 2) && (row == 6 || row == 14) ||
+            if ((row == 0 || row == matrixSizeRow - 1) && (col >= 7 && col <= 13) ||
+                        (col == 0 || col == matrixSizeCol - 1) && (row >= 7 && row <= 13) ||
+                        (row == 1 || row == matrixSizeRow - 2) && (col == 6 || col == 14) ||
+                        (col == 1 || col == matrixSizeCol - 2) && (row == 6 || row == 14) ||
                         (row == 2) && (col == 5 || col == 15) ||
-                        (col == 2 || col == matrixSizeX - 3) && (row == 5 || row == 15) ||
+                        (col == 2 || col == matrixSizeCol - 3) && (row == 5 || row == 15) ||
                         (row == 3) && (col == 4 || col == 16) ||
-                        (col == 3 || col == matrixSizeY - 4) && (row == 4 || row == 16) ||
+                        (col == 3 || col == matrixSizeRow - 4) && (row == 4 || row == 16) ||
                         (row == 17 && (col == 4 || col == 16)))
             {
                 return true;
