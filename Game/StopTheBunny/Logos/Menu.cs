@@ -5,12 +5,44 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StopTheBunny.Logos
+namespace StopTheBunny
 {
-    public static class Menu 
+    public static class Menu
     {
+        public static void ShowMenu()
+        {
+            int choise = 0;
+            Menu.PrintMenu(choise);
 
-        public static void MakeChoose(int choise)
+            ConsoleKeyInfo inputKey;
+
+            while (true)
+            {
+                if (Console.KeyAvailable)
+                {
+                    inputKey = Console.ReadKey();
+                    if (inputKey.Key == ConsoleKey.LeftArrow)
+                    {
+                        choise--;
+                        choise += 4;
+                        choise %= 4;
+                    }
+                    else if (inputKey.Key == ConsoleKey.RightArrow)
+                    {
+                        choise++;
+                        choise %= 4;
+                    }
+                    else if (inputKey.Key == ConsoleKey.Enter)
+                    {
+                        MakeChoose(choise);
+                    }
+                    Console.Clear();
+                    Menu.PrintMenu(choise);
+                }
+            }
+        }
+
+        private static void MakeChoose(int choise)
         {
             Console.Clear();
             switch (choise)
@@ -25,7 +57,7 @@ namespace StopTheBunny.Logos
                     Menu.ReadScores();
                     break;
                 case 3:
-                    new LogoBye().RenderAll();
+                    Logo.Bye();
 
                     Environment.Exit(1);
                     break;
@@ -34,36 +66,31 @@ namespace StopTheBunny.Logos
 
         public static void PrintMenu(int choose)
         {
-            var start = new MenuStart();
-            var guide = new MenuGuide();
-            var score = new MenuScore();
-            var end = new MenuEnd();
-
             switch (choose)
             {
                 case 0:
-                    start.GetImageSelected();
-                    guide.GetImage();
-                    score.GetImage();
-                    end.GetImage();
+                    MenuIcons.StartSelected();
+                    MenuIcons.Guide();
+                    MenuIcons.Score();
+                    MenuIcons.End();
                     break;
                 case 1:
-                    start.GetImage();
-                    guide.GetImageSelected();
-                    score.GetImage();
-                    end.GetImage();
+                    MenuIcons.Start();
+                    MenuIcons.GuideSelected();
+                    MenuIcons.Score();
+                    MenuIcons.End();
                     break;
                 case 2:
-                   start.GetImage();
-                   guide.GetImage();
-                   score.GetImageSelected();
-                   end.GetImage();
+                    MenuIcons.Start();
+                    MenuIcons.Guide();
+                    MenuIcons.ScoreSelected();
+                    MenuIcons.End();
                     break;
                 case 3:
-                    start.GetImage();
-                    guide.GetImage();
-                    score.GetImage();
-                    end.GetImageSelected();
+                    MenuIcons.Start();
+                    MenuIcons.Guide();
+                    MenuIcons.Score();
+                    MenuIcons.EndSelected();
                     break;
             }
         }

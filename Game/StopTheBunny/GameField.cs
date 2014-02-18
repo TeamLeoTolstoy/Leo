@@ -39,5 +39,10 @@ namespace StopTheBunny
 
         }
 
+        public void AddTower(ITower tower)
+        {
+            
+        }
+
     }
 }

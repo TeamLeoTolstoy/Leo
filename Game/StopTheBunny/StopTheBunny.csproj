@@ -57,17 +57,10 @@
     <Compile Include="IRenderer.cs" />
     <Compile Include="ITower.cs" />
     <Compile Include="IUserInterface.cs" />
-    <Compile Include="Logos\MenuEnd.cs" />
-    <Compile Include="Logos\MenuGuide.cs" />
-    <Compile Include="Logos\ISelectable.cs" />
     <Compile Include="Logos\Logo.cs" />
-    <Compile Include="Logos\LogoBunny.cs" />
-    <Compile Include="Logos\LogoBye.cs" />
-    <Compile Include="Logos\LogoName.cs" />
-    <Compile Include="Logos\MenuScore.cs" />
-    <Compile Include="MatrixCoords.cs" />
     <Compile Include="Logos\Menu.cs" />
-    <Compile Include="Logos\MenuStart.cs" />
+    <Compile Include="Logos\MenuIcons.cs" />
+    <Compile Include="MatrixCoords.cs" />
     <Compile Include="Path.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -79,6 +72,7 @@
     <None Include="App.config" />
     <None Include="ClassDiagram.cd" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
