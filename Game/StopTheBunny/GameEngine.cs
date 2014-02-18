@@ -16,7 +16,7 @@ namespace StopTheBunny
             {
                 for (int j = 0; j < field.GetColsInField; j++)
                 {
-                    Console.Write(field.Field[i, j]);
+                    Console.Write(field[i, j]);
                 }
 
                 Console.WriteLine();
@@ -26,20 +26,28 @@ namespace StopTheBunny
         static void Main(string[] args)
         {
             Airillery testTower = new Airillery();
-            GameField field = new GameField(30, 80);
+            GameField field = new GameField(15, 20);
+            for (int row = 0; row < field.GetRowsInField; row++)
+            {
+                for (int col = 0; col < field.GetColsInField; col++)
+                {
+                    field[row, col] = '*';
+                }
+            }
+            Print(field);
 
-            Console.WindowWidth = field.GetColsInField;
-            Console.WindowHeight = field.GetRowsInField;
-            Console.BufferHeight = field.GetRowsInField;
-            Console.BufferWidth = field.GetColsInField;
+            //Console.WindowWidth = field.GetColsInField;
+            //Console.WindowHeight = field.GetRowsInField;
+            //Console.BufferHeight = field.GetRowsInField;
+            //Console.BufferWidth = field.GetColsInField;
 
-            Logo.SignBunny();
-            Logo.Name();
-            Thread.Sleep(2000);
+            //Logo.SignBunny();
+            //Logo.Name();
+            //Thread.Sleep(2000);
 
-            Console.Clear();
+            //Console.Clear();
 
-            Menu.ShowMenu();
+            //Menu.ShowMenu();
 
         }
     }

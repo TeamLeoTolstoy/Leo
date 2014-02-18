@@ -48,15 +48,6 @@ namespace StopTheBunny
             get { return this.sign; }
              set
             {
-                if (value==null)
-                {
-                    throw new  ArgumentNullException("The sign of element cannot be null");
-                }
-                if (value==' ')
-                {
-                    throw new ArgumentException("The sign of element cannot be whitespace");
-                }
-
                 this.sign = value;
             }
         }
@@ -66,11 +57,6 @@ namespace StopTheBunny
             get { return this.color; }
             set
             {
-                if (value==null)
-                {
-                    throw new ArgumentNullException("The color cannot be null");
-                }
-
                 this.color = value;
             }
         }

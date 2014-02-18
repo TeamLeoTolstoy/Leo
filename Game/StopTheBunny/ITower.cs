@@ -9,6 +9,9 @@ namespace StopTheBunny
    public interface ITower
     {
        int Damage { get; }
-       int PriceOfTower { get; }     
+       int PriceOfTower { get; }
+       char[,] SizeOfElement { get; set; }
+       char Sign { get; set; }
+       Color Color { get; set; }
     }
 }

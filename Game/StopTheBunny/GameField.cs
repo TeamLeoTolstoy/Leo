@@ -38,6 +38,34 @@ namespace StopTheBunny
             }
         }
 
+        public char this[int row, int col]
+        {
+            get 
+            {
+                if (row<0 || row>this.GetRowsInField || col<0 || col>this.GetColsInField)
+                {
+                    throw new IndexOutOfRangeException();
+                }
+
+                return this.field[row,col]; 
+            }
+
+            set
+            {
+                if (row < 0 || row > this.GetRowsInField || col < 0 || col > this.GetColsInField)
+                {
+                    throw new IndexOutOfRangeException();
+                }
+
+                if (value==' ')
+                {
+                    throw new ArgumentException();
+                }
+
+                this.field[row, col] = value;
+            }
+        }
+
         public void AddTower(ITower tower)
         {
             
