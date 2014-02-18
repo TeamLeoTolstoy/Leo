@@ -37,7 +37,9 @@ namespace StopTheBunny
             
 
             Turrent tower = new Turrent(new PositionOfElement(13, 18));
-            field.AddTower(tower);
+            field.AddElement(tower);
+            Base newBase = new Base(new PositionOfElement(0,0));
+            field.AddElement(newBase);
             Print(field);
 
             //Console.WindowWidth = field.GetColsInField;
