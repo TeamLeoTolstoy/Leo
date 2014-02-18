@@ -5,7 +5,7 @@ using System.Text;
 
 namespace StopTheBunny
 {
-    public class Flak :GameObject, ITower
+    public class Flak :GameObject
     {
         private readonly int damage;
         private readonly int priceOfElement;

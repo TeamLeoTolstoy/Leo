@@ -34,6 +34,10 @@ namespace StopTheBunny
                     field[row, col] = '*';
                 }
             }
+            
+
+            Turrent tower = new Turrent(new PositionOfElement(13, 18));
+            field.AddTower(tower);
             Print(field);
 
             //Console.WindowWidth = field.GetColsInField;

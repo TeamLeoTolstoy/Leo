@@ -66,9 +66,33 @@ namespace StopTheBunny
             }
         }
 
-        public void AddTower(ITower tower)
+        public void AddTower(Tower tower)
         {
-            
+            if (tower.PositionOfElement.PositionRow < 0 || tower.PositionOfElement.PositionRow > this.GetRowsInField ||
+                tower.PositionOfElement.PositionCol < 0 || tower.PositionOfElement.PositionCol > this.GetColsInField)
+            {
+                throw new IndexOutOfRangeException();
+            }
+
+            int sizeOfTowerInRows = tower.SizeOfElement.GetLength(0) + tower.PositionOfElement.PositionRow;
+            int sizeOfTowerInCols = tower.SizeOfElement.GetLength(1) + tower.PositionOfElement.PositionCol;
+
+            if (sizeOfTowerInRows<0 || sizeOfTowerInRows>this.GetRowsInField || 
+                sizeOfTowerInCols<0 || sizeOfTowerInCols>this.GetColsInField)
+            {
+                throw new IndexOutOfRangeException();
+            }
+
+            int startRow = tower.PositionOfElement.PositionRow;
+            int startCol = tower.PositionOfElement.PositionCol;
+
+            for (int row =startRow ; row < sizeOfTowerInRows; row++)
+            {
+                for (int col = startCol; col < sizeOfTowerInCols; col++)
+                {
+                    this.field[row, col] = tower.Sign;
+                }
+            }
         }
     }
 }

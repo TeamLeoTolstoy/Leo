@@ -5,10 +5,10 @@ using System.Text;
 
 namespace StopTheBunny
 {
-    public class Turrent : GameObject, ITower
+    public class Turrent : Tower
     {
-        private readonly int damage;
-        private readonly int priceOfTower;
+        private const int DAMAGE = 10;
+        private const int PRICEOFTOWER = 50;
 
         public Turrent(PositionOfElement positionOfElement)
         {
@@ -16,18 +16,8 @@ namespace StopTheBunny
             this.SizeOfElement = new char[2, 2];
             this.PositionOfElement = positionOfElement;
             this.Color = Color.Blue;
-            this.damage = 10;
-            this.priceOfTower = 50;
-        }
-
-        public int Damage
-        {
-            get { return this.damage; }
-        }
-
-        public int PriceOfTower
-        {
-            get { return this.priceOfTower; }           
+            this.Damage = DAMAGE;
+            this.PriceOfTower = PRICEOFTOWER;
         }
     }
 }
