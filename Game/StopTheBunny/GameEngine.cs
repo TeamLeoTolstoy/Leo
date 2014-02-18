@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using StopTheBunny.Logos;
+//using StopTheBunny.Logos;
 
 namespace StopTheBunny
 {
@@ -16,7 +16,7 @@ namespace StopTheBunny
             {
                 for (int j = 0; j < field.GetColsInField; j++)
                 {
-                    Console.Write(field.Field[i,j]);
+                    Console.Write(field.Field[i, j]);
                 }
 
                 Console.WriteLine();
@@ -33,20 +33,13 @@ namespace StopTheBunny
             Console.BufferHeight = field.GetRowsInField;
             Console.BufferWidth = field.GetColsInField;
 
-            //Logo.SignBunny();
-            //Logo.Name();
-            //Thread.Sleep(2000);
+            Logo.SignBunny();
+            Logo.Name();
+            Thread.Sleep(2000);
 
-            //Console.Clear();
+            Console.Clear();
 
-            //Menu.ShowMenu();
-
-            Logo logoBunny = new LogoBunny();
-            Logo logoName = new LogoName();
-            Logo logoBye = new LogoBye();
-            logoBunny.RenderAll();
-            logoName.RenderAll();
-
+            Menu.ShowMenu();
 
         }
     }

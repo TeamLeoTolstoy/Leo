@@ -8,7 +8,7 @@ namespace StopTheBunny
 {
    public interface ITower
     {
-        int Damage { get; }
-        int Price { get; }     
+       int Damage { get; }
+       int PriceOfTower { get; }     
     }
 }

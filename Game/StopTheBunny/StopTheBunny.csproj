@@ -52,9 +52,6 @@
     <Compile Include="GameEngine.cs" />
     <Compile Include="GameObject.cs" />
     <Compile Include="IEnemy.cs" />
-    <Compile Include="Keyboard.cs" />
-    <Compile Include="IRenderable.cs" />
-    <Compile Include="IRenderer.cs" />
     <Compile Include="ITower.cs" />
     <Compile Include="IUserInterface.cs" />
     <Compile Include="Logos\Logo.cs" />

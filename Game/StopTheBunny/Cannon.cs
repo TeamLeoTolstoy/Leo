@@ -7,37 +7,27 @@ namespace StopTheBunny
 {
     public class Cannon :GameObject, ITower
     {
-        private int damage = 60;
-        private int price = 60;
-        private char sign = '&';
-        private char[,] sizeOfElement = new char[2, 2];
-        private Color color = Color.White;
+         private readonly int damage;
+         private readonly int priceOfTower;
 
-        public override UpperLeftPoint UpperLeftPoint { get; set; }
-
-        public override char[,] SizeOfElement
+        public Cannon(PositionOfElement positionOfElement)
         {
-            get { return this.sizeOfElement; }
-        }
-
-        public override char Sign
-        {
-            get { return this.sign; }
-        }
-
-        public override Color Color
-        {
-            get { return this.color; }
+            this.Sign = '%';
+            this.SizeOfElement = new char[2, 2];
+            this.PositionOfElement = positionOfElement;
+            this.Color = Color.Grey;
+            this.damage = 20;
+            this.priceOfTower = 60;
         }
 
         public int Damage
         {
-            get { return this.damage; }
+            get { return this.damage; }          
         }
 
-        public int Price
+        public int PriceOfTower
         {
-            get { return this.price; }
+            get { return this.priceOfTower; }            
         }
     }
 }

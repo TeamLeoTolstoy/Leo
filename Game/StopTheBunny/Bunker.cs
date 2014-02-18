@@ -5,7 +5,7 @@ using System.Text;
 
 namespace StopTheBunny
 {
-    public class Bunker :GameObject, ITower
+    public class Bunker// :GameObject, ITower
     {
         private int damage = 40;
         private int price = 60;
@@ -13,19 +13,19 @@ namespace StopTheBunny
         private char[,] sizeOfElement = new char[2, 2];
         private Color color = Color.Yellow;
 
-        public override UpperLeftPoint UpperLeftPoint { get; set; }
+        public  PositionOfElement UpperLeftPoint { get; set; }
 
-        public override char[,] SizeOfElement
+        public  char[,] SizeOfElement
         {
             get { return this.sizeOfElement; }
         }
 
-        public override char Sign
+        public  char Sign
         {
             get { return this.sign; }
         }
 
-        public override Color Color
+        public  Color Color
         {
             get { return this.color; }
         }
@@ -35,7 +35,7 @@ namespace StopTheBunny
             get { return this.damage; }
         }
 
-        public int Price
+        public int PriceOfTower
         {
             get { return this.price; }
         }

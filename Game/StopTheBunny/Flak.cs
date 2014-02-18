@@ -7,39 +7,26 @@ namespace StopTheBunny
 {
     public class Flak :GameObject, ITower
     {
-        private int damage = 40;
-        private int price = 12;
-        private char sign = '@';
-        private char[,] sizeOfElement = new char[2, 2];
-        private Color color = Color.Grey;
+        private readonly int damage;
+        private readonly int priceOfElement;
 
-
-
-        public override UpperLeftPoint UpperLeftPoint { get; set; }
-
-        public override char[,] SizeOfElement
+        public Flak(PositionOfElement positionOfElement)
         {
-            get { return this.sizeOfElement; }
-        }
+            this.Sign = '$';
+            this.SizeOfElement = new char[2, 2];
+            this.PositionOfElement = positionOfElement;
+            this.Color = Color.Green;
 
-        public override char Sign
-        {
-            get { return this.sign; }
-        }
-
-        public override Color Color
-        {
-            get { return this.color; }
         }
 
         public int Damage
         {
-            get { return this.damage; }
+            get { return this.damage; }            
         }
 
-        public int Price
+        public int PriceOfTower
         {
-            get { return this.price; }
+            get { return this.priceOfElement; }         
         }
     }
 }
