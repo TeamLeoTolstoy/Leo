@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace StopTheBunny
+﻿namespace StopTheBunny
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
     public class Airillery : GameObject, ITower
     {
+
+
         private int damage = 60;
         private int price = 90;
         private char sign = '/';
