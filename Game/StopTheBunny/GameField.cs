@@ -36,13 +36,11 @@ namespace StopTheBunny
 
                 this.field = value;
             }
-
         }
 
         public void AddTower(ITower tower)
         {
             
         }
-
     }
 }
