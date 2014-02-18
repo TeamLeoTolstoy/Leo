@@ -5,43 +5,34 @@ using System.Text;
 
 namespace StopTheBunny
 {
-    public class Player// : GameObject
+    public class Player: GameObject
     {
-
-        public  char Sign
+        public Player(PositionOfElement positionOfPlayer)
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
+            this.Sign = '&';
+            this.SizeOfElement = new char[1, 1];
+            this.PositionOfElement = positionOfPlayer;
+            this.Color = Color.Red;
         }
 
-        public  Color Color
+        public void MoveRight()
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
+            this.PositionOfElement.PositionCol++;
         }
 
-        public  char[] ElementSize
+        public void MoveLeft()
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
+            this.PositionOfElement.PositionCol--;
+        }
+        
+        public void MoveDown()
+        {
+            this.PositionOfElement.PositionRow++;
+        }
+
+        public void MoveUp()
+        {
+            this.PositionOfElement.PositionRow--;
         }
     }
 }

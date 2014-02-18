@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace StopTheBunny
 {
-    public struct PositionOfElement
+    public class PositionOfElement
     {
         private int positionRow;
         private int positionCol;
 
         public PositionOfElement(int positionRow, int postionCol)
-            : this()
         {
             this.PositionRow = positionRow;
             this.PositionCol = postionCol;

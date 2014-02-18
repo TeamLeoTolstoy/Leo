@@ -42,6 +42,10 @@ namespace StopTheBunny
             field.AddElement(newBase);
             Print(field);
 
+            Dictionary<int, int> coordinates = new Dictionary<int, int>();
+            coordinates.Add(3, 2);
+            Console.WriteLine(coordinates.Keys.First());
+            Console.WriteLine(coordinates[3]);
             //Console.WindowWidth = field.GetColsInField;
             //Console.WindowHeight = field.GetRowsInField;
             //Console.BufferHeight = field.GetRowsInField;

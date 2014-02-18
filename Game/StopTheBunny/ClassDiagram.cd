@@ -1,30 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="StopTheBunny.Airillery" Collapsed="true">
-    <Position X="0.5" Y="1.75" Width="1.5" />
+    <Position X="14.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAABAACAAQACgBAAAAAQAAAAAAAAAACAAAAAgAIAAQA=</HashCode>
+      <HashCode>AAABAACAAAACgBAAAAAQAAAAAAAAAECAAAAAgAIAAQA=</HashCode>
       <FileName>Airillery.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
   <Class Name="StopTheBunny.Base" Collapsed="true">
-    <Position X="12" Y="0.5" Width="1.5" />
+    <Position X="1" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Base.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="StopTheBunny.Bunker" Collapsed="true">
-    <Position X="5" Y="1.75" Width="1.5" />
+    <Position X="16.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAABAACAAQACgBAAAAAQAAAAAAAAAACAAAAAgAIAAQA=</HashCode>
+      <HashCode>AAABAACAAAACgBAAAAAQAAAAAAAAAECAAAAAgAIAAQA=</HashCode>
       <FileName>Bunker.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
   <Class Name="StopTheBunny.Bunny" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="13.75" Y="0.5" Width="1.5" />
+    <Position X="18.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AABICAAgAIAAIAAAAAAAgAAAAIAAAAAAAAEIAAABSAg=</HashCode>
       <FileName>Bunny.cs</FileName>
@@ -32,137 +30,119 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="StopTheBunny.Cannon" Collapsed="true">
-    <Position X="9.5" Y="1.75" Width="1.5" />
+    <Position X="10" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAABAACAAQACgBAAAAAQAAAAAAAAAACAAAAAgAIAAQA=</HashCode>
+      <HashCode>AAAAAACAAAAAgAAAAAAAAAAAAAAAAEAAAABAAAAAAAA=</HashCode>
       <FileName>Cannon.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
   <Class Name="StopTheBunny.Flak" Collapsed="true">
-    <Position X="2.75" Y="1.75" Width="1.5" />
+    <Position X="3.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAABAACAAQACgBAAAAAQAAAAAAAAAACAAAAAgAIAAQA=</HashCode>
+      <HashCode>AgAAAACAAAAAgAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
       <FileName>Flak.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
   <Class Name="StopTheBunny.GameEngine" Collapsed="true">
-    <Position X="15.5" Y="0.5" Width="1.5" />
+    <Position X="20" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAEAAA=</HashCode>
       <FileName>GameEngine.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="StopTheBunny.GameField" Collapsed="true">
-    <Position X="17.25" Y="0.5" Width="1.5" />
+    <Position X="14.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AoCAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <HashCode>AICAgAEAAAABAAAACAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
       <FileName>GameField.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="StopTheBunny.GameObject" Collapsed="true">
-    <Position X="5" Y="0.5" Width="1.5" />
+    <Position X="6.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAACABAAAAAAAAAAAAAAAAAAAAAAgAAAAQA=</HashCode>
+      <HashCode>AAAAAAAAAAACABAAAAAQAAAAAAQAAACEAAAAgAIAAAA=</HashCode>
       <FileName>GameObject.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="StopTheBunny.Keyboard" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="12" Y="1.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAgAAgAAAAAIAAAAAAAAA=</HashCode>
-      <FileName>Keyboard.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
-  </Class>
   <Class Name="StopTheBunny.Logo" Collapsed="true">
-    <Position X="13.75" Y="1.5" Width="1.5" />
+    <Position X="16.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAEAAAAIAAAAAAAAAQAAAAAAAAABAAAAAAAAAA=</HashCode>
       <FileName>Logos\Logo.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="StopTheBunny.Menu" Collapsed="true">
-    <Position X="17.25" Y="1.5" Width="1.5" />
+    <Position X="20" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAASAAAAAIAAAgAAAAAAAAABAAA=</HashCode>
       <FileName>Logos\Menu.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="StopTheBunny.MenuIcons" Collapsed="true">
-    <Position X="12" Y="2.5" Width="1.5" />
+    <Position X="14.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>QAIAAAAEACAAAAoAAACAACAgAAAAAAAAAQAAAAAAAAA=</HashCode>
       <FileName>Logos\MenuIcons.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="StopTheBunny.MatrixCoords" Collapsed="true">
-    <Position X="15.5" Y="1.5" Width="1.5" />
+    <Position X="18.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAgwAEAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
       <FileName>MatrixCoords.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="StopTheBunny.Path" Collapsed="true">
-    <Position X="13.75" Y="2.5" Width="1.5" />
+    <Position X="5.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAACAAAAAgAAAAAAAAAAAAAAAAAAAIABAAAAAQAAA=</HashCode>
       <FileName>Path.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="StopTheBunny.Player" Collapsed="true">
-    <Position X="15.5" Y="2.5" Width="1.5" />
+    <Position X="7.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAABAAAAAACAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAIQAAAAAAAAAA=</HashCode>
       <FileName>Player.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="StopTheBunny.Score" Collapsed="true">
-    <Position X="17.25" Y="2.5" Width="1.5" />
+    <Position X="16.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Score.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="StopTheBunny.Turrent" Collapsed="true">
-    <Position X="7.25" Y="1.75" Width="1.5" />
+  <Class Name="StopTheBunny.Tower" Collapsed="true">
+    <Position X="12.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAABAACAAQACgBAAAAAQAAAAAAAAAACAAAAAgAIAAQA=</HashCode>
+      <HashCode>AAAAAACAAAAAgAAAAAAAAAAAAAAAAEAAAABAAAAAAAA=</HashCode>
+      <FileName>Tower.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StopTheBunny.Turrent" Collapsed="true">
+    <Position X="12.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
       <FileName>Turrent.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
-  <Struct Name="StopTheBunny.UpperLeftPoint" Collapsed="true">
-    <Position X="12" Y="3.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>UpperLeftPoint.cs</FileName>
-    </TypeIdentifier>
-  </Struct>
   <Interface Name="StopTheBunny.IEnemy" Collapsed="true">
-    <Position X="12" Y="5" Width="1.5" />
+    <Position X="14.75" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IEnemy.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="StopTheBunny.ITower" Collapsed="true">
-    <Position X="17.25" Y="5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAACAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ITower.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
   <Interface Name="StopTheBunny.IUserInterface" Collapsed="true">
-    <Position X="12" Y="5.75" Width="1.5" />
+    <Position X="16.5" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAgAAgAAAAAIAAAAAAAAA=</HashCode>
       <FileName>IUserInterface.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Enum Name="StopTheBunny.Color" Collapsed="true">
-    <Position X="12" Y="6.75" Width="1.5" />
+    <Position X="14.75" Y="6" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAABAAAAAAgAAAAAAAAAABAAAAAAAAAAAADAAAAA=</HashCode>
       <FileName>Color.cs</FileName>
