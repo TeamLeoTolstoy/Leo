@@ -21,14 +21,6 @@
       <FileName>Bunker.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="StopTheBunny.Bunny" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="18.25" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AABICAAgAIAAIAAAAAAAgAAAAIAAAAAAAAEIAAABSAg=</HashCode>
-      <FileName>Bunny.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
-  </Class>
   <Class Name="StopTheBunny.Cannon" Collapsed="true">
     <Position X="10" Y="1.75" Width="1.5" />
     <TypeIdentifier>
@@ -92,13 +84,6 @@
       <FileName>MatrixCoords.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="StopTheBunny.Path" Collapsed="true">
-    <Position X="5.5" Y="1.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAACAAAAAgAAAAAAAAAAAAAAAAAAAIABAAAAAQAAA=</HashCode>
-      <FileName>Path.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="StopTheBunny.Player" Collapsed="true">
     <Position X="7.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
@@ -127,11 +112,26 @@
       <FileName>Turrent.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Interface Name="StopTheBunny.IEnemy" Collapsed="true">
+  <Class Name="StopTheBunny.Bunny" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAIAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Bunny.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="StopTheBunny.Path" Collapsed="true">
+    <Position X="5.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAACAAAIAAAAAAAA=</HashCode>
+      <FileName>Path.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="StopTheBunny.IMovable" Collapsed="true">
     <Position X="14.75" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>IEnemy.cs</FileName>
+      <FileName>IMovable.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="StopTheBunny.IUserInterface" Collapsed="true">

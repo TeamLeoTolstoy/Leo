@@ -12,7 +12,7 @@ namespace StopTheBunny
             this.Sign = '#';
             this.SizeOfElement = new char[3, 2];
             this.PositionOfElement = positionOfElement;
-            this.Color = Color.Grey;
+            this.Color = ConsoleColor.Gray;
         }
     }
 }

@@ -6,92 +6,63 @@ using System.Threading.Tasks;
 
 namespace StopTheBunny
 {
-    public class Bunny : IEnemy
+    public class Bunny : GameObject, IMovable, IDrawable
     {
-        private char symbol;
-        private Color bunnyColor;
-        private int health;
-        private int positionRow;
-        private int positionCol;
-        private int entryRow;
-        private int entryCol;
+        private static int initialHealth;
+        private int currentHealth;
 
-//<<<<<<< HEAD
-        public Bunny(char symbol, Color color, int health, int entryRow, int entryCol)
+        public Bunny(ConsoleColor color, char sign, char[,] size)
         {
-            this.Symbol = symbol;
-            this.bunnyColor = color;
-            this.Health = health;
+            this.Color = color;
+            this.Sign = sign;
+            this.SizeOfElement = size;
+            this.CurrentHealth = initialHealth;
+            this.PositionOfElement = null;
         }
-            
-//=======
-//        public Bunny(char symbol, Color color, int health, int entryRow, int entryCol)
-//        {
 
-////>>>>>>> 993c3ff0ee8f6cc52226eb557ce7ba8d334885d3
-//        }
-
-        public int EntryCol
-        {
-            get { return this.entryCol; }
-            set { this.entryCol = value; }
-        }
-        
-
-        public int EntryRow
-        {
-            get { return this.entryRow; }
-            set { this.entryRow = value; }
-        }
-        
-
-        public int PositionRow
+        public int CurrentHealth
         {
             get
             {
-                return this.positionRow;
+                return currentHealth;
             }
             set
             {
-                this.positionRow = value;
+                currentHealth = value;
             }
         }
 
-        public int PositionCol
+        public void ClearPreviousPosition()
         {
-            get
+            Console.BackgroundColor = ConsoleColor.Green;
+            for (int row = 0; row < this.SizeOfElement.GetLength(0); row++)
             {
-                return this.positionCol;
+                for (int col = 0; col < this.SizeOfElement.GetLength(1); col++)
+                {
+                    Console.SetCursorPosition(this.PositionOfElement.PositionCol + col, this.PositionOfElement.PositionRow + row);
+                    Console.Write(' ');
+                }
             }
-            set
-            {
-                this.positionCol = value;
-            }
+            Console.ResetColor();
         }
-
-        public int Health
-        {
-            get { return this.health; }
-            set { this.health = value; }
-        }
-
-
-        public Color BunnyColor
-        {
-            get { return this.bunnyColor; }
-            set { this.bunnyColor = value; }
-        }
-
-
-        public char Symbol
-        {
-            get { return this.symbol; }
-            set { this.symbol = value; }
-        }
-
 
         public void Move()
         {
+            this.PositionOfElement = Path.GetNextPosition(this.PositionOfElement);
+        }
+
+        public void Draw()
+        {
+            Console.ForegroundColor = this.Color;
+            Console.BackgroundColor = ConsoleColor.Green;
+            for (int row = 0; row < this.SizeOfElement.GetLength(0); row++)
+            {
+                for (int col = 0; col < this.SizeOfElement.GetLength(1); col++)
+                {
+                    Console.SetCursorPosition(this.PositionOfElement.PositionCol + col, this.PositionOfElement.PositionRow + row);
+                    Console.Write(this.Sign);
+                }
+            }
             
         }
     }

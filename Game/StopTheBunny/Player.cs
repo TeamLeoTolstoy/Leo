@@ -12,7 +12,7 @@ namespace StopTheBunny
             this.Sign = '&';
             this.SizeOfElement = new char[1, 1];
             this.PositionOfElement = positionOfPlayer;
-            this.Color = Color.Red;
+            this.Color = ConsoleColor.Red;
         }
 
         public void MoveRight()

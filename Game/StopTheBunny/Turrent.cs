@@ -15,7 +15,7 @@ namespace StopTheBunny
             this.Sign = '@';
             this.SizeOfElement = new char[2, 2];
             this.PositionOfElement = positionOfElement;
-            this.Color = Color.Blue;
+            this.Color = ConsoleColor.Blue;
             this.Damage = DAMAGE;
             this.PriceOfTower = PRICEOFTOWER;
         }

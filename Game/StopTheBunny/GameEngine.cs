@@ -25,27 +25,40 @@ namespace StopTheBunny
 
         static void Main(string[] args)
         {
-            Airillery testTower = new Airillery();
-            GameField field = new GameField(15, 20);
-            for (int row = 0; row < field.GetRowsInField; row++)
+            Path.Draw();
+
+            Bunny testBunny = new Bunny(ConsoleColor.Red, '@', new char[1, 1]);
+
+            while (true)
             {
-                for (int col = 0; col < field.GetColsInField; col++)
-                {
-                    field[row, col] = '*';
-                }
+                testBunny.Move();
+                testBunny.Draw();                 
+                Thread.Sleep(300);
+                testBunny.ClearPreviousPosition();
+                
             }
             
+            //Airillery testTower = new Airillery();
+            //GameField field = new GameField(15, 20);
+            //for (int row = 0; row < field.GetRowsInField; row++)
+            //{
+            //    for (int col = 0; col < field.GetColsInField; col++)
+            //    {
+            //        field[row, col] = '*';
+            //    }
+            //}
+            
 
-            Turrent tower = new Turrent(new PositionOfElement(13, 18));
-            field.AddElement(tower);
-            Base newBase = new Base(new PositionOfElement(0,0));
-            field.AddElement(newBase);
-            Print(field);
+            //Turrent tower = new Turrent(new PositionOfElement(13, 18));
+            //field.AddElement(tower);
+            //Base newBase = new Base(new PositionOfElement(0,0));
+            //field.AddElement(newBase);
+            //Print(field);
 
-            Dictionary<int, int> coordinates = new Dictionary<int, int>();
-            coordinates.Add(3, 2);
-            Console.WriteLine(coordinates.Keys.First());
-            Console.WriteLine(coordinates[3]);
+            //Dictionary<int, int> coordinates = new Dictionary<int, int>();
+            //coordinates.Add(3, 2);
+            //Console.WriteLine(coordinates.Keys.First());
+            //Console.WriteLine(coordinates[3]);
             //Console.WindowWidth = field.GetColsInField;
             //Console.WindowHeight = field.GetRowsInField;
             //Console.BufferHeight = field.GetRowsInField;

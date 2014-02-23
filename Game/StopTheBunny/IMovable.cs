@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StopTheBunny
 {
-    public interface IEnemy
+    public interface IMovable
     {
         void Move();
     }

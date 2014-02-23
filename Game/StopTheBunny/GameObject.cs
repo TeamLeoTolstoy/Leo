@@ -10,7 +10,7 @@ namespace StopTheBunny
     public abstract class GameObject
     {
         private char sign;
-        private Color color;
+        private ConsoleColor color;
         private char[,] sizeOfElement;
         private PositionOfElement positionOfElement;
 
@@ -52,7 +52,7 @@ namespace StopTheBunny
             }
         }
 
-        public Color Color
+        public ConsoleColor Color
         {
             get { return this.color; }
             set
