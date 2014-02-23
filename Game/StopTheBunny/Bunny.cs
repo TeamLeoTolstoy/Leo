@@ -11,13 +11,13 @@ namespace StopTheBunny
         private static int initialHealth;
         private int currentHealth;
 
-        public Bunny(ConsoleColor color, char sign, char[,] size)
+        public Bunny()
         {
-            this.Color = color;
-            this.Sign = sign;
-            this.SizeOfElement = size;
+            this.Color = ConsoleColor.Red;
+            this.Sign = '@';
+            this.SizeOfElement = new char[1,1];
             this.CurrentHealth = initialHealth;
-            this.PositionOfElement = null;
+            this.PositionOfElement = Path.GetFirstPosition();
         }
 
         public int CurrentHealth
@@ -62,8 +62,7 @@ namespace StopTheBunny
                     Console.SetCursorPosition(this.PositionOfElement.PositionCol + col, this.PositionOfElement.PositionRow + row);
                     Console.Write(this.Sign);
                 }
-            }
-            
+            }            
         }
     }
 }

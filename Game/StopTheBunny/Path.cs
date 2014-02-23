@@ -48,12 +48,13 @@ namespace StopTheBunny
             Console.ResetColor();
         }
 
+        public static PositionOfElement GetFirstPosition()
+        {
+            return pathPoints[0];
+        }
+
         public static PositionOfElement GetNextPosition(PositionOfElement currentPosition)
         {
-            if (currentPosition == null)
-            {
-                return pathPoints[0];
-            }
             int currentIndex = pathPoints.IndexOf(currentPosition);
             if (currentIndex + 1 < pathPoints.Count)
             {

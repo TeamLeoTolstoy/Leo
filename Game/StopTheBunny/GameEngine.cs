@@ -10,6 +10,8 @@ namespace StopTheBunny
 {
     class GameEngine
     {
+        static int gameTime = 0;
+
         static void Print(GameField field)
         {
             for (int i = 0; i < field.GetRowsInField; i++)
@@ -23,32 +25,72 @@ namespace StopTheBunny
             }
         }
 
+        static void HandleBunnies(List<Bunny> bunnies, int gameCounter)
+        {
+            if (gameCounter % 5 == 0)
+            {
+                foreach (var bunny in bunnies)
+                {
+                    bunny.ClearPreviousPosition();                    
+                                    
+                    bunny.Move();
+                    bunny.Draw();    
+                    
+                }
+            }
+
+            if (gameCounter % 15 == 0)
+            {
+                bunnies.Add(new Bunny());
+            }
+        }
+
         static void Main(string[] args)
         {
             GameField field = new GameField(15, 20);
             Player player = new Player(new PositionOfElement(0, 0));
             Path.Draw();
 
-            Bunny testBunny = new Bunny(ConsoleColor.Red, '@', new char[1, 1]);
-
-            Thread parallelThread = new Thread(() =>
-            {
-                while (true)
-                {
-                    testBunny.Move();
-                    testBunny.Draw();
-                    Thread.Sleep(500);
-                    testBunny.ClearPreviousPosition();
-                }
-            });
-            parallelThread.Start();
+            List<Bunny> bunnies = new List<Bunny>();
+            //IList<Bunny> tempBunnies = new List<Bunny>();
+            bunnies.Add(new Bunny());
 
             while (true)
             {
+                gameTime++;
                 player.Move();
                 player.Draw();
+                HandleBunnies(bunnies, gameTime);
                 Thread.Sleep(100);
             }
+
+            //Thread movingBunnies = new Thread(() =>
+            //{
+            //    while (true)
+            //    {
+            //        foreach (var currentBunny in bunnies)
+            //        {
+            //            currentBunny.Move();
+            //            currentBunny.Draw();
+            //            Thread.Sleep(500);
+            //            currentBunny.ClearPreviousPosition();
+            //        }                    
+            //    }
+            //});
+            //movingBunnies.Start();
+
+            //Thread addingBunnies = new Thread(() => 
+            //{
+            //    for (int i = 0; i < 10; i++)
+            //    {
+            //        tempBunnies.Add(new Bunny());
+            //        Thread.Sleep(2000);
+            //    }
+            //});
+
+            //addingBunnies.Start();
+
+            
 
             
 

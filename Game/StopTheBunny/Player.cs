@@ -35,11 +35,20 @@ namespace StopTheBunny
             this.PositionOfElement.PositionRow--;
         }
 
+        public void Clear()
+        {
+            Console.SetCursorPosition(this.PositionOfElement.PositionCol, this.PositionOfElement.PositionRow);
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.Write(' ');
+        }
+
         public void Draw()
         {
             Console.SetCursorPosition(this.PositionOfElement.PositionCol, this.PositionOfElement.PositionRow);
+            Console.BackgroundColor = ConsoleColor.Black;
             Console.ForegroundColor = this.Color;
             Console.Write(this.Sign);
+            Console.ResetColor();
         }
 
         public void Move()
@@ -53,24 +62,23 @@ namespace StopTheBunny
                 }
                 if (keyPressed.Key == ConsoleKey.LeftArrow)
                 {
+                    this.Clear();
                     this.MoveLeft();
                 }
                 if (keyPressed.Key == ConsoleKey.RightArrow)
                 {
+                    this.Clear();
                     this.MoveRight();
                 }
                 if (keyPressed.Key == ConsoleKey.UpArrow)
                 {
+                    this.Clear();
                     this.MoveUp();
                 }
                 if (keyPressed.Key == ConsoleKey.DownArrow)
                 {
+                    this.Clear();
                     this.MoveDown();
-                }
-                if (keyPressed.Key == ConsoleKey.D)
-                {
-                    Turrent tur = new Turrent(new PositionOfElement(this.PositionOfElement.PositionRow, this.PositionOfElement.PositionCol));
-                    
                 }
             }
         }
