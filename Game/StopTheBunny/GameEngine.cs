@@ -25,18 +25,41 @@ namespace StopTheBunny
 
         static void Main(string[] args)
         {
+            GameField field = new GameField(15, 20);
+            Player player = new Player(new PositionOfElement(0, 0));
             Path.Draw();
 
             Bunny testBunny = new Bunny(ConsoleColor.Red, '@', new char[1, 1]);
 
+            Thread parallelThread = new Thread(() =>
+            {
+                while (true)
+                {
+                    testBunny.Move();
+                    testBunny.Draw();
+                    Thread.Sleep(500);
+                    testBunny.ClearPreviousPosition();
+                }
+            });
+            parallelThread.Start();
+
             while (true)
             {
-                testBunny.Move();
-                testBunny.Draw();                 
-                Thread.Sleep(300);
-                testBunny.ClearPreviousPosition();
-                
+                player.Move();
+                player.Draw();
+                Thread.Sleep(100);
             }
+
+            
+
+            //while (true)
+            //{
+            //    testBunny.Move();
+            //    testBunny.Draw();                 
+            //    Thread.Sleep(300);
+            //    testBunny.ClearPreviousPosition();
+                
+            //}
             
             //Airillery testTower = new Airillery();
             //GameField field = new GameField(15, 20);

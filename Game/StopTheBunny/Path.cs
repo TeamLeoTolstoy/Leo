@@ -8,7 +8,7 @@ namespace StopTheBunny
 {
     public static class Path
     {
-        private static List<PositionOfElement> pathPoints = new List<PositionOfElement>
+        private static readonly List<PositionOfElement> pathPoints = new List<PositionOfElement>
         {
             new PositionOfElement(5, 0),
             new PositionOfElement(5, 1),
@@ -42,12 +42,8 @@ namespace StopTheBunny
             Console.BackgroundColor = ConsoleColor.Green;
             foreach (var point in pathPoints)
             {
-                Console.SetCursorPosition(point.PositionCol, point.PositionRow - 1);
-                Console.Write('-');
                 Console.SetCursorPosition(point.PositionCol, point.PositionRow);
                 Console.Write(' ');
-                Console.SetCursorPosition(point.PositionCol, point.PositionRow + 1);
-                Console.Write('-');
             }
             Console.ResetColor();
         }

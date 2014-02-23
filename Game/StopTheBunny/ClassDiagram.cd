@@ -87,9 +87,10 @@
   <Class Name="StopTheBunny.Player" Collapsed="true">
     <Position X="7.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAIQAAAAAAAAAA=</HashCode>
+      <HashCode>AAEAAAAAAIAAAgAAAAAAAAAAAAAAAAAIQAAAAAAAAAA=</HashCode>
       <FileName>Player.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="StopTheBunny.Score" Collapsed="true">
     <Position X="16.5" Y="2.5" Width="1.5" />
@@ -115,7 +116,7 @@
   <Class Name="StopTheBunny.Bunny" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="18.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAACAAAAIAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <HashCode>AAAAAAAAAIAAAwAAAAAACAQAAAAEAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Bunny.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
