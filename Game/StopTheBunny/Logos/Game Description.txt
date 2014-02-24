@@ -1,0 +1,14 @@
+﻿Stop The Bunny
+//suggestions//
+
+The lovely garden in your backyard is facing
+a bunny invasion! Use all means necessary to 
+stop the mischievous bunnies and send them 
+back to Bunny Land!
+
+Weapons:
+
+CarrotTrap - lures the bunny into a cage. Success : 100%
+Sprinkler - sprinkles water. It takes several(2) shots to scare the bunny for good.
+.....
+......
