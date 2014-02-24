@@ -130,6 +130,8 @@ namespace StopTheBunny
                 catch (IndexOutOfRangeException)
                 {
                     bunnies.Clear();
+                    towers.Clear();
+                    gameTime = 0;
                     Console.Clear();
                     Console.SetCursorPosition(0, 0);
                     Console.WriteLine("Game over!");
