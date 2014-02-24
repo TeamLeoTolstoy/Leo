@@ -7,12 +7,13 @@ using System.Threading.Tasks;
 
 namespace StopTheBunny
 {
-    public abstract class GameObject
+    public abstract class GameObject : IDrawable
     {
-        private char sign;
-        private ConsoleColor color;
-        private char[,] sizeOfElement;
         private PositionOfElement positionOfElement;
+        private char[,] sizeOfElement;
+        private char sign;
+        private ConsoleColor foregroundColor;
+        private ConsoleColor backgroundColor;       
 
         public PositionOfElement PositionOfElement
         {
@@ -52,14 +53,39 @@ namespace StopTheBunny
             }
         }
 
-        public ConsoleColor Color
+        public ConsoleColor ForegroundColor
         {
-            get { return this.color; }
+            get { return this.foregroundColor; }
             set
             {
-                this.color = value;
+                this.foregroundColor = value;
             }
         }
 
+        public ConsoleColor BackgroundColor
+        {
+            get { return this.backgroundColor; }
+            set
+            {
+                this.backgroundColor = value;
+            }
+        }
+
+        public virtual void Draw()
+        {
+            Console.SetCursorPosition(this.PositionOfElement.PositionCol, this.PositionOfElement.PositionRow);
+            Console.ForegroundColor = this.ForegroundColor;
+            Console.BackgroundColor = this.backgroundColor;
+            for (int row = this.PositionOfElement.PositionRow; row < this.PositionOfElement.PositionRow + this.SizeOfElement.GetLength(0); row++)
+            {
+                for (int col = this.PositionOfElement.PositionCol; col < this.PositionOfElement.PositionCol + this.SizeOfElement.GetLength(1); col++)
+                {
+                    Console.SetCursorPosition(col, row);
+                    Console.ForegroundColor = this.ForegroundColor;
+                    Console.Write(this.Sign);
+                }
+            }
+            //Console.ResetColor();
+        }
     }
 }

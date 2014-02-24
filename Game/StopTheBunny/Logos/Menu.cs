@@ -48,7 +48,7 @@ namespace StopTheBunny
             switch (choise)
             {
                 case 0:
-                    //StartGame();
+                    GameEngine.StartGame();
                     break;
                 case 1:
                     Menu.ReadGuide();

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StopTheBunny
 {
-    public abstract class Tower:GameObject
+    public abstract class Tower:GameObject, IDrawable
     {
         private int damage;
         private int priceOfTower;
@@ -38,5 +38,22 @@ namespace StopTheBunny
                 this.priceOfTower = value;
             }
         }
+
+        //public void Draw()
+        //{
+        //    Console.SetCursorPosition(this.PositionOfElement.PositionCol, this.PositionOfElement.PositionRow);
+        //    Console.ForegroundColor = this.Color;
+        //    Console.BackgroundColor = ConsoleColor.White;
+        //    for (int row = this.PositionOfElement.PositionRow; row < this.PositionOfElement.PositionRow + this.SizeOfElement.GetLength(0); row++)
+        //    {
+        //        for (int col = this.PositionOfElement.PositionCol; col < this.PositionOfElement.PositionCol + this.SizeOfElement.GetLength(1); col++)
+        //        {
+        //            Console.SetCursorPosition(col, row);
+        //            Console.ForegroundColor = this.Color;
+        //            Console.Write(this.Sign);
+        //        }
+        //    }
+        //    Console.ResetColor();
+        //}
     }
 }

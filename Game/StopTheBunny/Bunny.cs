@@ -13,7 +13,8 @@ namespace StopTheBunny
 
         public Bunny()
         {
-            this.Color = ConsoleColor.Red;
+            this.ForegroundColor = ConsoleColor.Red;
+            this.BackgroundColor = ConsoleColor.Green;
             this.Sign = '@';
             this.SizeOfElement = new char[1,1];
             this.CurrentHealth = initialHealth;
@@ -51,18 +52,18 @@ namespace StopTheBunny
             this.PositionOfElement = Path.GetNextPosition(this.PositionOfElement);
         }
 
-        public void Draw()
-        {
-            Console.ForegroundColor = this.Color;
-            Console.BackgroundColor = ConsoleColor.Green;
-            for (int row = 0; row < this.SizeOfElement.GetLength(0); row++)
-            {
-                for (int col = 0; col < this.SizeOfElement.GetLength(1); col++)
-                {
-                    Console.SetCursorPosition(this.PositionOfElement.PositionCol + col, this.PositionOfElement.PositionRow + row);
-                    Console.Write(this.Sign);
-                }
-            }            
-        }
+        //public void Draw()
+        //{
+        //    Console.ForegroundColor = this.Color;
+        //    Console.BackgroundColor = ConsoleColor.Green;
+        //    for (int row = 0; row < this.SizeOfElement.GetLength(0); row++)
+        //    {
+        //        for (int col = 0; col < this.SizeOfElement.GetLength(1); col++)
+        //        {
+        //            Console.SetCursorPosition(this.PositionOfElement.PositionCol + col, this.PositionOfElement.PositionRow + row);
+        //            Console.Write(this.Sign);
+        //        }
+        //    }            
+        //}
     }
 }

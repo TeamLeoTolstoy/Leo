@@ -12,7 +12,8 @@ namespace StopTheBunny
             this.Sign = '&';
             this.SizeOfElement = new char[1, 1];
             this.PositionOfElement = positionOfPlayer;
-            this.Color = ConsoleColor.Red;
+            this.ForegroundColor = ConsoleColor.Red;
+            this.BackgroundColor = ConsoleColor.Black;
         }
 
         public void MoveRight()
@@ -42,13 +43,19 @@ namespace StopTheBunny
             Console.Write(' ');
         }
 
-        public void Draw()
+        //public void Draw()
+        //{
+        //    Console.SetCursorPosition(this.PositionOfElement.PositionCol, this.PositionOfElement.PositionRow);
+        //    Console.BackgroundColor = ConsoleColor.Black;
+        //    Console.ForegroundColor = this.ForegroundColor;
+        //    Console.Write(this.Sign);
+        //    Console.ResetColor();
+        //}
+
+        public void Build()
         {
-            Console.SetCursorPosition(this.PositionOfElement.PositionCol, this.PositionOfElement.PositionRow);
-            Console.BackgroundColor = ConsoleColor.Black;
-            Console.ForegroundColor = this.Color;
-            Console.Write(this.Sign);
-            Console.ResetColor();
+            Turrent tower = new Turrent(new PositionOfElement(this.PositionOfElement.PositionRow + 1, this.PositionOfElement.PositionCol));
+            tower.Draw();
         }
 
         public void Move()
@@ -79,6 +86,10 @@ namespace StopTheBunny
                 {
                     this.Clear();
                     this.MoveDown();
+                }
+                if (keyPressed.Key == ConsoleKey.T)
+                {
+                    this.Build();
                 }
             }
         }
