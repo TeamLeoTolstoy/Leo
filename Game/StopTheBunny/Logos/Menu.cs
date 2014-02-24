@@ -125,7 +125,8 @@ namespace StopTheBunny
             }
             Console.SetCursorPosition(32, 29);
             Console.Write("Press any key...");
-            Console.ReadLine();
+            //Console.ReadLine();
+            ReturnToMainMenu();
         }
 
         public static void ReadGuide()
@@ -145,7 +146,8 @@ namespace StopTheBunny
 
                 Console.SetCursorPosition(32, 29);
                 Console.WriteLine("Press any key...");
-                Console.ReadLine();
+                //Console.ReadLine();
+                ReturnToMainMenu();
             }
             else
             {
@@ -153,7 +155,26 @@ namespace StopTheBunny
                 Console.WriteLine("File does not exist, ask from developer team");
                 Console.SetCursorPosition(32, 29);
                 Console.WriteLine("Press any key...");
-                Console.ReadLine();
+                //Console.ReadLine();
+                ReturnToMainMenu();
+            }
+        }
+
+        public static void ReturnToMainMenu()
+        {
+            while (true)
+            {
+                if (Console.KeyAvailable)
+                {
+                    return;
+                    // IF RETURN WITH BACKSPACE????? not any key "Press  [backspace] to return."
+                    //ConsoleKeyInfo pressedKey = Console.ReadKey(true);
+                    //if (pressedKey.Key == ConsoleKey.Backspace)
+                    //{
+                    //    Console.Clear();
+                    //    return;
+                    //}
+                }
             }
         }
     }
