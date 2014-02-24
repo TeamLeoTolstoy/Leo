@@ -123,8 +123,8 @@ namespace StopTheBunny
 
                 Console.WriteLine("NO HIGH SCORES ?");
             }
-            //Console.SetCursorPosition(32, 29);
-            //Console.Write("Press any key...");
+            Console.SetCursorPosition(32, 29);
+            Console.Write("Press any key...");
             //Console.ReadLine();
             ReturnToMainMenu();
         }

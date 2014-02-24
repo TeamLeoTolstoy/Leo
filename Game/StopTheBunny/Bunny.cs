@@ -16,7 +16,13 @@ namespace StopTheBunny
             this.ForegroundColor = ConsoleColor.Red;
             this.BackgroundColor = ConsoleColor.Green;
             this.Sign = '@';
-            this.SizeOfElement = new char[1,1];
+            this.SizeOfElement = new char[4,4]
+                {
+                    {'(', '\\', '/', ')'},
+                    {'(', '.', '.', ')'},
+                    {'(', '_', '_', ')'},
+                    {' ', '*', '*', ' '}
+                };
             this.CurrentHealth = initialHealth;
             this.PositionOfElement = Path.GetFirstPosition();
         }
@@ -50,6 +56,20 @@ namespace StopTheBunny
         public void Move()
         {
             this.PositionOfElement = Path.GetNextPosition(this.PositionOfElement);
+        }
+
+        public override void Draw()
+        {
+            Console.ForegroundColor = this.ForegroundColor;
+            Console.BackgroundColor = this.BackgroundColor;
+            for (int row = 0; row < this.SizeOfElement.GetLength(0); row++)
+            {
+                for (int col = 0; col < this.SizeOfElement.GetLength(1); col++)
+                {
+                    Console.SetCursorPosition(this.PositionOfElement.PositionCol + col, this.PositionOfElement.PositionRow + row);
+                    Console.Write(this.SizeOfElement[row, col]);
+                }
+            }
         }
 
         //public void Draw()

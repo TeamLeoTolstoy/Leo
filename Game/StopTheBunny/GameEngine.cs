@@ -28,7 +28,7 @@ namespace StopTheBunny
 
         static void HandleBunnies(List<Bunny> bunnies, int gameCounter)
         {
-            if (gameCounter % 2 == 0)
+            if (gameCounter % 7 == 0)
             {
                 foreach (var bunny in bunnies)
                 {
@@ -39,15 +39,14 @@ namespace StopTheBunny
                 }
             }
 
-            if (gameCounter % 7 == 0)
+            if (gameCounter % 28 == 0)
             {
                 bunnies.Add(new Bunny());
             }
         }        
 
         public static void StartGame()
-        {
-            
+        { 
 
             Base newBase = new Base(new PositionOfElement(16, 58));
             //GameField field = new GameField(15, 20);

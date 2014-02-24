@@ -109,8 +109,39 @@ namespace StopTheBunny
             Console.BackgroundColor = ConsoleColor.Green;
             foreach (var point in pathPoints)
             {
-                Console.SetCursorPosition(point.PositionCol, point.PositionRow);
-                Console.Write(' ');
+                //if (point.PositionRow == 5 || point.PositionRow == 10 || point.PositionRow == 20)
+                //{
+                //    for (int i = 0; i < 4; i++)
+                //    {
+                //        Console.SetCursorPosition(point.PositionCol, point.PositionRow + i);
+                //        Console.Write(' ');
+                //    }
+                //}
+                if (point.PositionCol == 20 || point.PositionCol == 21 || point.PositionCol == 40 || point.PositionCol == 60)
+                {
+                    if (point.PositionCol == 40)
+                    {
+                        for (int i = 0; i < 4; i++)
+                        {
+                            for (int j = 0; j < 4; j++)
+                            {
+                                Console.SetCursorPosition(point.PositionCol + j, point.PositionRow + i);
+                                Console.Write(' ');
+                            }
+                        }
+                    }
+                    for (int i = 0; i < 4; i++)
+                    {
+                        Console.SetCursorPosition(point.PositionCol + i, point.PositionRow);
+                        Console.Write(' ');
+                    }
+                }
+
+                for (int i = 0; i < 4; i++)
+                {
+                    Console.SetCursorPosition(point.PositionCol, point.PositionRow + i);
+                    Console.Write(' ');
+                }
             }
             Console.ResetColor();
         }
@@ -125,7 +156,7 @@ namespace StopTheBunny
             int currentIndex = pathPoints.IndexOf(currentPosition);
             if (currentIndex + 1 < pathPoints.Count)
             {
-                return pathPoints[currentIndex + 1];
+                return pathPoints[currentIndex + 2];
             }
             else
             {
@@ -139,7 +170,6 @@ namespace StopTheBunny
     //    private int fieldCols;
     //    public List<int> RowCoodrinates { get; set; }
     //    public List<int> ColCoordinates { get; set; }
-
     //    public Path(int fieldRows, int fieldCols)
     //    {
     //        this.FieldRows = fieldRows;
@@ -148,7 +178,6 @@ namespace StopTheBunny
     //        this.ColCoordinates = new List<int>();
     //        this.Sign = '=';          
     //    }
-
     //    public int FieldRows
     //    {
     //        get { return this.fieldRows; }
@@ -158,11 +187,9 @@ namespace StopTheBunny
     //            {
     //                throw new ArgumentException();
     //            }
-
     //            this.fieldRows = value;
     //        }
     //    }
-
     //    public int FieldCols
     //    {
     //        get { return this.fieldCols; }
@@ -172,16 +199,11 @@ namespace StopTheBunny
     //            {
     //                throw new ArgumentException();
     //            }
-
     //            this.fieldCols = value;
     //        }
     //    }
-
     //    public void Initialize()
     //    {
-           
-
     //    }
-
     //}
 }
