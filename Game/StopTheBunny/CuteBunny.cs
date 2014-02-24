@@ -19,8 +19,12 @@ namespace StopTheBunny
                     {'(', '_', '_', ')'},
                     {' ', '*', '*', ' '}
                 };
-            this.CurrentHealth = initialHealth;
+            
             this.PositionOfElement = Path.GetFirstPosition();
+            this.IsAlive = true;
+            this.initialHealth = 100;
+            this.CurrentHealth = this.initialHealth;
+            
         }
     }
 }

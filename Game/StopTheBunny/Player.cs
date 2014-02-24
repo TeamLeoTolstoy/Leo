@@ -42,19 +42,9 @@ namespace StopTheBunny
             Console.Write(' ');
         }
 
-        //public void Draw()
-        //{
-        //    Console.SetCursorPosition(this.PositionOfElement.PositionCol, this.PositionOfElement.PositionRow);
-        //    Console.BackgroundColor = ConsoleColor.Black;
-        //    Console.ForegroundColor = this.ForegroundColor;
-        //    Console.Write(this.Sign);
-        //    Console.ResetColor();
-        //}
-
         public void Build()
         {
-            Turrent tower = new Turrent(new PositionOfElement(this.PositionOfElement.PositionRow + 1, this.PositionOfElement.PositionCol));
-            tower.Draw();
+            GameEngine.AddTower(new PositionOfElement(this.PositionOfElement.PositionRow + 1, this.PositionOfElement.PositionCol));
         }
 
         public void Move()
@@ -86,7 +76,7 @@ namespace StopTheBunny
                     this.Clear();
                     this.MoveDown();
                 }
-                if (keyPressed.Key == ConsoleKey.T)
+                if (keyPressed.Key == ConsoleKey.B)
                 {
                     this.Build();
                 }

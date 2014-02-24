@@ -65,7 +65,7 @@
     <Compile Include="Score.cs" />
     <Compile Include="StopTheBunnyMain.cs" />
     <Compile Include="Tower.cs" />
-    <Compile Include="Turrent.cs" />
+    <Compile Include="Turret.cs" />
     <Compile Include="PositionOfElement.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -5,19 +5,24 @@ using System.Text;
 
 namespace StopTheBunny
 {
-    public class Turrent : Tower
+    public class Turret : Tower
     {
-        private const int DAMAGE = 10;
+        private const int DAMAGE = 3;
         private const int PRICEOFTOWER = 50;
 
-        public Turrent(PositionOfElement positionOfElement)
+        public Turret(PositionOfElement positionOfElement)
         {
-            this.ElementImage = new char[2, 2];
+            this.ElementImage = new char[2, 2]
+                {
+                    {'*', '*'},
+                    {'*', '*'}
+                };
             this.PositionOfElement = positionOfElement;
             this.ForegroundColor = ConsoleColor.Blue;
             this.BackgroundColor = ConsoleColor.Black;
             this.Damage = DAMAGE;
             this.PriceOfTower = PRICEOFTOWER;
+            this.Range = 6;
         }
     }
 }

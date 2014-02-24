@@ -11,6 +11,8 @@ namespace StopTheBunny
         private int damage;
         private int priceOfTower;
 
+        public int Range { get; protected set; }
+
         public int Damage
         {
             get { return this.damage; }
@@ -37,6 +39,11 @@ namespace StopTheBunny
 
                 this.priceOfTower = value;
             }
+        }
+
+        public virtual int Attack()
+        {
+            return this.Damage;
         }
 
         //public void Draw()

@@ -9,7 +9,9 @@ namespace StopTheBunny
     public abstract class Bunny : GameObject, IMovable, IDrawable
     {
         protected int initialHealth;
-        private int currentHealth;
+        protected int currentHealth;
+
+        public bool IsAlive { get; protected set; }
 
         public int CurrentHealth
         {
@@ -19,6 +21,10 @@ namespace StopTheBunny
             }
             set
             {
+                if (this.currentHealth + value < 0)
+                {
+                    this.IsAlive = false;
+                }
                 currentHealth = value;
             }
         }

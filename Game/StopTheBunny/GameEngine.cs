@@ -14,18 +14,25 @@ namespace StopTheBunny
         static int gameTime = 0;
 
         private static List<Bunny> bunnies = new List<Bunny>();
+        private static List<Tower> towers = new List<Tower>();
 
-        static void Print(GameField field)
+        //static void Print(GameField field)
+        //{
+        //    for (int i = 0; i < field.GetRowsInField; i++)
+        //    {
+        //        for (int j = 0; j < field.GetColsInField; j++)
+        //        {
+        //            Console.Write(field[i, j]);
+        //        }
+
+        //        Console.WriteLine();
+        //    }
+        //}
+
+        public static void AddTower(PositionOfElement position)
         {
-            for (int i = 0; i < field.GetRowsInField; i++)
-            {
-                for (int j = 0; j < field.GetColsInField; j++)
-                {
-                    Console.Write(field[i, j]);
-                }
-
-                Console.WriteLine();
-            }
+            towers.Add(new Turret(position));
+            towers[towers.Count - 1].Draw();
         }
 
         static void HandleBunnies(List<Bunny> bunnies, int gameCounter)
@@ -45,7 +52,56 @@ namespace StopTheBunny
             {
                 bunnies.Add(new CuteBunny());
             }
-        }        
+        }
+
+        private static bool IsInRange(Tower tower, Bunny bunny)
+        {
+            return ((bunny.PositionOfElement.PositionRow - tower.PositionOfElement.PositionRow + 1) *
+                (bunny.PositionOfElement.PositionRow - tower.PositionOfElement.PositionRow + 1)) +
+                ((bunny.PositionOfElement.PositionCol - tower.PositionOfElement.PositionCol + 1) *
+                (bunny.PositionOfElement.PositionCol - tower.PositionOfElement.PositionCol + 1)) <
+                (tower.Range * tower.Range);
+        }
+
+        static void CheckForAttackTarget(List<Tower> towers, List<Bunny> bunnies)
+        {
+            foreach (var tower in towers)
+            {
+                foreach (var bunny in bunnies)
+                {
+                    if (IsInRange(tower, bunny))
+                    {
+                        bunny.CurrentHealth -= tower.Attack();
+                        bunny.BackgroundColor = ConsoleColor.DarkYellow;
+                    }
+                    else
+                    {
+                        bunny.BackgroundColor = ConsoleColor.Green;
+                    }
+                }
+            }
+        }
+
+        private static void RemoveDeadBunnies(List<Bunny> bunnies)
+        {
+            foreach (var bunny in bunnies)
+            {
+                if (!bunny.IsAlive)
+                {
+                    for (int row = bunny.PositionOfElement.PositionRow; row < bunny.PositionOfElement.PositionRow + bunny.ElementImage.GetLength(0); row++)
+                    {
+                        for (int col = bunny.PositionOfElement.PositionCol; col < bunny.PositionOfElement.PositionCol + bunny.ElementImage.GetLength(1); col++)
+                        {
+                            Console.SetCursorPosition(col, row);
+                            Console.BackgroundColor = ConsoleColor.Green;
+                            Console.Write(' ');
+                        }
+                    }
+                }
+            }
+
+            bunnies.RemoveAll(b => b.IsAlive == false);
+        }
 
         public static void StartGame()
         { 
@@ -80,6 +136,8 @@ namespace StopTheBunny
                     Thread.Sleep(1000);
                     break;
                 }
+                CheckForAttackTarget(towers, bunnies);
+                RemoveDeadBunnies(bunnies);
                 
                 Thread.Sleep(100);
             }
