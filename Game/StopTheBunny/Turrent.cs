@@ -12,8 +12,7 @@ namespace StopTheBunny
 
         public Turrent(PositionOfElement positionOfElement)
         {
-            this.Sign = '@';
-            this.SizeOfElement = new char[2, 2];
+            this.ElementImage = new char[2, 2];
             this.PositionOfElement = positionOfElement;
             this.ForegroundColor = ConsoleColor.Blue;
             this.BackgroundColor = ConsoleColor.Black;

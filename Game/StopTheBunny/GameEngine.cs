@@ -13,6 +13,8 @@ namespace StopTheBunny
     {
         static int gameTime = 0;
 
+        private static List<Bunny> bunnies = new List<Bunny>();
+
         static void Print(GameField field)
         {
             for (int i = 0; i < field.GetRowsInField; i++)
@@ -41,22 +43,22 @@ namespace StopTheBunny
 
             if (gameCounter % 28 == 0)
             {
-                bunnies.Add(new Bunny());
+                bunnies.Add(new CuteBunny());
             }
         }        
 
         public static void StartGame()
         { 
 
-            Base newBase = new Base(new PositionOfElement(16, 58));
+            Base newBase = new Base(new PositionOfElement(7, 61));
             //GameField field = new GameField(15, 20);
             Player player = new Player(new PositionOfElement(0, 0));
             Path.Draw();
             newBase.Draw();
 
-            List<Bunny> bunnies = new List<Bunny>();
+            //List<Bunny> bunnies = new List<Bunny>();
             //IList<Bunny> tempBunnies = new List<Bunny>();
-            bunnies.Add(new Bunny());
+            //bunnies.Add(new CuteBunny());
 
             while (true)
             {
@@ -71,7 +73,11 @@ namespace StopTheBunny
                 }
                 catch (IndexOutOfRangeException)
                 {
+                    bunnies.Clear();
+                    Console.Clear();
+                    Console.SetCursorPosition(0, 0);
                     Console.WriteLine("Game over!");
+                    Thread.Sleep(1000);
                     break;
                 }
                 

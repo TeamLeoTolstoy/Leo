@@ -47,6 +47,7 @@
     <Compile Include="Bunny.cs" />
     <Compile Include="Cannon.cs" />
     <Compile Include="Color.cs" />
+    <Compile Include="CuteBunny.cs" />
     <Compile Include="GameField.cs" />
     <Compile Include="Flak.cs" />
     <Compile Include="GameEngine.cs" />

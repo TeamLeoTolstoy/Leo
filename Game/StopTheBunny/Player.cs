@@ -9,8 +9,7 @@ namespace StopTheBunny
     {
         public Player(PositionOfElement positionOfPlayer)
         {
-            this.Sign = '&';
-            this.SizeOfElement = new char[1, 1];
+            this.ElementImage = new char[1, 1] { { 'O' } };
             this.PositionOfElement = positionOfPlayer;
             this.ForegroundColor = ConsoleColor.Red;
             this.BackgroundColor = ConsoleColor.Black;

@@ -10,8 +10,7 @@ namespace StopTheBunny
     public abstract class GameObject : IDrawable
     {
         private PositionOfElement positionOfElement;
-        private char[,] sizeOfElement;
-        private char sign;
+        private char[,] elementImage;
         private ConsoleColor foregroundColor;
         private ConsoleColor backgroundColor;       
 
@@ -25,9 +24,9 @@ namespace StopTheBunny
             }
         }
 
-        public char[,] SizeOfElement
+        public char[,] ElementImage
         {
-            get { return this.sizeOfElement; }
+            get { return this.elementImage; }
              set
             {
                 if (value == null)
@@ -40,16 +39,7 @@ namespace StopTheBunny
                 }
                 //TODO:Proverka dali ne e po golqmo ot poleto
 
-                this.sizeOfElement = value;
-            }
-        }
-
-        public char Sign
-        {
-            get { return this.sign; }
-             set
-            {
-                this.sign = value;
+                this.elementImage = value;
             }
         }
 
@@ -76,13 +66,13 @@ namespace StopTheBunny
             Console.SetCursorPosition(this.PositionOfElement.PositionCol, this.PositionOfElement.PositionRow);
             Console.ForegroundColor = this.ForegroundColor;
             Console.BackgroundColor = this.backgroundColor;
-            for (int row = this.PositionOfElement.PositionRow; row < this.PositionOfElement.PositionRow + this.SizeOfElement.GetLength(0); row++)
+            for (int row = 0; row < this.ElementImage.GetLength(0); row++)
             {
-                for (int col = this.PositionOfElement.PositionCol; col < this.PositionOfElement.PositionCol + this.SizeOfElement.GetLength(1); col++)
+                for (int col = 0; col < this.ElementImage.GetLength(1); col++)
                 {
-                    Console.SetCursorPosition(col, row);
+                    Console.SetCursorPosition(col + this.PositionOfElement.PositionCol, row + this.PositionOfElement.PositionRow);
                     Console.ForegroundColor = this.ForegroundColor;
-                    Console.Write(this.Sign);
+                    Console.Write(this.ElementImage[row, col]);
                 }
             }
             //Console.ResetColor();

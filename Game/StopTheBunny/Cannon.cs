@@ -12,8 +12,8 @@ namespace StopTheBunny
 
         public Cannon(PositionOfElement positionOfElement)
         {
-            this.Sign = '%';
-            this.SizeOfElement = new char[2, 2];
+            //this.Sign = '%';
+            this.ElementImage = new char[2, 2];
             this.PositionOfElement = positionOfElement;
             this.ForegroundColor = ConsoleColor.Gray;
             this.damage = 20;

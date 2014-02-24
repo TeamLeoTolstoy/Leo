@@ -75,14 +75,14 @@ namespace StopTheBunny
 
             int startRow = newElement.PositionOfElement.PositionRow;
             int startCol = newElement.PositionOfElement.PositionCol;
-            int sizeOfTowerInRows = newElement.SizeOfElement.GetLength(0) + newElement.PositionOfElement.PositionRow;
-            int sizeOfTowerInCols = newElement.SizeOfElement.GetLength(1) + newElement.PositionOfElement.PositionCol;
+            int sizeOfTowerInRows = newElement.ElementImage.GetLength(0) + newElement.PositionOfElement.PositionRow;
+            int sizeOfTowerInCols = newElement.ElementImage.GetLength(1) + newElement.PositionOfElement.PositionCol;
 
             for (int row = startRow; row < sizeOfTowerInRows; row++)
             {
                 for (int col = startCol; col < sizeOfTowerInCols; col++)
                 {
-                    this.field[row, col] = newElement.Sign;
+                    this.field[row, col] = newElement.ElementImage[row, col];
                 }
             }
         }
@@ -96,8 +96,8 @@ namespace StopTheBunny
             }
             else
             {
-                int sizeOfTowerInRows = element.SizeOfElement.GetLength(0) + element.PositionOfElement.PositionRow;
-                int sizeOfTowerInCols = element.SizeOfElement.GetLength(1) + element.PositionOfElement.PositionCol;
+                int sizeOfTowerInRows = element.ElementImage.GetLength(0) + element.PositionOfElement.PositionRow;
+                int sizeOfTowerInCols = element.ElementImage.GetLength(1) + element.PositionOfElement.PositionCol;
 
                 if (sizeOfTowerInRows < 0 || sizeOfTowerInRows > this.GetRowsInField ||
                     sizeOfTowerInCols < 0 || sizeOfTowerInCols > this.GetColsInField)

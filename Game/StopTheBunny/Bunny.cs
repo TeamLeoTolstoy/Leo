@@ -6,26 +6,10 @@ using System.Threading.Tasks;
 
 namespace StopTheBunny
 {
-    public class Bunny : GameObject, IMovable, IDrawable
+    public abstract class Bunny : GameObject, IMovable, IDrawable
     {
-        private static int initialHealth;
+        protected int initialHealth;
         private int currentHealth;
-
-        public Bunny()
-        {
-            this.ForegroundColor = ConsoleColor.Red;
-            this.BackgroundColor = ConsoleColor.Green;
-            this.Sign = '@';
-            this.SizeOfElement = new char[4,4]
-                {
-                    {'(', '\\', '/', ')'},
-                    {'(', '.', '.', ')'},
-                    {'(', '_', '_', ')'},
-                    {' ', '*', '*', ' '}
-                };
-            this.CurrentHealth = initialHealth;
-            this.PositionOfElement = Path.GetFirstPosition();
-        }
 
         public int CurrentHealth
         {
@@ -42,9 +26,9 @@ namespace StopTheBunny
         public void ClearPreviousPosition()
         {
             Console.BackgroundColor = ConsoleColor.Green;
-            for (int row = 0; row < this.SizeOfElement.GetLength(0); row++)
+            for (int row = 0; row < this.ElementImage.GetLength(0); row++)
             {
-                for (int col = 0; col < this.SizeOfElement.GetLength(1); col++)
+                for (int col = 0; col < this.ElementImage.GetLength(1); col++)
                 {
                     Console.SetCursorPosition(this.PositionOfElement.PositionCol + col, this.PositionOfElement.PositionRow + row);
                     Console.Write(' ');
@@ -62,12 +46,12 @@ namespace StopTheBunny
         {
             Console.ForegroundColor = this.ForegroundColor;
             Console.BackgroundColor = this.BackgroundColor;
-            for (int row = 0; row < this.SizeOfElement.GetLength(0); row++)
+            for (int row = 0; row < this.ElementImage.GetLength(0); row++)
             {
-                for (int col = 0; col < this.SizeOfElement.GetLength(1); col++)
+                for (int col = 0; col < this.ElementImage.GetLength(1); col++)
                 {
                     Console.SetCursorPosition(this.PositionOfElement.PositionCol + col, this.PositionOfElement.PositionRow + row);
-                    Console.Write(this.SizeOfElement[row, col]);
+                    Console.Write(this.ElementImage[row, col]);
                 }
             }
         }
