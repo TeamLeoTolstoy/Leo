@@ -8,35 +8,35 @@ namespace StopTheBunny
 {
     public class MatrixCoords
     {
-        public int PositionY { get; private set; }
-        public int PositionX { get; private  set; }
+        public int PositionRow { get; private set; }
+        public int PositionCol { get; private  set; }
 
         public MatrixCoords(int positionY, int positionX)
         {
-            this.PositionY = positionY;
-            this.PositionX = positionX;
+            this.PositionRow = positionY;
+            this.PositionCol = positionX;
         }
 
         public static MatrixCoords operator + (MatrixCoords a, MatrixCoords b)
         {
-            return new MatrixCoords(a.PositionY + b.PositionY, a.PositionX + b.PositionX);
+            return new MatrixCoords(a.PositionRow + b.PositionRow, a.PositionCol + b.PositionCol);
         }
 
         public static MatrixCoords operator -(MatrixCoords a, MatrixCoords b)
         {
-            return new MatrixCoords(a.PositionY - b.PositionY, a.PositionX - b.PositionX);
+            return new MatrixCoords(a.PositionRow - b.PositionRow, a.PositionCol - b.PositionCol);
         }
 
         public override bool Equals(object obj)
         {
             MatrixCoords objAsMatrixCoords = obj as MatrixCoords;
 
-            return objAsMatrixCoords.PositionY == this.PositionY && objAsMatrixCoords.PositionX == this.PositionX;
+            return objAsMatrixCoords.PositionRow == this.PositionRow && objAsMatrixCoords.PositionCol == this.PositionCol;
         }
 
         public override int GetHashCode()
         {
-            return this.PositionY.GetHashCode() * 7 + this.PositionX;
+            return this.PositionRow.GetHashCode() * 7 + this.PositionCol;
         }
     }
 }

@@ -6,33 +6,33 @@
     using System.Text;
     using System.Threading.Tasks;
 
-    public static class Logo
+    public class Logo
     {
-        private static int sizeMatrix = 21;
+        private const int SizeMatrix = 21;
 
-        public static void SignBunny()
+        private int positionCol; //= 5;
+        private int positionRow;// = 30;
+        private string[,] matrix;// = new string[SizeMatrix, SizeMatrix];
+
+        public Logo()
         {
-            int positionX = 5;
-            int positionY = 30;
-            string[,] matrix = new string[sizeMatrix, sizeMatrix];
+            this.positionCol = 5;
+            this.positionRow = 30;
+            this.matrix = new string[SizeMatrix, SizeMatrix];
+        }
+
+        public void ShowBunnyLogo()
+        {             
             Console.ForegroundColor = ConsoleColor.Red;
 
-            for (int row = 0; row < matrix.GetLength(0); row++)
+            for (int row = 0; row < this.matrix.GetLength(0); row++)
             {
-                Console.SetCursorPosition(positionY, positionX++);
+                Console.SetCursorPosition(this.positionRow, this.positionCol);
+                this.positionCol++;
 
-                for (int col = 0; col < matrix.GetLength(1); col++)
+                for (int col = 0; col < this.matrix.GetLength(1); col++)
                 {
-                    if (
-                        (row == 0 || row == sizeMatrix - 1) && (col >= 7 && col <= 13) ||
-                        (col == 0 || col == sizeMatrix - 1) && (row >= 7 && row <= 13) ||
-                        (row == 1 || row == sizeMatrix - 2) && (col == 6 || col == 14) ||
-                        (col == 1 || col == sizeMatrix - 2) && (row == 6 || row == 14) ||
-                        (row == 2) && (col == 5 || col == 15) ||
-                        (col == 2 || col == sizeMatrix - 3) && (row == 5 || row == 15) ||
-                        (row == 3) && (col == 4 || col == 16) ||
-                        (col == 3 || col == sizeMatrix - 4) && (row == 4 || row == 16) ||
-                        (row == 17 && (col == 4 || col == 16)))
+                    if (IsX(row, col))
                     {
                         Console.Write("X");
                     }
@@ -54,8 +54,7 @@
                         Console.Write("^");
                         Console.ForegroundColor = ConsoleColor.Red;
                     }
-                    else if ((row == 2 && ((col == 6 || col == 7) || (col == 13 || col == 14)) ||
-                        row == 17 && ((col >= 3 && col <= 5) || (col >= 15 && col <= 17))))
+                    else if (IsUnderscore(row, col))
                     {
                         Console.ForegroundColor = ConsoleColor.White;
                         Console.Write("_");
@@ -97,45 +96,13 @@
                         Console.Write(".");
                         Console.ForegroundColor = ConsoleColor.Red;
                     }
-                    else if (
-                        (row == 3 && (col == 6 || col == 8)) ||
-                        (row == 4 && (col == 7 || col == 9) ||
-                        (row == 5 && col == 8) ||
-                        (row == 6 && col == 12) ||
-                        (row == 7 && col == 13) ||
-                        (row == 8 && col == 14) ||
-                        (row == 9 && col == 6) ||
-                        (row == 10 && col == 7) ||
-                        (row == 11 && col == 13) ||
-                        (row == 12 && (col == 7 || col == 14)) ||
-                        (row == 13 && (col == 6 || col == 8 || col == 15)) ||
-                        (row == 14 && (col == 7 || col == 16 || col == 9)) ||
-                        (row == 15 && col == 4) ||
-                        (row == 16 && col == 5) ||
-                        (row == 17 && col == 6) ||
-                        (row == 18 && col == 11)))
+                    else if (IsLeftSlash(row, col))
                     {
                         Console.ForegroundColor = ConsoleColor.White;
                         Console.Write("\\");
                         Console.ForegroundColor = ConsoleColor.Red;
                     }
-                    else if (
-                        (row == 3 && (col == 12 || col == 14)) ||
-                        (row == 4 && (col == 11 || col == 13) ||
-                        (row == 5 && col == 12) ||
-                        (row == 6 && col == 8) ||
-                        (row == 7 && col == 7) ||
-                        (row == 8 && col == 6) ||
-                        (row == 9 && col == 14) ||
-                        (row == 10 && col == 13) ||
-                        (row == 11 && col == 7) ||
-                        (row == 12 && (col == 6 || col == 13)) ||
-                        (row == 13 && (col == 5 || col == 12 || col == 14)) ||
-                        (row == 14 && (col == 4 || col == 13 || col == 11)) ||
-                        (row == 15 && col == 16) ||
-                        (row == 16 && col == 15) ||
-                        (row == 17 && col == 14) ||
-                        (row == 18 && col == 9)))
+                    else if (IsRightSlash(row, col))
                     {
                         Console.ForegroundColor = ConsoleColor.White;
                         Console.Write("/");
@@ -151,11 +118,86 @@
             Console.WriteLine();
         }
 
-        public static void Name()
+        private bool IsLeftSlash(int row, int col)
         {
-            int positionX = 5;
-            int positionY = 30;
-            string[,] matrix = new string[sizeMatrix, sizeMatrix];
+            if ((row == 3 && (col == 6 || col == 8)) ||
+                                    (row == 4 && (col == 7 || col == 9) ||
+                                    (row == 5 && col == 8) ||
+                                    (row == 6 && col == 12) ||
+                                    (row == 7 && col == 13) ||
+                                    (row == 8 && col == 14) ||
+                                    (row == 9 && col == 6) ||
+                                    (row == 10 && col == 7) ||
+                                    (row == 11 && col == 13) ||
+                                    (row == 12 && (col == 7 || col == 14)) ||
+                                    (row == 13 && (col == 6 || col == 8 || col == 15)) ||
+                                    (row == 14 && (col == 7 || col == 16 || col == 9)) ||
+                                    (row == 15 && col == 4) ||
+                                    (row == 16 && col == 5) ||
+                                    (row == 17 && col == 6) ||
+                                    (row == 18 && col == 11)))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        private bool IsRightSlash(int row, int col)
+        {
+            if ((row == 3 && (col == 12 || col == 14)) ||
+                                    (row == 4 && (col == 11 || col == 13) ||
+                                    (row == 5 && col == 12) ||
+                                    (row == 6 && col == 8) ||
+                                    (row == 7 && col == 7) ||
+                                    (row == 8 && col == 6) ||
+                                    (row == 9 && col == 14) ||
+                                    (row == 10 && col == 13) ||
+                                    (row == 11 && col == 7) ||
+                                    (row == 12 && (col == 6 || col == 13)) ||
+                                    (row == 13 && (col == 5 || col == 12 || col == 14)) ||
+                                    (row == 14 && (col == 4 || col == 13 || col == 11)) ||
+                                    (row == 15 && col == 16) ||
+                                    (row == 16 && col == 15) ||
+                                    (row == 17 && col == 14) ||
+                                    (row == 18 && col == 9)))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        private bool IsUnderscore(int row, int col)
+        {
+            if ((row == 2 && ((col == 6 || col == 7) || (col == 13 || col == 14)) ||
+                                    row == 17 && ((col >= 3 && col <= 5) || (col >= 15 && col <= 17))))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        private bool IsX(int row, int col)
+        {
+            if ((row == 0 || row == SizeMatrix - 1) && (col >= 7 && col <= 13) ||
+                                    (col == 0 || col == SizeMatrix - 1) && (row >= 7 && row <= 13) ||
+                                    (row == 1 || row == SizeMatrix - 2) && (col == 6 || col == 14) ||
+                                    (col == 1 || col == SizeMatrix - 2) && (row == 6 || row == 14) ||
+                                    (row == 2) && (col == 5 || col == 15) ||
+                                    (col == 2 || col == SizeMatrix - 3) && (row == 5 || row == 15) ||
+                                    (row == 3) && (col == 4 || col == 16) ||
+                                    (col == 3 || col == SizeMatrix - 4) && (row == 4 || row == 16) ||
+                                    (row == 17 && (col == 4 || col == 16)))
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public void Name()
+        {          
             Console.ForegroundColor = ConsoleColor.Red;
 
             for (int row = 0; row < matrix.GetLength(0); row++)
@@ -196,11 +238,8 @@
 
         }
 
-        public static void Bye()
+        public void Bye()
         {
-            int positionX = 5;
-            int positionY = 30;
-            string[,] matrix = new string[sizeMatrix, sizeMatrix];
             Console.ForegroundColor = ConsoleColor.White;
 
             for (int row = 0; row < matrix.GetLength(0); row++)
