@@ -15,20 +15,7 @@ namespace StopTheBunny
 
         private static List<Bunny> bunnies = new List<Bunny>();
         private static List<Tower> towers = new List<Tower>();
-
-        //static void Print(GameField field)
-        //{
-        //    for (int i = 0; i < field.GetRowsInField; i++)
-        //    {
-        //        for (int j = 0; j < field.GetColsInField; j++)
-        //        {
-        //            Console.Write(field[i, j]);
-        //        }
-
-        //        Console.WriteLine();
-        //    }
-        //}
-
+    
         public static void AddTower(PositionOfElement position)
         {
             towers.Add(new Turret(position));
