@@ -9,11 +9,20 @@ namespace StopTheBunny
 {
     class StopTheBunnyMain
     {
+        public const int ConsoleWidthMax = 80; // ******!!!JUST TO TEST THE GAME HEIGHT AND WIDTH!!!
+        public const int ConsoleHeightMax = 30;// ******!!!JUST TO TEST THE GAME HEIGHT AND WIDTH!!!
         static void Main(string[] args)
         {
             
             //GameField field = new GameField(30, 80);
             //Base newBase = new Base(new PositionOfElement(16, 59));
+
+
+
+            ConsoleSetUp(); // *********!!!JUST TO TEST THE GAME HEIGHT AND WIDTH!!!
+
+
+
             Logo.SignBunny();
             Logo.Name();
             Thread.Sleep(2000);
@@ -81,5 +90,16 @@ namespace StopTheBunny
             //Console.Clear();
             //Menu.ShowMenu();
         }
+
+        // ******!!!METHOD JUST TO TEST THE GAME HEIGHT AND WIDTH!!!
+        private static void ConsoleSetUp()
+        {
+            Console.WindowWidth = ConsoleWidthMax;
+            Console.WindowHeight = ConsoleHeightMax;
+            Console.BufferWidth = ConsoleWidthMax;
+            Console.BufferHeight = ConsoleHeightMax;
+        }
+
+
     }
 }

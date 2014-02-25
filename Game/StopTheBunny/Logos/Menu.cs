@@ -141,16 +141,10 @@ namespace StopTheBunny
                 while (line != null)
                 {
                     lineNumber++;
-                    Console.SetCursorPosition(19, 15 + lineNumber);
+                    Console.SetCursorPosition(23, 5 + lineNumber);
                     Console.WriteLine(line);
                     line = reader.ReadLine();
                 }
-
-                //using (reader)
-                //{
-                //    string text = reader.ReadToEnd();
-                //    Console.WriteLine(text);
-                //}
                 ReturnToMainMenu();
             }
             else
@@ -163,7 +157,8 @@ namespace StopTheBunny
 
         public static void ReturnToMainMenu()
         {
-            Console.SetCursorPosition(28, 29);
+            Console.SetCursorPosition(26, 29);
+            Console.ForegroundColor = ConsoleColor.DarkGray;
             Console.WriteLine("Press [backspace] to return");
             while (true)
             {
