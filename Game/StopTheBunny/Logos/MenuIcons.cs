@@ -7,22 +7,30 @@ using System.Threading.Tasks;
 
 namespace StopTheBunny
 {
-    public static class MenuIcons
+    public class MenuIcons
     {
+        private int sizeCol;
+        private int sizeRow;
+        private int positionX;
+        private int positionY;
 
-        private static int sizeCol = 7;
-        private static int sizeRow = 10;
-
-        public static void Start()
+        public MenuIcons()
         {
-            int positionX = 10;
-            int positionY = 20;
+            this.sizeRow = 10;
+            this.sizeCol = 7;
+        }
+
+        public void Start()
+        {
+            this.positionX = 10;
+            this.positionY = 20;
             string[,] matrix = new string[sizeRow, sizeCol];
             //Console.ForegroundColor = ConsoleColor.Red;
 
             for (int row = 0; row < matrix.GetLength(0); row++)
             {
-                Console.SetCursorPosition(positionY, positionX++);
+                Console.SetCursorPosition(positionY, positionX);
+                this.positionX++;
 
                 for (int col = 0; col < matrix.GetLength(1); col++)
                 {
@@ -32,7 +40,6 @@ namespace StopTheBunny
                         (row == 3 && col == 4) ||
                         (row == 4 && col == 2) ||
                         (row == 5 && col == 4) ||
-                        //(row == 6 && col == 5) ||
                         (row == 7 && col == 1) ||
                         (row == 8 && col == 2))
                     {
@@ -44,7 +51,6 @@ namespace StopTheBunny
                         (row == 3 && col == 2) ||
                         (row == 4 && col == 4) ||
                         (row == 5 && col == 2) ||
-                        //(row == 6 && col == 1) ||
                         (row == 7 && col == 5) ||
                         (row == 8 && col == 4))
                     {
@@ -106,16 +112,17 @@ namespace StopTheBunny
             }
         }
 
-        public static void Guide()
+        public void Guide()
         {
-            int positionX = 10;
-            int positionY = 30;
+            this.positionX = 10;
+            this.positionY = 30;
             string[,] matrix = new string[sizeRow, sizeCol];
             //Console.ForegroundColor = ConsoleColor.Red;
 
             for (int row = 0; row < matrix.GetLength(0); row++)
             {
-                Console.SetCursorPosition(positionY, positionX++);
+                Console.SetCursorPosition(positionY, positionX);
+                this.positionX++;
 
                 for (int col = 0; col < matrix.GetLength(1); col++)
                 {
@@ -125,7 +132,6 @@ namespace StopTheBunny
                         (row == 3 && col == 4) ||
                         (row == 4 && col == 2) ||
                         (row == 5 && col == 4) ||
-                        //(row == 6 && col == 5) ||
                         (row == 7 && col == 1) ||
                         (row == 8 && col == 2))
                     {
@@ -137,7 +143,6 @@ namespace StopTheBunny
                         (row == 3 && col == 2) ||
                         (row == 4 && col == 4) ||
                         (row == 5 && col == 2) ||
-                        //(row == 6 && col == 1) ||
                         (row == 7 && col == 5) ||
                         (row == 8 && col == 4))
                     {
@@ -203,16 +208,17 @@ namespace StopTheBunny
             }
         }
 
-        public static void Score()
+        public void Score()
         {
-            int positionX = 10;
-            int positionY = 40;
+            this.positionX = 10;
+            this.positionY = 40;
             string[,] matrix = new string[sizeRow, sizeCol];
             //Console.ForegroundColor = ConsoleColor.Red;
 
             for (int row = 0; row < matrix.GetLength(0); row++)
             {
-                Console.SetCursorPosition(positionY, positionX++);
+                Console.SetCursorPosition(this.positionY, this.positionX);
+                this.positionX++;
 
                 for (int col = 0; col < matrix.GetLength(1); col++)
                 {
@@ -300,16 +306,17 @@ namespace StopTheBunny
             }
         }
 
-        public static void End()
+        public void End()
         {
-            int positionX = 10;
-            int positionY = 50;
+            this.positionX = 10;
+            this.positionY = 50;
             string[,] matrix = new string[sizeRow, sizeCol];
             //Console.ForegroundColor = ConsoleColor.Red;
 
             for (int row = 0; row < matrix.GetLength(0); row++)
             {
-                Console.SetCursorPosition(positionY, positionX++);
+                Console.SetCursorPosition(this.positionY, this.positionX);
+                this.positionX++;
 
                 for (int col = 0; col < matrix.GetLength(1); col++)
                 {
@@ -389,16 +396,17 @@ namespace StopTheBunny
             }
         }
 
-        public static void StartSelected()
+        public void StartSelected()
         {
-            int positionX = 10;
-            int positionY = 20;
+            this.positionX = 10;
+            this.positionY = 20;
             string[,] matrix = new string[sizeRow, sizeCol];
             //Console.ForegroundColor = ConsoleColor.Red;
 
             for (int row = 0; row < matrix.GetLength(0); row++)
             {
-                Console.SetCursorPosition(positionY, positionX++);
+                Console.SetCursorPosition(this.positionY, this.positionX);
+                this.positionX++;
 
                 for (int col = 0; col < matrix.GetLength(1); col++)
                 {
@@ -486,16 +494,17 @@ namespace StopTheBunny
             }
         }
 
-        public static void GuideSelected()
+        public void GuideSelected()
         {
-            int positionX = 10;
-            int positionY = 30;
+            this.positionX = 10;
+            this.positionY = 30;
             string[,] matrix = new string[sizeRow, sizeCol];
             //Console.ForegroundColor = ConsoleColor.Red;
 
             for (int row = 0; row < matrix.GetLength(0); row++)
             {
-                Console.SetCursorPosition(positionY, positionX++);
+                Console.SetCursorPosition(this.positionY, this.positionX);
+                this.positionX++;
 
                 for (int col = 0; col < matrix.GetLength(1); col++)
                 {
@@ -593,16 +602,17 @@ namespace StopTheBunny
             }
         }
 
-        public static void ScoreSelected()
+        public void ScoreSelected()
         {
-            int positionX = 10;
-            int positionY = 40;
+            this.positionX = 10;
+            this.positionY = 40;
             string[,] matrix = new string[sizeRow, sizeCol];
             //Console.ForegroundColor = ConsoleColor.Red;
 
             for (int row = 0; row < matrix.GetLength(0); row++)
             {
-                Console.SetCursorPosition(positionY, positionX++);
+                Console.SetCursorPosition(this.positionY, this.positionX);
+                this.positionX++;
 
                 for (int col = 0; col < matrix.GetLength(1); col++)
                 {
@@ -700,16 +710,17 @@ namespace StopTheBunny
             }
         }
 
-        public static void EndSelected()
+        public void EndSelected()
         {
-            int positionX = 10;
-            int positionY = 50;
+            this.positionX = 10;
+            this.positionY = 50;
             string[,] matrix = new string[sizeRow, sizeCol];
             //Console.ForegroundColor = ConsoleColor.Red;
 
             for (int row = 0; row < matrix.GetLength(0); row++)
             {
-                Console.SetCursorPosition(positionY, positionX++);
+                Console.SetCursorPosition(this.positionY, this.positionX);
+                this.positionX++;
 
                 for (int col = 0; col < matrix.GetLength(1); col++)
                 {

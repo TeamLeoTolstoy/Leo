@@ -10,6 +10,7 @@ namespace StopTheBunny
     public static class Menu
     {
         private static Logo logo = new Logo();
+        private static MenuIcons menuIcon = new MenuIcons();
 
         public static void ShowMenu()
         {
@@ -71,28 +72,28 @@ namespace StopTheBunny
             switch (choose)
             {
                 case 0:
-                    MenuIcons.StartSelected();
-                    MenuIcons.Guide();
-                    MenuIcons.Score();
-                    MenuIcons.End();
+                    menuIcon.StartSelected();
+                    menuIcon.Guide();
+                    menuIcon.Score();
+                    menuIcon.End();
                     break;
                 case 1:
-                    MenuIcons.Start();
-                    MenuIcons.GuideSelected();
-                    MenuIcons.Score();
-                    MenuIcons.End();
+                    menuIcon.Start();
+                    menuIcon.GuideSelected();
+                    menuIcon.Score();
+                    menuIcon.End();
                     break;
                 case 2:
-                    MenuIcons.Start();
-                    MenuIcons.Guide();
-                    MenuIcons.ScoreSelected();
-                    MenuIcons.End();
+                    menuIcon.Start();
+                    menuIcon.Guide();
+                    menuIcon.ScoreSelected();
+                    menuIcon.End();
                     break;
                 case 3:
-                    MenuIcons.Start();
-                    MenuIcons.Guide();
-                    MenuIcons.Score();
-                    MenuIcons.EndSelected();
+                    menuIcon.Start();
+                    menuIcon.Guide();
+                    menuIcon.Score();
+                    menuIcon.EndSelected();
                     break;
             }
         }
