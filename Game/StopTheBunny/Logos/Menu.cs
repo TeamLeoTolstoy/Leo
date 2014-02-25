@@ -7,15 +7,30 @@ using System.Threading.Tasks;
 
 namespace StopTheBunny
 {
-    public static class Menu
+    public class Menu
     {
-        private static Logo logo = new Logo();
-        private static MenuIcons menuIcon = new MenuIcons();
+        private Logo logo;
+        private MenuIcons menuIcon;
+        private GameEngine gameEngine;
 
-        public static void ShowMenu()
+        public Menu()
+        {
+            this.logo = new Logo();
+            this.menuIcon = new MenuIcons();
+            this.gameEngine = new GameEngine();
+        }
+
+        public Menu(Logo logo, MenuIcons menuIcon, GameEngine gameEngine)
+        {
+            this.logo = logo;
+            this.menuIcon = menuIcon;
+            this.gameEngine = gameEngine;
+        }
+
+        public void ShowMenu()
         {
             int choise = 0;
-            Menu.PrintMenu(choise);
+            PrintMenu(choise);
 
             ConsoleKeyInfo inputKey;
 
@@ -40,24 +55,24 @@ namespace StopTheBunny
                         MakeChoose(choise);
                     }
                     Console.Clear();
-                    Menu.PrintMenu(choise);
+                    PrintMenu(choise);
                 }
             }
         }
 
-        private static void MakeChoose(int choise)
+        private void MakeChoose(int choise)
         {
             Console.Clear();
             switch (choise)
             {
                 case 0:
-                    GameEngine.StartGame();
+                    this.gameEngine.StartGame();
                     break;
                 case 1:
-                    Menu.ReadGuide();
+                    ReadGuide();
                     break;
                 case 2:
-                    Menu.ReadScores();
+                    ReadScores();
                     break;
                 case 3:
                     logo.Bye();
@@ -67,38 +82,38 @@ namespace StopTheBunny
             }
         }
 
-        public static void PrintMenu(int choose)
+        public void PrintMenu(int choose)
         {
             switch (choose)
             {
                 case 0:
-                    menuIcon.StartSelected();
-                    menuIcon.Guide();
-                    menuIcon.Score();
-                    menuIcon.End();
+                    this.menuIcon.StartSelected();
+                    this.menuIcon.Guide();
+                    this.menuIcon.Score();
+                    this.menuIcon.End();
                     break;
                 case 1:
-                    menuIcon.Start();
-                    menuIcon.GuideSelected();
-                    menuIcon.Score();
-                    menuIcon.End();
+                    this.menuIcon.Start();
+                    this.menuIcon.GuideSelected();
+                    this.menuIcon.Score();
+                    this.menuIcon.End();
                     break;
                 case 2:
-                    menuIcon.Start();
-                    menuIcon.Guide();
-                    menuIcon.ScoreSelected();
-                    menuIcon.End();
+                    this.menuIcon.Start();
+                    this.menuIcon.Guide();
+                    this.menuIcon.ScoreSelected();
+                    this.menuIcon.End();
                     break;
                 case 3:
-                    menuIcon.Start();
-                    menuIcon.Guide();
-                    menuIcon.Score();
-                    menuIcon.EndSelected();
+                    this.menuIcon.Start();
+                    this.menuIcon.Guide();
+                    this.menuIcon.Score();
+                    this.menuIcon.EndSelected();
                     break;
             }
         }
 
-        public static void ReadScores()
+        public void ReadScores()
         {
             int positionX = 10;
             int positionY = 20;
@@ -129,7 +144,7 @@ namespace StopTheBunny
             ReturnToMainMenu();
         }
 
-        public static void ReadGuide()
+        public void ReadGuide()
         {
             Console.SetCursorPosition(0, 0);
 
@@ -137,7 +152,6 @@ namespace StopTheBunny
             {
                 Console.Clear();
                 StreamReader reader = new StreamReader(@"helpers.txt");
-
 
                 int lineNumber = 0;
                 string line = reader.ReadLine();
@@ -158,7 +172,7 @@ namespace StopTheBunny
             }
         }
 
-        public static void ReturnToMainMenu()
+        public void ReturnToMainMenu()
         {
             Console.SetCursorPosition(26, 29);
             Console.WriteLine("Press [backspace] to return");

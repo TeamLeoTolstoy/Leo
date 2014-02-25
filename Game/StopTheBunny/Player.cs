@@ -44,7 +44,7 @@ namespace StopTheBunny
 
         public void Build()
         {
-            GameEngine.AddTower(new PositionOfElement(this.PositionOfElement.PositionRow + 1, this.PositionOfElement.PositionCol));
+            //GameEngine.AddTower(new PositionOfElement(this.PositionOfElement.PositionRow + 1, this.PositionOfElement.PositionCol));
         }
 
         public void Move()

@@ -9,14 +9,20 @@ using System.Threading.Tasks;
 
 namespace StopTheBunny
 {
-    class GameEngine
+   public class GameEngine
     {
         static int gameTime = 0;
 
-        private static List<Bunny> bunnies = new List<Bunny>();
-        private static List<Tower> towers = new List<Tower>();
+        private List<Bunny> bunnies;
+        private List<Tower> towers;
+
+        public GameEngine()
+        {
+            this.bunnies = new List<Bunny>();
+            this.towers = new List<Tower>();
+        }
     
-        public static void AddTower(PositionOfElement position)
+        public void AddTower(PositionOfElement position)
         {
             towers.Add(new Turret(position));
             towers[towers.Count - 1].Draw();
@@ -90,7 +96,7 @@ namespace StopTheBunny
             bunnies.RemoveAll(b => b.IsAlive == false);
         }
 
-        public static void StartGame()
+        public void StartGame()
         { 
 
             Base newBase = new Base(new PositionOfElement(7, 61));
@@ -116,8 +122,8 @@ namespace StopTheBunny
                 }
                 catch (IndexOutOfRangeException)
                 {
-                    bunnies.Clear();
-                    towers.Clear();
+                    this.bunnies.Clear();
+                    this.towers.Clear();
                     gameTime = 0;
                     Console.Clear();
                     Console.SetCursorPosition(0, 0);
@@ -125,7 +131,7 @@ namespace StopTheBunny
                     Thread.Sleep(1000);
                     break;
                 }
-                CheckForAttackTarget(towers, bunnies);
+                CheckForAttackTarget(this.towers, this.bunnies);
                 RemoveDeadBunnies(bunnies);
                 
                 Thread.Sleep(100);
