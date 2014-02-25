@@ -158,7 +158,6 @@ namespace StopTheBunny
         public static void ReturnToMainMenu()
         {
             Console.SetCursorPosition(26, 29);
-            Console.ForegroundColor = ConsoleColor.DarkGray;
             Console.WriteLine("Press [backspace] to return");
             while (true)
             {
