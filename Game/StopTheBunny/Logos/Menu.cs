@@ -9,6 +9,8 @@ namespace StopTheBunny
 {
     public static class Menu
     {
+        private static Logo logo = new Logo();
+
         public static void ShowMenu()
         {
             int choise = 0;
@@ -57,7 +59,7 @@ namespace StopTheBunny
                     Menu.ReadScores();
                     break;
                 case 3:
-                    Logo.Bye();
+                    logo.Bye();
 
                     Environment.Exit(1);
                     break;

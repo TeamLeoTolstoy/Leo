@@ -22,7 +22,9 @@
         }
 
         public void ShowBunnyLogo()
-        {             
+        {
+            ResetDefaultPosition();
+
             Console.ForegroundColor = ConsoleColor.Red;
 
             for (int row = 0; row < this.matrix.GetLength(0); row++)
@@ -196,13 +198,22 @@
             return false;
         }
 
+        private void ResetDefaultPosition()
+        {
+            this.positionRow = 30;
+            this.positionCol = 5;
+        }
+
         public void Name()
-        {          
+        {
+            ResetDefaultPosition();
             Console.ForegroundColor = ConsoleColor.Red;
 
             for (int row = 0; row < matrix.GetLength(0); row++)
             {
-                Console.SetCursorPosition(positionY++, positionX++);
+                Console.SetCursorPosition(this.positionRow, this.positionCol);
+                this.positionRow++;
+                this.positionCol++;
 
                 for (int col = 0; col < matrix.GetLength(1); col++)
                 {
@@ -244,7 +255,8 @@
 
             for (int row = 0; row < matrix.GetLength(0); row++)
             {
-                Console.SetCursorPosition(positionY, positionX++);
+                Console.SetCursorPosition(this.positionRow, this.positionCol);
+                this.positionCol++;
 
                 for (int col = 0; col < matrix.GetLength(1); col++)
                 {
@@ -302,9 +314,7 @@
                         (row == 12 && (col == 7 || col == 14)) ||
                         (row == 13 && col == 8) ||
                         (row == 14 && col == 16) ||
-                        (row == 15 && col == 4) ||
-                        //(row == 16 && col == 5) ||
-                        //(row == 17 && col == 6) ||
+                        (row == 15 && col == 4) ||                        
                         (row == 18 && col == 11)))
                     {
                         Console.Write("\\");
