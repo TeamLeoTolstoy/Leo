@@ -17,12 +17,13 @@ namespace StopTheBunny
             ConsoleSetUp(); // *********!!!JUST TO TEST THE GAME HEIGHT AND WIDTH!!!
 
             //Logo.SignBunny();
-            Logo logo = new Logo();
-            logo.ShowBunnyLogo();
+            StartLogo logo = new StartLogo();
+            logo.PrintStartBunnyLogo();
             logo.Name();
             Thread.Sleep(2000);
 
             Console.Clear();
+
             Menu menu = new Menu();
             menu.ShowMenu();
 

@@ -24,7 +24,7 @@ namespace StopTheBunny
         {
             this.positionX = 10;
             this.positionY = 20;
-            string[,] matrix = new string[sizeRow, sizeCol];
+            string[,] matrix = new string[10, 7];
             //Console.ForegroundColor = ConsoleColor.Red;
 
             for (int row = 0; row < matrix.GetLength(0); row++)
@@ -116,7 +116,7 @@ namespace StopTheBunny
         {
             this.positionX = 10;
             this.positionY = 30;
-            string[,] matrix = new string[sizeRow, sizeCol];
+            string[,] matrix = new string[10, 7];
             //Console.ForegroundColor = ConsoleColor.Red;
 
             for (int row = 0; row < matrix.GetLength(0); row++)
@@ -212,7 +212,7 @@ namespace StopTheBunny
         {
             this.positionX = 10;
             this.positionY = 40;
-            string[,] matrix = new string[sizeRow, sizeCol];
+            string[,] matrix = new string[10, 7];
             //Console.ForegroundColor = ConsoleColor.Red;
 
             for (int row = 0; row < matrix.GetLength(0); row++)
@@ -310,7 +310,7 @@ namespace StopTheBunny
         {
             this.positionX = 10;
             this.positionY = 50;
-            string[,] matrix = new string[sizeRow, sizeCol];
+            string[,] matrix = new string[10, 7];
             //Console.ForegroundColor = ConsoleColor.Red;
 
             for (int row = 0; row < matrix.GetLength(0); row++)
@@ -400,7 +400,7 @@ namespace StopTheBunny
         {
             this.positionX = 10;
             this.positionY = 20;
-            string[,] matrix = new string[sizeRow, sizeCol];
+            string[,] matrix = new string[10, 7];
             //Console.ForegroundColor = ConsoleColor.Red;
 
             for (int row = 0; row < matrix.GetLength(0); row++)
@@ -498,7 +498,7 @@ namespace StopTheBunny
         {
             this.positionX = 10;
             this.positionY = 30;
-            string[,] matrix = new string[sizeRow, sizeCol];
+            string[,] matrix = new string[10, 7];
             //Console.ForegroundColor = ConsoleColor.Red;
 
             for (int row = 0; row < matrix.GetLength(0); row++)
@@ -606,7 +606,7 @@ namespace StopTheBunny
         {
             this.positionX = 10;
             this.positionY = 40;
-            string[,] matrix = new string[sizeRow, sizeCol];
+            string[,] matrix = new string[10, 7];
             //Console.ForegroundColor = ConsoleColor.Red;
 
             for (int row = 0; row < matrix.GetLength(0); row++)
@@ -714,7 +714,7 @@ namespace StopTheBunny
         {
             this.positionX = 10;
             this.positionY = 50;
-            string[,] matrix = new string[sizeRow, sizeCol];
+            string[,] matrix = new string[10, 7];
             //Console.ForegroundColor = ConsoleColor.Red;
 
             for (int row = 0; row < matrix.GetLength(0); row++)

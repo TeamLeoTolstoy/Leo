@@ -55,9 +55,11 @@
     <Compile Include="IDrawable.cs" />
     <Compile Include="IMovable.cs" />
     <Compile Include="IUserInterface.cs" />
+    <Compile Include="Logos\GoodByeLogo.cs" />
     <Compile Include="Logos\Logo.cs" />
     <Compile Include="Logos\Menu.cs" />
     <Compile Include="Logos\MenuIcons.cs" />
+    <Compile Include="Logos\StartLogo.cs" />
     <Compile Include="MatrixCoords.cs" />
     <Compile Include="Path.cs" />
     <Compile Include="Player.cs" />
