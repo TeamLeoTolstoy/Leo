@@ -60,7 +60,6 @@
     <Compile Include="Logos\GuideIcon.cs" />
     <Compile Include="Logos\Logo.cs" />
     <Compile Include="Logos\Menu.cs" />
-    <Compile Include="Logos\MenuIcons.cs" />
     <Compile Include="Logos\ScoreIcon.cs" />
     <Compile Include="Logos\StartIcon.cs" />
     <Compile Include="Logos\LogoOfGame.cs" />
