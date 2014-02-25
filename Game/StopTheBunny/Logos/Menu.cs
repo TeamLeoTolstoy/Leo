@@ -123,9 +123,6 @@ namespace StopTheBunny
 
                 Console.WriteLine("NO HIGH SCORES ?");
             }
-            Console.SetCursorPosition(32, 29);
-            Console.Write("Press any key...");
-            //Console.ReadLine();
             ReturnToMainMenu();
         }
 
@@ -138,24 +135,28 @@ namespace StopTheBunny
                 Console.Clear();
                 StreamReader reader = new StreamReader(@"helpers.txt");
 
-                using (reader)
+
+                int lineNumber = 0;
+                string line = reader.ReadLine();
+                while (line != null)
                 {
-                    string text = reader.ReadToEnd();
-                    Console.WriteLine(text);
+                    lineNumber++;
+                    Console.SetCursorPosition(19, 15 + lineNumber);
+                    Console.WriteLine(line);
+                    line = reader.ReadLine();
                 }
 
-                //Console.SetCursorPosition(32, 29);
-                //Console.WriteLine("Press any key...");
-                //Console.ReadLine();
+                //using (reader)
+                //{
+                //    string text = reader.ReadToEnd();
+                //    Console.WriteLine(text);
+                //}
                 ReturnToMainMenu();
             }
             else
             {
                 Console.SetCursorPosition(19, 15);
                 Console.WriteLine("File does not exist, ask from developer team");
-                //Console.SetCursorPosition(32, 29);
-                //Console.WriteLine("Press any key...");
-                //Console.ReadLine();
                 ReturnToMainMenu();
             }
         }

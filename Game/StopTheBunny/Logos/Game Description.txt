@@ -9,6 +9,24 @@ back to Bunny Land!
 Weapons:
 
 CarrotTrap - lures the bunny into a cage. Success : 100%
-Sprinkler - sprinkles water. It takes several(2) shots to scare the bunny for good.
+Sprinkler - sprinkles water. It takes several shots to scare the bunny for good.
 .....
 ......
+
+CuteBunny
+(\/) 
+(..)
+(__)
+ **
+
+AngryBunny
+(\/) 
+(><)
+(__)
+ **
+
+ZombieBunny
+(\/) 
+(**)
+(__)
+ **
