@@ -16,7 +16,7 @@
         protected int positionRow;
         protected string[,] matrix;
 
-        public bool IsSelected { get; protected set; }
+        public bool IsSelected { get; set; }
 
         public Logo()
         {
@@ -37,7 +37,10 @@
             this.positionCol = DefaultCol;
         }
 
-        public abstract void Print();
+        public virtual void Print()
+        {
+
+        }
         public virtual void PrintSelected()
         {
 

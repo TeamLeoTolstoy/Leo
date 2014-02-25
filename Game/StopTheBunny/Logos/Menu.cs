@@ -9,8 +9,7 @@ namespace StopTheBunny
 {
     public class Menu
     {
-        private List<Logo> logos;
-        //private MenuIcons menuIcon;
+        private List<Logo> logos;       
         private GameEngine gameEngine;
 
         public Menu()
@@ -19,8 +18,7 @@ namespace StopTheBunny
             this.logos.Add(new StartIcon());
             this.logos.Add(new GuideIcon());
             this.logos.Add(new ScoreIcon());
-            this.logos.Add(new EndIcon());
-            //this.menuIcon = new MenuIcons();
+            this.logos.Add(new EndIcon());           
             this.gameEngine = new GameEngine();
         }
        
@@ -72,7 +70,7 @@ namespace StopTheBunny
                     ReadScores();
                     break;
                 case 3:
-                    logos.Bye();
+                    //logos.Bye();
 
                     Environment.Exit(1);
                     break;
@@ -96,6 +94,20 @@ namespace StopTheBunny
                     logos[3].IsSelected = true;
                     break;
             }
+
+            foreach (var item in logos)
+            {
+                if (item.IsSelected)
+                {
+                    item.PrintSelected();
+                    item.IsSelected = false;
+                }
+                else
+                {
+                    item.Print();
+                }
+            }
+
         }
 
         public void ReadScores()
