@@ -17,8 +17,8 @@ namespace StopTheBunny
             ConsoleSetUp(); // *********!!!JUST TO TEST THE GAME HEIGHT AND WIDTH!!!
 
             //Logo.SignBunny();
-            StartLogo logo = new StartLogo();
-            logo.PrintStartBunnyLogo();
+            LogoOfGame logo = new LogoOfGame();
+            logo.Print();
             logo.Name();
             Thread.Sleep(2000);
 

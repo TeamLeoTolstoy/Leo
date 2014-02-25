@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace StopTheBunny
 {
-    public class StartLogo : Logo
+    public class LogoOfGame : Logo
     {
-        public StartLogo()
+        public LogoOfGame()
             : base()
         {
 
         }
 
-        public void PrintStartBunnyLogo()
+        public override void Print()
         {
             ResetDefaultPosition();
 

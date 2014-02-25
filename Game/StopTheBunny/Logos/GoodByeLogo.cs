@@ -13,7 +13,7 @@ namespace StopTheBunny
             
         }
 
-        public void PrintBye()
+        public override void Print()
         {
             Console.ForegroundColor = ConsoleColor.White;
 

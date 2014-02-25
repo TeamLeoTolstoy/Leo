@@ -9,24 +9,21 @@ namespace StopTheBunny
 {
     public class Menu
     {
-        private Logo logo;
-        private MenuIcons menuIcon;
+        private List<Logo> logos;
+        //private MenuIcons menuIcon;
         private GameEngine gameEngine;
 
         public Menu()
         {
-            this.logo = new Logo();
-            this.menuIcon = new MenuIcons();
+            this.logos = new List<Logo>();
+            this.logos.Add(new StartIcon());
+            this.logos.Add(new GuideIcon());
+            this.logos.Add(new ScoreIcon());
+            this.logos.Add(new EndIcon());
+            //this.menuIcon = new MenuIcons();
             this.gameEngine = new GameEngine();
         }
-
-        public Menu(Logo logo, MenuIcons menuIcon, GameEngine gameEngine)
-        {
-            this.logo = logo;
-            this.menuIcon = menuIcon;
-            this.gameEngine = gameEngine;
-        }
-
+       
         public void ShowMenu()
         {
             int choise = 0;
@@ -75,7 +72,7 @@ namespace StopTheBunny
                     ReadScores();
                     break;
                 case 3:
-                    logo.Bye();
+                    logos.Bye();
 
                     Environment.Exit(1);
                     break;
@@ -87,28 +84,16 @@ namespace StopTheBunny
             switch (choose)
             {
                 case 0:
-                    this.menuIcon.StartSelected();
-                    this.menuIcon.Guide();
-                    this.menuIcon.Score();
-                    this.menuIcon.End();
+                    logos[0].IsSelected = true;
                     break;
                 case 1:
-                    this.menuIcon.Start();
-                    this.menuIcon.GuideSelected();
-                    this.menuIcon.Score();
-                    this.menuIcon.End();
+                    logos[1].IsSelected = true;
                     break;
                 case 2:
-                    this.menuIcon.Start();
-                    this.menuIcon.Guide();
-                    this.menuIcon.ScoreSelected();
-                    this.menuIcon.End();
+                    logos[2].IsSelected = true;
                     break;
                 case 3:
-                    this.menuIcon.Start();
-                    this.menuIcon.Guide();
-                    this.menuIcon.Score();
-                    this.menuIcon.EndSelected();
+                    logos[3].IsSelected = true;
                     break;
             }
         }

@@ -16,6 +16,8 @@
         protected int positionRow;
         protected string[,] matrix;
 
+        public bool IsSelected { get; protected set; }
+
         public Logo()
         {
             this.positionCol = DefaultCol;
@@ -23,10 +25,22 @@
             this.matrix = new string[SizeOfMatrix, SizeOfMatrix];
         }
 
+        public Logo(int matrixRows, int matrixCols)
+            : this()
+        {
+            this.matrix = new string[matrixRows, matrixCols];
+        }
+
         protected void ResetDefaultPosition()
         {
             this.positionRow = DefaultRow;
             this.positionCol = DefaultCol;
-        }       
+        }
+
+        public abstract void Print();
+        public virtual void PrintSelected()
+        {
+
+        }
     }
 }
