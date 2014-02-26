@@ -1,23 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace StopTheBunny
+﻿namespace StopTheBunny
 {
-    public class Player : GameObject, IMovable, IDrawable
-    {
-        public bool IsBuilding { get; set; }
-        public Score scoreOfPlayer { get; set; }
+    using System;
 
+    public class Player : GameObject, IDrawable
+    {
         public Player(PositionOfElement positionOfPlayer)
         {
             this.ElementImage = new char[1, 1] { { 'O' } };
             this.PositionOfElement = positionOfPlayer;
             this.ForegroundColor = ConsoleColor.Red;
             this.BackgroundColor = ConsoleColor.Black;
-            this.scoreOfPlayer = new Score();
+            this.ScoreOfPlayer = new Score();
         }
+
+        public bool IsBuilding { get; set; }
+
+        public Score ScoreOfPlayer { get; set; }
 
         public void MoveRight()
         {
@@ -37,11 +35,6 @@ namespace StopTheBunny
         public void MoveUp()
         {
             this.PositionOfElement.PositionRow--;
-        }       
-    
-public void Move()
-{
- 	throw new NotImplementedException();
-}
-}
+        }        
+    }
 }
