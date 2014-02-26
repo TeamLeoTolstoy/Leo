@@ -11,15 +11,20 @@ namespace StopTheBunny
 {
    public class GameEngine
     {
-        static int gameTime = 0;
-
+        private int gameTime = 0;
         private List<Bunny> bunnies;
         private List<Tower> towers;
+        private LogoOfGame logoOfTheGame;
+        private Menu menu;
+        private GameField gameField;
 
         public GameEngine()
         {
             this.bunnies = new List<Bunny>();
             this.towers = new List<Tower>();
+            this.logoOfTheGame = new LogoOfGame();
+            this.menu = new Menu();
+            this.gameField = new GameField(StopTheBunnyMain.ConsoleHeightMax, StopTheBunnyMain.ConsoleWidthMax);
         }
     
         public void AddTower(PositionOfElement position)
@@ -97,10 +102,15 @@ namespace StopTheBunny
         }
 
         public void StartGame()
-        { 
+        {           
+            this.logoOfTheGame.Print();
+            this.logoOfTheGame.Name();
+            Thread.Sleep(2000);
+
+            Console.Clear();
+            menu.ShowMenu();
 
             Base newBase = new Base(new PositionOfElement(7, 61));
-            //GameField field = new GameField(15, 20);
             Player player = new Player(new PositionOfElement(0, 0));
             Path.Draw();
             newBase.Draw();
@@ -131,6 +141,7 @@ namespace StopTheBunny
                     Thread.Sleep(1000);
                     break;
                 }
+
                 CheckForAttackTarget(this.towers, this.bunnies);
                 RemoveDeadBunnies(bunnies);
                 

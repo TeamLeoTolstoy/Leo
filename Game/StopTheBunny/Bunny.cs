@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StopTheBunny
 {
-    public abstract class Bunny : GameObject, IMovable, IDrawable
+    public class Bunny : GameObject, IMovable, IDrawable
     {
         protected int currentHealth;
 
@@ -70,20 +70,6 @@ namespace StopTheBunny
                     Console.Write(this.ElementImage[row, col]);
                 }
             }
-        }
-
-        //public void Draw()
-        //{
-        //    Console.ForegroundColor = this.Color;
-        //    Console.BackgroundColor = ConsoleColor.Green;
-        //    for (int row = 0; row < this.SizeOfElement.GetLength(0); row++)
-        //    {
-        //        for (int col = 0; col < this.SizeOfElement.GetLength(1); col++)
-        //        {
-        //            Console.SetCursorPosition(this.PositionOfElement.PositionCol + col, this.PositionOfElement.PositionRow + row);
-        //            Console.Write(this.Sign);
-        //        }
-        //    }            
-        //}
+        }      
     }
 }

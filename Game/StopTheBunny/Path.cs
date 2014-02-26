@@ -8,7 +8,7 @@ namespace StopTheBunny
 {
     public static class Path
     {
-        private static readonly List<PositionOfElement> pathPoints = new List<PositionOfElement>
+        private static readonly List<PositionOfElement> pathOfPoints = new List<PositionOfElement>
         {
             new PositionOfElement(5, 0),
             new PositionOfElement(5, 1),
@@ -23,14 +23,6 @@ namespace StopTheBunny
             new PositionOfElement(5, 10),
             new PositionOfElement(5, 11),
             new PositionOfElement(5, 12),
-            //new PositionOfElement(5, 13),
-            //new PositionOfElement(5, 14),
-            //new PositionOfElement(5, 15),
-            //new PositionOfElement(5, 16),
-            //new PositionOfElement(5, 17),
-            //new PositionOfElement(5, 18),
-            //new PositionOfElement(5, 19),
-            //new PositionOfElement(5, 20),
             new PositionOfElement(6, 12),
             new PositionOfElement(7, 12),
             new PositionOfElement(8, 12),
@@ -135,41 +127,13 @@ namespace StopTheBunny
             new PositionOfElement(12, 61),
             new PositionOfElement(11, 61),
             new PositionOfElement(10, 61),
-            //new PositionOfElement(10, 46),
-            //new PositionOfElement(10, 47),
-            //new PositionOfElement(10, 48),
-            //new PositionOfElement(10, 49),
-            //new PositionOfElement(10, 50),
-            //new PositionOfElement(10, 51),
-            //new PositionOfElement(10, 52),
-            //new PositionOfElement(10, 53),
-            //new PositionOfElement(10, 54),
-            //new PositionOfElement(10, 55),
-            //new PositionOfElement(10, 56),
-            //new PositionOfElement(10, 57),
-            //new PositionOfElement(10, 58),
-            //new PositionOfElement(10, 59),
-            //new PositionOfElement(10, 60),
-            //new PositionOfElement(11, 60),
-            //new PositionOfElement(12, 60),
-            //new PositionOfElement(13, 60),
-            //new PositionOfElement(14, 60),
-            //new PositionOfElement(15, 60),
         };
 
         public static void Draw()
         {
             Console.BackgroundColor = ConsoleColor.Green;
-            foreach (var point in pathPoints)
-            {
-                //if (point.PositionRow == 5 || point.PositionRow == 10 || point.PositionRow == 20)
-                //{
-                //    for (int i = 0; i < 4; i++)
-                //    {
-                //        Console.SetCursorPosition(point.PositionCol, point.PositionRow + i);
-                //        Console.Write(' ');
-                //    }
-                //}
+            foreach (var point in pathOfPoints)
+            {               
                 if (point.PositionCol == 12 || point.PositionCol == 21 || point.PositionCol == 30 || point.PositionCol == 43 || point.PositionCol == 61)
                 {
                     if (point.PositionCol == 30 || point.PositionCol == 61)
@@ -201,15 +165,15 @@ namespace StopTheBunny
 
         public static PositionOfElement GetFirstPosition()
         {
-            return pathPoints[0];
+            return pathOfPoints[0];
         }
 
         public static PositionOfElement GetNextPosition(PositionOfElement currentPosition)
         {
-            int currentIndex = pathPoints.IndexOf(currentPosition);
-            if (currentIndex + 1 < pathPoints.Count)
+            int currentIndex = pathOfPoints.IndexOf(currentPosition);
+            if (currentIndex + 1 < pathOfPoints.Count)
             {
-                return pathPoints[currentIndex + 2];
+                return pathOfPoints[currentIndex + 2];
             }
             else
             {
@@ -217,46 +181,4 @@ namespace StopTheBunny
             }
         }
     }
-    //public class Path:GameObject
-    //{
-    //    private int fieldRows;
-    //    private int fieldCols;
-    //    public List<int> RowCoodrinates { get; set; }
-    //    public List<int> ColCoordinates { get; set; }
-    //    public Path(int fieldRows, int fieldCols)
-    //    {
-    //        this.FieldRows = fieldRows;
-    //        this.FieldCols = fieldCols;
-    //        this.RowCoodrinates = new List<int>();
-    //        this.ColCoordinates = new List<int>();
-    //        this.Sign = '=';          
-    //    }
-    //    public int FieldRows
-    //    {
-    //        get { return this.fieldRows; }
-    //        set
-    //        {
-    //            if (value<0)
-    //            {
-    //                throw new ArgumentException();
-    //            }
-    //            this.fieldRows = value;
-    //        }
-    //    }
-    //    public int FieldCols
-    //    {
-    //        get { return this.fieldCols; }
-    //        set
-    //        {
-    //            if (value < 0)
-    //            {
-    //                throw new ArgumentException();
-    //            }
-    //            this.fieldCols = value;
-    //        }
-    //    }
-    //    public void Initialize()
-    //    {
-    //    }
-    //}
 }
