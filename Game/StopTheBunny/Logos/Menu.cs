@@ -18,7 +18,8 @@ namespace StopTheBunny
             this.logos.Add(new StartIcon());
             this.logos.Add(new GuideIcon());
             this.logos.Add(new ScoreIcon());
-            this.logos.Add(new EndIcon());           
+            this.logos.Add(new EndIcon());
+            this.logos.Add(new GoodByeLogo());
             this.gameEngine = new GameEngine();
         }
        
@@ -70,7 +71,7 @@ namespace StopTheBunny
                     ReadScores();
                     break;
                 case 3:
-                    //logos.Bye();
+                    logos.Last().Print();
 
                     Environment.Exit(1);
                     break;
@@ -95,16 +96,16 @@ namespace StopTheBunny
                     break;
             }
 
-            foreach (var item in logos)
+            for (int index = 0; index < this.logos.Count - 1;index++ )
             {
-                if (item.IsSelected)
+                if (this.logos[index].IsSelected)
                 {
-                    item.PrintSelected();
-                    item.IsSelected = false;
+                    this.logos[index].PrintSelected();
+                    this.logos[index].IsSelected = false;
                 }
                 else
                 {
-                    item.Print();
+                    this.logos[index].Print();
                 }
             }
 
