@@ -7,11 +7,11 @@
       <FileName>AdvancedTurret.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="StopTheBunny.AngryBunny" Collapsed="true">
+  <Class Name="StopTheBunny.FluffyBunny" Collapsed="true">
     <Position X="5.5" Y="6.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>AngryBunny.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>FluffyBunny.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="StopTheBunny.Base" Collapsed="true">
@@ -33,7 +33,7 @@
   <Class Name="StopTheBunny.CuteBunny" Collapsed="true">
     <Position X="10.25" Y="6.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
       <FileName>CuteBunny.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -126,7 +126,7 @@
   <Class Name="StopTheBunny.Path" Collapsed="true">
     <Position X="11" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAACAAAAACAIAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAiAIAAAAAAAAAA=</HashCode>
       <FileName>Path.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -174,11 +174,11 @@
       <FileName>Turret.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="StopTheBunny.ZombieBunny" Collapsed="true">
+  <Class Name="StopTheBunny.AngoraBunny" Collapsed="true">
     <Position X="8" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
-      <FileName>ZombieBunny.cs</FileName>
+      <FileName>AngoraBunny.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="StopTheBunny.IDrawable" Collapsed="true">
@@ -202,12 +202,5 @@
       <FileName>IUserInterface.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Enum Name="StopTheBunny.Color" Collapsed="true">
-    <Position X="11" Y="3.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAACAABAAAAAAgAAAAAAAAAABAAAAAAAAAAAADAAAAA=</HashCode>
-      <FileName>Color.cs</FileName>
-    </TypeIdentifier>
-  </Enum>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

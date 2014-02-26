@@ -130,7 +130,7 @@
                     if (IsInRange(tower, bunny))
                     {
                         if ((bunny.GetType() == typeof(CuteBunny) && tower.GetType() == typeof(Turret)) ||
-                            (bunny.GetType() == typeof(ZombieBunny) || bunny.GetType() == typeof(AngryBunny) &&
+                            (bunny.GetType() == typeof(AngoraBunny) || bunny.GetType() == typeof(FluffyBunny) &&
                              tower.GetType() == typeof(AdvancedTurret)))
                         {
                             bunny.CurrentHealth -= tower.Attack();
@@ -174,11 +174,11 @@
             {
                 if (this.bunnyCounter % 3 == 0)
                 {
-                    this.bunnies.Add(new AngryBunny());
+                    this.bunnies.Add(new FluffyBunny());
                 }
                 else if (this.bunnyCounter % 5 == 0)
                 {
-                    this.bunnies.Add(new ZombieBunny());
+                    this.bunnies.Add(new AngoraBunny());
                 }
                 else
                 {

@@ -42,7 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdvancedTurret.cs" />
-    <Compile Include="AngryBunny.cs" />
+    <Compile Include="FluffyBunny.cs" />
     <Compile Include="Base.cs" />
     <Compile Include="Bunny.cs" />
     <Compile Include="CuteBunny.cs" />
@@ -71,7 +71,7 @@
     <Compile Include="Tower.cs" />
     <Compile Include="Turret.cs" />
     <Compile Include="PositionOfElement.cs" />
-    <Compile Include="ZombieBunny.cs" />
+    <Compile Include="AngoraBunny.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
