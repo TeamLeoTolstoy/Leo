@@ -17,9 +17,9 @@ namespace StopTheBunny
             ConsoleSetUp(); // *********!!!JUST TO TEST THE GAME HEIGHT AND WIDTH!!!
 
             //Logo.SignBunny();
-            LogoOfGame logo = new LogoOfGame();
-            logo.Print();
-            logo.Name();
+            LogoOfGame logoOfTheGame = new LogoOfGame();
+            logoOfTheGame.Print();
+            logoOfTheGame.Name();
             Thread.Sleep(2000);
 
             Console.Clear();
@@ -27,8 +27,8 @@ namespace StopTheBunny
             Menu menu = new Menu();
             menu.ShowMenu();
 
-            //GameEngine gameEngine = new GameEngine();
-            //gameEngine.StartGame();
+            GameEngine gameEngine = new GameEngine();
+            gameEngine.StartGame();
             //Thread movingBunnies = new Thread(() =>
             //{
             //    while (true)

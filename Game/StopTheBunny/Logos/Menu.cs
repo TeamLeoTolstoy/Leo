@@ -10,8 +10,7 @@ namespace StopTheBunny
     public class Menu
     {
         private List<Logo> logos;       
-        private GameEngine gameEngine;
-
+        
         public Menu()
         {
             this.logos = new List<Logo>();
@@ -19,8 +18,7 @@ namespace StopTheBunny
             this.logos.Add(new GuideIcon());
             this.logos.Add(new ScoreIcon());
             this.logos.Add(new EndIcon());
-            this.logos.Add(new GoodByeLogo());
-            this.gameEngine = new GameEngine();
+            this.logos.Add(new GoodByeLogo());          
         }
        
         public void ShowMenu()
@@ -48,7 +46,24 @@ namespace StopTheBunny
                     }
                     else if (inputKey.Key == ConsoleKey.Enter)
                     {
-                        MakeChoose(choise);
+                        string myChoise=MakeChoose(choise);
+                        if (myChoise == "StartGame")
+                        {
+                            break;
+                        }
+                        else if (myChoise=="ReadGuide")
+                        {
+                            ReadGuide();
+                        }
+                        else if (myChoise=="ReadScores")
+                        {
+                            ReadScores();
+                        }
+                        else
+                        {
+                            logos.Last().Print();
+                            Environment.Exit(1);
+                        }
                     }
                     Console.Clear();
                     PrintMenu(choise);
@@ -56,26 +71,28 @@ namespace StopTheBunny
             }
         }
 
-        private void MakeChoose(int choise)
+        private string MakeChoose(int choise)
         {
             Console.Clear();
+            string result = null;
+
             switch (choise)
             {
                 case 0:
-                    this.gameEngine.StartGame();
+                   result="StartGame";
                     break;
                 case 1:
-                    ReadGuide();
+                   result="ReadGuide"; 
                     break;
                 case 2:
-                    ReadScores();
+                  result="ReadScores"; 
                     break;
                 case 3:
-                    logos.Last().Print();
-
-                    Environment.Exit(1);
+                   result="GoodBye";                     
                     break;
             }
+
+            return result;
         }
 
         public void PrintMenu(int choose)
