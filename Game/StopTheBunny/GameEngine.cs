@@ -209,7 +209,7 @@ namespace StopTheBunny
         public void UpgradeTower()
         {
             var currentTower = this.towers.Find(t => t.PositionOfElement.PositionRow == this.player.PositionOfElement.PositionRow + 1 && t.PositionOfElement.PositionCol == this.player.PositionOfElement.PositionCol);
-            if (currentTower != null && this.player.ScoreOfPlayer.ScorePoints>=2)
+            if (currentTower != null && this.player.ScoreOfPlayer.ScorePoints>=NeededPointsToUpgrade)
             {
                 this.towers.Remove(currentTower);
                 this.towers.Add(new AdvancedTurret(new PositionOfElement(this.player.PositionOfElement.PositionRow + 1, this.player.PositionOfElement.PositionCol)));
