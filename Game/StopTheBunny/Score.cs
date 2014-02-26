@@ -8,7 +8,10 @@ namespace StopTheBunny
     public class Score
     {
         private int scorePoints;
+        public Score()
+        {
 
+        }
         public Score(int score)
         {
             this.ScorePoints = score;

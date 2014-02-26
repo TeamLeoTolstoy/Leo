@@ -11,7 +11,7 @@ namespace StopTheBunny
 {
     public class GameEngine
     {
-        public const int PointsFromBunny = 10;
+        public const int PointsFromBunny = 1;
 
         private int gameTime;
         private int bunnyCounter;
