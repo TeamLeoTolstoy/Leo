@@ -37,9 +37,5 @@
         {
             this.ScorePoints += points;
         }
-
-        public void WriteScore()
-        {
-        }
     }
 }
