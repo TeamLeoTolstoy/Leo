@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace StopTheBunny
 {
+    /// <summary>
+    /// Game logo and logo of the team
+    /// </summary>
     public class LogoOfGame : Logo
     {
         public LogoOfGame()
@@ -113,6 +116,7 @@ namespace StopTheBunny
             Console.WriteLine();
         }
 
+        //Extracted methods for easier checking
         private bool IsLeftSlash(int row, int col)
         {
             if ((row == 3 && (col == 6 || col == 8)) ||
@@ -191,6 +195,9 @@ namespace StopTheBunny
             return false;
         }
 
+        /// <summary>
+        /// Print the name of the team
+        /// </summary>
         public void Name()
         {
             ResetDefaultPosition();
