@@ -6,6 +6,9 @@
     using System.Text;
     using System.Threading.Tasks;
 
+    /// <summary>
+    /// Base class for logos
+    /// </summary>
     public class Logo
     {
         protected const int SizeOfMatrix = 21;
@@ -31,6 +34,9 @@
             this.matrix = new string[matrixRows, matrixCols];
         }
 
+        /// <summary>
+        /// Reset default position of positionRow and positionCol
+        /// </summary>
         protected void ResetDefaultPosition()
         {
             this.positionRow = DefaultRow;
@@ -41,6 +47,7 @@
         {
 
         }
+
         public virtual void PrintSelected()
         {
 
