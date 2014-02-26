@@ -37,12 +37,12 @@ namespace StopTheBunny
             this.PositionOfElement.PositionRow--;
         }
 
-        public void Clear()
-        {
-            Console.SetCursorPosition(this.PositionOfElement.PositionCol, this.PositionOfElement.PositionRow);
-            Console.BackgroundColor = ConsoleColor.Black;
-            Console.Write(' ');
-        }
+        //public void Clear()
+        //{
+        //    Console.SetCursorPosition(this.PositionOfElement.PositionCol, this.PositionOfElement.PositionRow);
+        //    Console.BackgroundColor = ConsoleColor.Black;
+        //    Console.Write(' ');
+        //}
 
         //public PositionOfElement Build()
         //{

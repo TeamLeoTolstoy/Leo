@@ -33,23 +33,35 @@ namespace StopTheBunny
 
         public virtual void MovePlayerLeft()
         {
+            this.ClearPlayerPosition();
             this.player.MoveLeft();
         }
 
         public virtual void MovePlayerRight()
         {
+            this.ClearPlayerPosition();
             this.player.MoveRight();
         }
 
         public virtual void MovePlayerUp()
         {
+            this.ClearPlayerPosition();
             this.player.MoveUp();
         }
 
         public virtual void MovePlayerDown()
         {
+            this.ClearPlayerPosition();
             this.player.MoveDown();
         }
+
+        public void ClearPlayerPosition()
+        {
+            Console.SetCursorPosition(this.player.PositionOfElement.PositionCol, this.player.PositionOfElement.PositionRow);
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.Write(' ');
+        }
+
 
         public void AddTower()
         {
