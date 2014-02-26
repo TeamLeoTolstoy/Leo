@@ -18,6 +18,7 @@ namespace StopTheBunny
             this.PositionOfElement = positionOfElement;
             this.ForegroundColor = ConsoleColor.Gray;
             this.BackgroundColor = ConsoleColor.Black;
+
         }
     }
 }
