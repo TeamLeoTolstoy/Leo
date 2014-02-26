@@ -9,7 +9,7 @@ namespace StopTheBunny
     {
         private int scorePoints;
 
-        public Score(int score):this()
+        public Score(int score)
         {
             this.ScorePoints = score;
         }

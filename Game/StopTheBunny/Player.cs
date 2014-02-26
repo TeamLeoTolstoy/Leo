@@ -8,6 +8,7 @@ namespace StopTheBunny
     public class Player : GameObject, IMovable, IDrawable
     {
         public bool IsBuilding { get; set; }
+        public Score scoreOfPlayer { get; set; }
 
         public Player(PositionOfElement positionOfPlayer)
         {
@@ -36,5 +37,10 @@ namespace StopTheBunny
         {
             this.PositionOfElement.PositionRow--;
         }       
-    }
+    
+public void Move()
+{
+ 	throw new NotImplementedException();
+}
+}
 }

@@ -11,6 +11,8 @@ namespace StopTheBunny
 {
     public class GameEngine
     {
+        public const int PointsFromBunny = 10;
+
         private int gameTime;
         private int bunnyCounter;
         private List<Bunny> bunnies;
@@ -131,12 +133,14 @@ namespace StopTheBunny
             }
         }
 
-        private static void RemoveDeadBunnies(List<Bunny> bunnies)
+        private void RemoveDeadBunnies(List<Bunny> bunnies)
         {
             foreach (var bunny in bunnies)
             {
                 if (!bunny.IsAlive)
                 {
+                    this.player.scoreOfPlayer.AddPoints(PointsFromBunny);
+
                     for (int row = bunny.PositionOfElement.PositionRow; row < bunny.PositionOfElement.PositionRow + bunny.ElementImage.GetLength(0); row++)
                     {
                         for (int col = bunny.PositionOfElement.PositionCol; col < bunny.PositionOfElement.PositionCol + bunny.ElementImage.GetLength(1); col++)
@@ -180,6 +184,7 @@ namespace StopTheBunny
                     Console.Clear();
                     Console.SetCursorPosition(0, 0);
                     Console.WriteLine("Game over!");
+                    Console.WriteLine("Your score is:{0}",this.player.scoreOfPlayer.ScorePoints);
                     Thread.Sleep(1000);
                     break;
                 }
