@@ -7,50 +7,35 @@ namespace StopTheBunny
 {
     public class Score
     {
-        /*
-         * 
-        private const uint INITIAL_VALUE = 50; // the player can build only one tower at first.
-        private uint value;
+        private int scorePoints;
 
-        //constructor
-        public Score(PositionOfElement position, string text, ConsoleColor color)
+        public Score(int score):this()
         {
-            this.Position = position;
-            this.Text = text;
-            this.Color = color;
-            this.Value = INITIAL_VALUE;
+            this.ScorePoints = score;
         }
 
-        // Properties
-        public uint Value
+        public int ScorePoints
         {
-            get;
-            set;
-        }
-        public PositionOfElement Position
-        {
-            get;
-            set;
+            get { return this.scorePoints; }
+            set
+            {
+                if (value<0)
+                {
+                    throw new ArgumentException();
+                }
+
+                this.scorePoints = value;
+            }
         }
 
-        public ConsoleColor Color
+        public void AddPoints(int points)
         {
-            get;
-            set;
+            this.ScorePoints += points;
         }
 
-        public string Text
+        public void WriteScore()
         {
-            get;
-            set;
+            
         }
-
-        // Method - to print the score
-        public override string ToString()
-        {
-            return string.Format("{0} -> {1}", this.Text, this.Value);
-        }
-         
-         */
     }
 }

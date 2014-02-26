@@ -165,14 +165,7 @@ namespace StopTheBunny
             while (true)
             {
                 this.gameTime++;
-                //this.player.Move();
                 this.userInterface.ProcessInput();
-                //if (this.player.IsBuilding)
-                //{
-                //    PositionOfElement positionOfTower = player.Build();
-                //    AddTower(positionOfTower);
-                //}
-
                 this.player.Draw();
 
                 try
@@ -196,6 +189,8 @@ namespace StopTheBunny
 
                 Thread.Sleep(100);
             }
+
+
         }
 
         public void UpgradeTower()
