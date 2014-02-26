@@ -142,7 +142,7 @@ namespace StopTheBunny
             {
                 if (!bunny.IsAlive)
                 {
-                    this.player.scoreOfPlayer.AddPoints(PointsFromBunny);
+                    this.player.ScoreOfPlayer.AddPoints(PointsFromBunny);
 
                     for (int row = bunny.PositionOfElement.PositionRow; row < bunny.PositionOfElement.PositionRow + bunny.ElementImage.GetLength(0); row++)
                     {
@@ -187,7 +187,7 @@ namespace StopTheBunny
                     Console.Clear();
                     Console.SetCursorPosition(0, 0);
                     Console.WriteLine("Game over!");
-                    Console.WriteLine("Your score is:{0}",this.player.scoreOfPlayer.ScorePoints);
+                    Console.WriteLine("Your score is:{0}",this.player.ScoreOfPlayer.ScorePoints);
                     Thread.Sleep(1000);
                     break;
                 }
