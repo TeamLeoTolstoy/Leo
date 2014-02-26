@@ -9,24 +9,26 @@ using System.Threading.Tasks;
 
 namespace StopTheBunny
 {
-   public class GameEngine
+    public class GameEngine
     {
         private int gameTime = 0;
         private List<Bunny> bunnies;
         private List<Tower> towers;
         private LogoOfGame logoOfTheGame;
-        private Menu menu;
-        private GameField gameField;
+        private Menu menu;       
+        private Base newBase; 
+        private Player player; 
 
         public GameEngine()
         {
             this.bunnies = new List<Bunny>();
             this.towers = new List<Tower>();
             this.logoOfTheGame = new LogoOfGame();
-            this.menu = new Menu();
-            this.gameField = new GameField(StopTheBunnyMain.ConsoleHeightMax, StopTheBunnyMain.ConsoleWidthMax);
+            this.menu = new Menu();           
+            this.newBase = new Base(new PositionOfElement(7, 61));
+            this.player = new Player(new PositionOfElement(0, 0));
         }
-    
+
         public void AddTower(PositionOfElement position)
         {
             towers.Add(new Turret(position));
@@ -39,10 +41,10 @@ namespace StopTheBunny
             {
                 foreach (var bunny in bunnies)
                 {
-                    bunny.ClearPreviousPosition();                    
-                                    
+                    bunny.ClearPreviousPosition();
+
                     bunny.Move();
-                    bunny.Draw();    
+                    bunny.Draw();
                 }
             }
 
@@ -102,23 +104,19 @@ namespace StopTheBunny
         }
 
         public void StartGame()
-        {           
+        {
             this.logoOfTheGame.Print();
             this.logoOfTheGame.Name();
             Thread.Sleep(2000);
-
             Console.Clear();
             menu.ShowMenu();
-
-            Base newBase = new Base(new PositionOfElement(7, 61));
-            Player player = new Player(new PositionOfElement(0, 0));
             Path.Draw();
-            newBase.Draw();           
+            newBase.Draw();
 
             while (true)
             {
-                gameTime++;            
-                player.Move();              
+                gameTime++;
+                player.Move();
                 player.Draw();
 
                 try
@@ -138,8 +136,8 @@ namespace StopTheBunny
                 }
 
                 CheckForAttackTarget(this.towers, this.bunnies);
-                RemoveDeadBunnies(bunnies);
-                
+                RemoveDeadBunnies(this.bunnies);
+
                 Thread.Sleep(100);
             }
         }

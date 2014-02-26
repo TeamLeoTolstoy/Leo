@@ -42,9 +42,9 @@ namespace StopTheBunny
             Console.Write(' ');
         }
 
-        public void Build()
+        public PositionOfElement Build()
         {
-            //GameEngine.AddTower(new PositionOfElement(this.PositionOfElement.PositionRow + 1, this.PositionOfElement.PositionCol));
+            return new PositionOfElement(this.PositionOfElement.PositionRow + 1, this.PositionOfElement.PositionCol);
         }
 
         public void Move()

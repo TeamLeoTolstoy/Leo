@@ -44,23 +44,6 @@ namespace StopTheBunny
         public virtual int Attack()
         {
             return this.Damage;
-        }
-
-        //public void Draw()
-        //{
-        //    Console.SetCursorPosition(this.PositionOfElement.PositionCol, this.PositionOfElement.PositionRow);
-        //    Console.ForegroundColor = this.Color;
-        //    Console.BackgroundColor = ConsoleColor.White;
-        //    for (int row = this.PositionOfElement.PositionRow; row < this.PositionOfElement.PositionRow + this.SizeOfElement.GetLength(0); row++)
-        //    {
-        //        for (int col = this.PositionOfElement.PositionCol; col < this.PositionOfElement.PositionCol + this.SizeOfElement.GetLength(1); col++)
-        //        {
-        //            Console.SetCursorPosition(col, row);
-        //            Console.ForegroundColor = this.Color;
-        //            Console.Write(this.Sign);
-        //        }
-        //    }
-        //    Console.ResetColor();
-        //}
+        }     
     }
 }
