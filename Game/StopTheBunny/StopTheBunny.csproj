@@ -52,6 +52,7 @@
     <Compile Include="IDrawable.cs" />
     <Compile Include="IMovable.cs" />
     <Compile Include="IUserInterface.cs" />
+    <Compile Include="KeyboardInterface.cs" />
     <Compile Include="Logos\EndIcon.cs" />
     <Compile Include="Logos\GoodByeLogo.cs" />
     <Compile Include="Logos\GuideIcon.cs" />

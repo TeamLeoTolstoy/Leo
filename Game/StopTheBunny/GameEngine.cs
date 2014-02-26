@@ -17,9 +17,10 @@ namespace StopTheBunny
         private LogoOfGame logoOfTheGame;
         private Menu menu;       
         private Base newBase; 
-        private Player player; 
+        private Player player;
+        private IUserInterface userInterface;
 
-        public GameEngine()
+        public GameEngine(IUserInterface keyboard)
         {
             this.bunnies = new List<Bunny>();
             this.towers = new List<Tower>();
@@ -27,6 +28,7 @@ namespace StopTheBunny
             this.menu = new Menu();           
             this.newBase = new Base(new PositionOfElement(7, 61));
             this.player = new Player(new PositionOfElement(0, 0));
+            this.userInterface = keyboard;
         }
 
         public void AddTower(PositionOfElement position)

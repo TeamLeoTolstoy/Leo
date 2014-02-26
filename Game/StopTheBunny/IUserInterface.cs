@@ -9,9 +9,9 @@ namespace StopTheBunny
     public interface IUserInterface
     {
 
-        event EventHandler OnLeftArrow;
+        event EventHandler OnLeftPressed;
 
-        event EventHandler OnRightArrow;
+        event EventHandler OnRightPressed;
 
         event EventHandler OnActionPressed;
 
