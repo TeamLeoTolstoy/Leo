@@ -148,7 +148,7 @@
                 while (line != null)
                 {
                     lineNumber++;
-                    Console.SetCursorPosition(23, 5 + lineNumber);
+                    Console.SetCursorPosition(15, 5 + lineNumber);
                     Console.WriteLine(line);
                     line = reader.ReadLine();
                 }
