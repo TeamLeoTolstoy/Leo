@@ -8,8 +8,18 @@ namespace StopTheBunny
 {
     public abstract class Bunny : GameObject, IMovable, IDrawable
     {
-        protected int initialHealth;
         protected int currentHealth;
+
+        public Bunny(ConsoleColor fColor, char[,] image, int initialHealth)
+        {
+            this.ForegroundColor = fColor;
+            this.CurrentHealth = initialHealth;
+            this.ElementImage = image;
+            this.BackgroundColor = ConsoleColor.Green;
+            this.PositionOfElement = Path.GetFirstPosition();
+            this.IsAlive = true;
+            
+        }
 
         public bool IsAlive { get; protected set; }
 

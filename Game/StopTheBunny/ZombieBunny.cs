@@ -6,16 +6,17 @@ using System.Threading.Tasks;
 
 namespace StopTheBunny
 {
-    public class CuteBunny : Bunny
+    public class ZombieBunny : Bunny
     {
         private static readonly char[,] image = new char[4, 4]
                 {
                     {'(', '\\', '/', ')'},
-                    {'(', '.', '.', ')'},
+                    {'(', '*', '*', ')'},
                     {'(', '_', '_', ')'},
                     {' ', '*', '*', ' '}
                 };
-        public CuteBunny() : base(ConsoleColor.Red, image, 100)
+
+        public ZombieBunny() : base(ConsoleColor.DarkGray, image, 150)
         {
         }
     }
