@@ -122,11 +122,11 @@ namespace StopTheBunny
                 {
                     if (IsInRange(tower, bunny))
                     {
-                        if (bunny.GetType() is CuteBunny)
+                        if (bunny.GetType()==typeof(CuteBunny))
                         {
                             bunny.CurrentHealth -= tower.Attack();
-                            bunny.BackgroundColor = ConsoleColor.DarkYellow;
-                        }                        
+                            bunny.BackgroundColor = ConsoleColor.DarkYellow;  
+                        }                                              
                     }
                     else
                     {
