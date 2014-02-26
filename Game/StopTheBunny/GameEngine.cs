@@ -12,6 +12,7 @@ namespace StopTheBunny
     public class GameEngine
     {
         public const int PointsFromBunny = 1;
+        public const int NeededPointsToUpgrade = 2;
 
         private int gameTime;
         private int bunnyCounter;
@@ -203,14 +204,12 @@ namespace StopTheBunny
 
                 Thread.Sleep(100);
             }
-
-
         }
 
         public void UpgradeTower()
         {
             var currentTower = this.towers.Find(t => t.PositionOfElement.PositionRow == this.player.PositionOfElement.PositionRow + 1 && t.PositionOfElement.PositionCol == this.player.PositionOfElement.PositionCol);
-            if (currentTower != null)
+            if (currentTower != null && this.player.ScoreOfPlayer.ScorePoints>=2)
             {
                 this.towers.Remove(currentTower);
                 this.towers.Add(new AdvancedTurret(new PositionOfElement(this.player.PositionOfElement.PositionRow + 1, this.player.PositionOfElement.PositionCol)));
