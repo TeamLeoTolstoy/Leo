@@ -1,11 +1,5 @@
 ﻿namespace StopTheBunny
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
-
     /// <summary>
     /// Base class for logos
     /// </summary>
@@ -19,8 +13,6 @@
         protected int positionRow;
         protected string[,] matrix;
 
-        public bool IsSelected { get; set; }
-
         public Logo()
         {
             this.positionCol = DefaultCol;
@@ -28,10 +20,19 @@
             this.matrix = new string[SizeOfMatrix, SizeOfMatrix];
         }
 
-        public Logo(int matrixRows, int matrixCols)
-            : this()
+        public Logo(int matrixRows, int matrixCols) : this()
         {
             this.matrix = new string[matrixRows, matrixCols];
+        }
+
+        public bool IsSelected { get; set; }
+
+        public virtual void Print()
+        {
+        }
+
+        public virtual void PrintSelected()
+        {
         }
 
         /// <summary>
@@ -41,16 +42,6 @@
         {
             this.positionRow = DefaultRow;
             this.positionCol = DefaultCol;
-        }
-
-        public virtual void Print()
-        {
-
-        }
-
-        public virtual void PrintSelected()
-        {
-
         }
     }
 }

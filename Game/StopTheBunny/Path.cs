@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace StopTheBunny
+﻿namespace StopTheBunny
 {
+    using System;
+    using System.Collections.Generic;
+
     public static class Path
     {
-        private static readonly List<PositionOfElement> pathOfPoints = new List<PositionOfElement>
+        private static readonly List<PositionOfElement> PathOfPoints = new List<PositionOfElement>
         {
             new PositionOfElement(5, 0),
             new PositionOfElement(5, 1),
@@ -132,7 +129,7 @@ namespace StopTheBunny
         public static void Draw()
         {
             Console.BackgroundColor = ConsoleColor.Green;
-            foreach (var point in pathOfPoints)
+            foreach (var point in PathOfPoints)
             {               
                 if (point.PositionCol == 12 || point.PositionCol == 21 || point.PositionCol == 30 || point.PositionCol == 43 || point.PositionCol == 61)
                 {
@@ -147,6 +144,7 @@ namespace StopTheBunny
                             }
                         }
                     }
+
                     for (int i = 0; i < 4; i++)
                     {
                         Console.SetCursorPosition(point.PositionCol + i, point.PositionRow);
@@ -160,20 +158,21 @@ namespace StopTheBunny
                     Console.Write(' ');
                 }
             }
+
             Console.ResetColor();
         }
 
         public static PositionOfElement GetFirstPosition()
         {
-            return pathOfPoints[0];
+            return PathOfPoints[0];
         }
 
         public static PositionOfElement GetNextPosition(PositionOfElement currentPosition)
         {
-            int currentIndex = pathOfPoints.IndexOf(currentPosition);
-            if (currentIndex + 1 < pathOfPoints.Count)
+            int currentIndex = PathOfPoints.IndexOf(currentPosition);
+            if (currentIndex + 1 < PathOfPoints.Count)
             {
-                return pathOfPoints[currentIndex + 2];
+                return PathOfPoints[currentIndex + 2];
             }
             else
             {

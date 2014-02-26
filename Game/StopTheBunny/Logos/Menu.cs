@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace StopTheBunny
+﻿namespace StopTheBunny
 {
+    using System;
+    using System.Collections.Generic;
+    using System.IO;
+    using System.Linq;
+
     public class Menu
     {
         private List<Logo> logos;       
@@ -24,7 +22,7 @@ namespace StopTheBunny
         public void ShowMenu()
         {
             int choise = 0;
-            PrintMenu(choise);
+            this.PrintMenu(choise);
 
             ConsoleKeyInfo inputKey;
 
@@ -46,53 +44,30 @@ namespace StopTheBunny
                     }
                     else if (inputKey.Key == ConsoleKey.Enter)
                     {
-                        string myChoise=MakeChoose(choise);
+                        string myChoise = this.MakeChoose(choise);
                         if (myChoise == "StartGame")
                         {
                             break;
                         }
-                        else if (myChoise=="ReadGuide")
+                        else if (myChoise == "ReadGuide")
                         {
-                            ReadGuide();
+                            this.ReadGuide();
                         }
-                        else if (myChoise=="ReadScores")
+                        else if (myChoise == "ReadScores")
                         {
-                            ReadScores();
+                            this.ReadScores();
                         }
                         else
                         {
-                            logos.Last().Print();
+                            this.logos.Last().Print();
                             Environment.Exit(1);
                         }
                     }
+
                     Console.Clear();
-                    PrintMenu(choise);
+                    this.PrintMenu(choise);
                 }
             }
-        }
-
-        private string MakeChoose(int choise)
-        {
-            Console.Clear();
-            string result = null;
-
-            switch (choise)
-            {
-                case 0:
-                   result="StartGame";
-                    break;
-                case 1:
-                   result="ReadGuide"; 
-                    break;
-                case 2:
-                  result="ReadScores"; 
-                    break;
-                case 3:
-                   result="GoodBye";                     
-                    break;
-            }
-
-            return result;
         }
 
         public void PrintMenu(int choose)
@@ -100,20 +75,20 @@ namespace StopTheBunny
             switch (choose)
             {
                 case 0:
-                    logos[0].IsSelected = true;
+                    this.logos[0].IsSelected = true;
                     break;
                 case 1:
-                    logos[1].IsSelected = true;
+                    this.logos[1].IsSelected = true;
                     break;
                 case 2:
-                    logos[2].IsSelected = true;
+                    this.logos[2].IsSelected = true;
                     break;
                 case 3:
-                    logos[3].IsSelected = true;
+                    this.logos[3].IsSelected = true;
                     break;
             }
 
-            for (int index = 0; index < this.logos.Count - 1;index++ )
+            for (int index = 0; index < this.logos.Count - 1; index++)
             {
                 if (this.logos[index].IsSelected)
                 {
@@ -125,7 +100,6 @@ namespace StopTheBunny
                     this.logos[index].Print();
                 }
             }
-
         }
 
         public void ReadScores()
@@ -156,7 +130,8 @@ namespace StopTheBunny
 
                 Console.WriteLine("NO HIGH SCORES ?");
             }
-            ReturnToMainMenu();
+
+            this.ReturnToMainMenu();
         }
 
         public void ReadGuide()
@@ -177,13 +152,14 @@ namespace StopTheBunny
                     Console.WriteLine(line);
                     line = reader.ReadLine();
                 }
-                ReturnToMainMenu();
+
+                this.ReturnToMainMenu();
             }
             else
             {
                 Console.SetCursorPosition(19, 15);
                 Console.WriteLine("File does not exist, ask from developer team");
-                ReturnToMainMenu();
+                this.ReturnToMainMenu();
             }
         }
 
@@ -203,6 +179,30 @@ namespace StopTheBunny
                     }
                 }
             }
+        }
+
+        private string MakeChoose(int choise)
+        {
+            Console.Clear();
+            string result = null;
+
+            switch (choise)
+            {
+                case 0:
+                    result = "StartGame";
+                    break;
+                case 1:
+                    result = "ReadGuide";
+                    break;
+                case 2:
+                    result = "ReadScores";
+                    break;
+                case 3:
+                    result = "GoodBye";
+                    break;
+            }
+
+            return result;
         }
     }
 }

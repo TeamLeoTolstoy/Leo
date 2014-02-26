@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace StopTheBunny
+﻿namespace StopTheBunny
 {
+    using System;
+
     public class PositionOfElement
     {
         private int positionRow;
@@ -19,7 +15,11 @@ namespace StopTheBunny
 
         public int PositionRow
         {
-            get { return this.positionRow; }
+            get 
+            { 
+                return this.positionRow; 
+            }
+
             set
             {
                 if (value < 0)
@@ -33,7 +33,11 @@ namespace StopTheBunny
 
         public int PositionCol
         {
-            get { return this.positionCol; }
+            get 
+            { 
+                return this.positionCol; 
+            }
+
             set
             {
                 if (value < 0)

@@ -45,7 +45,6 @@
     <Compile Include="AngryBunny.cs" />
     <Compile Include="Base.cs" />
     <Compile Include="Bunny.cs" />
-    <Compile Include="Color.cs" />
     <Compile Include="CuteBunny.cs" />
     <Compile Include="GameEngine.cs" />
     <Compile Include="GameObject.cs" />
@@ -60,7 +59,9 @@
     <Compile Include="Logos\Menu.cs" />
     <Compile Include="Logos\ScoreIcon.cs" />
     <Compile Include="Logos\StartIcon.cs" />
-    <Compile Include="Logos\LogoOfGame.cs" />
+    <Compile Include="Logos\LogoOfGame.cs">
+      <ExcludeFromStyleCop>False</ExcludeFromStyleCop>
+    </Compile>
     <Compile Include="MatrixCoords.cs" />
     <Compile Include="Path.cs" />
     <Compile Include="Player.cs" />
@@ -75,9 +76,6 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="ClassDiagram.cd" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Logos\Game Description.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

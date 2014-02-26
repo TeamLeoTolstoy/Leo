@@ -1,21 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace StopTheBunny
+﻿namespace StopTheBunny
 {
+    using System;
+
     public class CuteBunny : Bunny
     {
-        private static readonly char[,] image = new char[4, 4]
-                {
-                    {'(', '\\', '/', ')'},
-                    {'(', '.', '.', ')'},
-                    {'(', '_', '_', ')'},
-                    {' ', '*', '*', ' '}
-                };
-        public CuteBunny() : base(ConsoleColor.Red, image, 100)
+        private static readonly char[,] Image = new char[4, 4]
+        {
+            { '(', '\\', '/', ')' },
+            { '(', '.', '.', ')' },
+            { '(', '_', '_', ')' },
+            { ' ', '*', '*', ' ' }
+        };
+
+        public CuteBunny() : base(ConsoleColor.Red, Image, 100)
         {
         }
     }

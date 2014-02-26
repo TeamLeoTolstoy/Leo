@@ -1,25 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace StopTheBunny
+﻿namespace StopTheBunny
 {
+    using System;
+
     public class EndIcon : Logo
     {
-        public EndIcon()
-            : base(10, 7)
+        public EndIcon() : base(10, 7)
         {
-
         }
       
         public override void Print()
         {
             this.positionCol = 10;
-            this.positionRow = 50;          
-            //Console.ForegroundColor = ConsoleColor.Red;
-
+            this.positionRow = 50; 
+         
+            // Console.ForegroundColor = ConsoleColor.Red;
             for (int row = 0; row < matrix.GetLength(0); row++)
             {
                 Console.SetCursorPosition(this.positionRow, this.positionCol);
@@ -40,14 +34,14 @@ namespace StopTheBunny
                         Console.Write("\\");
                     }
                     else if (
-                        (row == 1 && (col == 4 || col == 5)) ||
-                        (row == 2 && col == 4) ||
-                        (row == 3 && col == 2) ||
-                        (row == 4 && col == 4) ||
-                        (row == 5 && col == 2) ||
-                        (row == 6 && col == 1) ||
-                        (row == 7 && col == 5) ||
-                        (row == 8 && col == 4))
+                             (row == 1 && (col == 4 || col == 5)) ||
+                             (row == 2 && col == 4) ||
+                             (row == 3 && col == 2) ||
+                             (row == 4 && col == 4) ||
+                             (row == 5 && col == 2) ||
+                             (row == 6 && col == 1) ||
+                             (row == 7 && col == 5) ||
+                             (row == 8 && col == 4))
                     {
                         Console.Write("/");
                     }
@@ -106,9 +100,9 @@ namespace StopTheBunny
         public override void PrintSelected()
         {
             this.positionCol = 10;
-            this.positionRow = 50;           
-            //Console.ForegroundColor = ConsoleColor.Red;
-
+            this.positionRow = 50;
+           
+            // Console.ForegroundColor = ConsoleColor.Red;
             for (int row = 0; row < matrix.GetLength(0); row++)
             {
                 Console.SetCursorPosition(this.positionRow, this.positionCol);
@@ -129,14 +123,14 @@ namespace StopTheBunny
                         Console.Write("\\");
                     }
                     else if ((row == 1 && col == 1) || (row == 2 && (col == 0 || col == 1)) ||
-                        (row == 1 && col == 4) ||
-                        (row == 2 && col == 4) ||
-                        (row == 3 && col == 2) ||
-                        (row == 4 && col == 4) ||
-                        (row == 5 && col == 2) ||
-                        (row == 6 && col == 1) ||
-                        (row == 7 && col == 5) ||
-                        (row == 8 && col == 4))
+                             (row == 1 && col == 4) ||
+                             (row == 2 && col == 4) ||
+                             (row == 3 && col == 2) ||
+                             (row == 4 && col == 4) ||
+                             (row == 5 && col == 2) ||
+                             (row == 6 && col == 1) ||
+                             (row == 7 && col == 5) ||
+                             (row == 8 && col == 4))
                     {
                         Console.Write("/");
                     }

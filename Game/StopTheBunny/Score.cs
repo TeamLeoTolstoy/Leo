@@ -1,17 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace StopTheBunny
+﻿namespace StopTheBunny
 {
+    using System;
+
     public class Score
     {
         private int scorePoints;
+
         public Score()
         {
-
         }
+
         public Score(int score)
         {
             this.ScorePoints = score;
@@ -19,10 +17,14 @@ namespace StopTheBunny
 
         public int ScorePoints
         {
-            get { return this.scorePoints; }
+            get
+            {
+                return this.scorePoints;
+            }
+
             set
             {
-                if (value<0)
+                if (value < 0)
                 {
                     throw new ArgumentException();
                 }
@@ -38,7 +40,6 @@ namespace StopTheBunny
 
         public void WriteScore()
         {
-            
         }
     }
 }

@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace StopTheBunny
+﻿namespace StopTheBunny
 {
+    using System;
+
     /// <summary>
     /// Game logo and logo of the team
     /// </summary>
@@ -14,12 +10,11 @@ namespace StopTheBunny
         public LogoOfGame()
             : base()
         {
-
         }
 
         public override void Print()
         {
-            ResetDefaultPosition();
+            this.ResetDefaultPosition();
 
             Console.ForegroundColor = ConsoleColor.Red;
 
@@ -30,7 +25,7 @@ namespace StopTheBunny
 
                 for (int col = 0; col < this.matrix.GetLength(1); col++)
                 {
-                    if (IsX(row, col))
+                    if (this.IsX(row, col))
                     {
                         Console.Write("X");
                     }
@@ -52,7 +47,7 @@ namespace StopTheBunny
                         Console.Write("^");
                         Console.ForegroundColor = ConsoleColor.Red;
                     }
-                    else if (IsUnderscore(row, col))
+                    else if (this.IsUnderscore(row, col))
                     {
                         Console.ForegroundColor = ConsoleColor.White;
                         Console.Write("_");
@@ -94,13 +89,13 @@ namespace StopTheBunny
                         Console.Write(".");
                         Console.ForegroundColor = ConsoleColor.Red;
                     }
-                    else if (IsLeftSlash(row, col))
+                    else if (this.IsLeftSlash(row, col))
                     {
                         Console.ForegroundColor = ConsoleColor.White;
                         Console.Write("\\");
                         Console.ForegroundColor = ConsoleColor.Red;
                     }
-                    else if (IsRightSlash(row, col))
+                    else if (this.IsRightSlash(row, col))
                     {
                         Console.ForegroundColor = ConsoleColor.White;
                         Console.Write("/");
@@ -112,11 +107,59 @@ namespace StopTheBunny
                     }
                 }
             }
+
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine();
         }
 
-        //Extracted methods for easier checking
+        /// <summary>
+        /// Print the name of the team
+        /// </summary>
+        public void Name()
+        {
+            this.ResetDefaultPosition();
+            Console.ForegroundColor = ConsoleColor.Red;
+
+            for (int row = 0; row < matrix.GetLength(0); row++)
+            {
+                Console.SetCursorPosition(this.positionRow, this.positionCol);
+                this.positionRow++;
+                this.positionCol++;
+
+                for (int col = 0; col < matrix.GetLength(1); col++)
+                {
+                    if ((row == 5 && col == 5) || (row == 11 && col == 11))
+                    {
+                        Console.Write("L");
+                    }
+                    else if (row == 6 && col == 6)
+                    {
+                        Console.Write("E");
+                    }
+                    else if ((row == 7 && col == 7) || (row == 10 && col == 10) || (row == 14 && col == 14))
+                    {
+                        Console.Write("O");
+                    }
+                    else if ((row == 9 && col == 9) || (row == 13 && col == 13))
+                    {
+                        Console.Write("T");
+                    }
+                    else if (row == 12 && col == 12)
+                    {
+                        Console.Write("S");
+                    }
+                    else if (row == 15 && col == 15)
+                    {
+                        Console.Write("Y");
+                    }
+                }
+            }
+
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine();
+        }
+
+        // Extracted methods for easier checking
         private bool IsLeftSlash(int row, int col)
         {
             if ((row == 3 && (col == 6 || col == 8)) ||
@@ -169,8 +212,8 @@ namespace StopTheBunny
 
         private bool IsUnderscore(int row, int col)
         {
-            if ((row == 2 && ((col == 6 || col == 7) || (col == 13 || col == 14)) ||
-                                    row == 17 && ((col >= 3 && col <= 5) || (col >= 15 && col <= 17))))
+            if (row == 2 && ((col == 6 || col == 7) || (col == 13 || col == 14)) ||
+                                    row == 17 && ((col >= 3 && col <= 5) || (col >= 15 && col <= 17)))
             {
                 return true;
             }
@@ -192,54 +235,8 @@ namespace StopTheBunny
             {
                 return true;
             }
+
             return false;
-        }
-
-        /// <summary>
-        /// Print the name of the team
-        /// </summary>
-        public void Name()
-        {
-            ResetDefaultPosition();
-            Console.ForegroundColor = ConsoleColor.Red;
-
-            for (int row = 0; row < matrix.GetLength(0); row++)
-            {
-                Console.SetCursorPosition(this.positionRow, this.positionCol);
-                this.positionRow++;
-                this.positionCol++;
-
-                for (int col = 0; col < matrix.GetLength(1); col++)
-                {
-                    if ((row == 5 && col == 5) || (row == 11 && col == 11))
-                    {
-                        Console.Write("L");
-                    }
-                    else if (row == 6 && col == 6)
-                    {
-                        Console.Write("E");
-                    }
-                    else if ((row == 7 && col == 7) || (row == 10 && col == 10) || (row == 14 && col == 14))
-                    {
-                        Console.Write("O");
-                    }
-                    else if ((row == 9 && col == 9) || (row == 13 && col == 13))
-                    {
-                        Console.Write("T");
-                    }
-                    else if (row == 12 && col == 12)
-                    {
-                        Console.Write("S");
-                    }
-                    else if (row == 15 && col == 15)
-                    {
-                        Console.Write("Y");
-                    }
-
-                }
-            }
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine();
         }
     }
 }

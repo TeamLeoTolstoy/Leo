@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace StopTheBunny
+﻿namespace StopTheBunny
 {
+    using System;
+
     public interface IUserInterface
     {
-
         event EventHandler OnLeftPressed;
 
         event EventHandler OnRightPressed;
@@ -22,6 +17,5 @@ namespace StopTheBunny
         event EventHandler OnUpgradePressed;
 
         void ProcessInput();
-
     }
 }

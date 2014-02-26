@@ -1,23 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-
-namespace StopTheBunny
+﻿namespace StopTheBunny
 {
-    class StopTheBunnyMain
-    {
-        public const int ConsoleWidthMax = 80; // ******!!!JUST TO TEST THE GAME HEIGHT AND WIDTH!!!
-        public const int ConsoleHeightMax = 30;// ******!!!JUST TO TEST THE GAME HEIGHT AND WIDTH!!!
+    using System;
 
-        static void Main()
-        {         
-            ConsoleSetUp(); // *********!!!JUST TO TEST THE GAME HEIGHT AND WIDTH!!!
+    public class StopTheBunnyMain
+    {
+        public const int ConsoleWidthMax = 80;
+        public const int ConsoleHeightMax = 30;
+
+        public static void Main()
+        { 
+            ConsoleSetUp();
             IUserInterface keyboard = new KeyboardInterface();
             GameEngine gameEngine = new GameEngine(keyboard);
-
+            
             keyboard.OnLeftPressed += (sender, eventInfo) =>
             {
                 gameEngine.MovePlayerLeft();
@@ -39,9 +34,9 @@ namespace StopTheBunny
             };
 
             keyboard.OnBuildPressed += (sender, eventInfo) =>
-                {
-                    gameEngine.AddTower();
-                };
+            {
+                gameEngine.AddTower();
+            };
 
             keyboard.OnUpgradePressed += (sender, eventInfo) =>
             {
@@ -49,7 +44,6 @@ namespace StopTheBunny
             };
 
             gameEngine.StartGame();
-            
         }
 
         // ******!!!METHOD JUST TO TEST THE GAME HEIGHT AND WIDTH!!!
@@ -60,7 +54,5 @@ namespace StopTheBunny
             Console.BufferWidth = ConsoleWidthMax;
             Console.BufferHeight = ConsoleHeightMax;
         }
-
-
     }
 }

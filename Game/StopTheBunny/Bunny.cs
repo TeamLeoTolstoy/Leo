@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace StopTheBunny
+﻿namespace StopTheBunny
 {
+    using System;
+
     public class Bunny : GameObject, IMovable, IDrawable
     {
-        protected int currentHealth;
+        private int currentHealth;
 
         public Bunny(ConsoleColor fColor, char[,] image, int initialHealth)
         {
@@ -18,7 +14,6 @@ namespace StopTheBunny
             this.BackgroundColor = ConsoleColor.Green;
             this.PositionOfElement = Path.GetFirstPosition();
             this.IsAlive = true;
-            
         }
 
         public bool IsAlive { get; protected set; }
@@ -27,15 +22,17 @@ namespace StopTheBunny
         {
             get
             {
-                return currentHealth;
+                return this.currentHealth;
             }
+
             set
             {
                 if (this.currentHealth + value < 0)
                 {
                     this.IsAlive = false;
                 }
-                currentHealth = value;
+
+                this.currentHealth = value;
             }
         }
 
@@ -50,6 +47,7 @@ namespace StopTheBunny
                     Console.Write(' ');
                 }
             }
+
             Console.ResetColor();
         }
 
@@ -70,6 +68,6 @@ namespace StopTheBunny
                     Console.Write(this.ElementImage[row, col]);
                 }
             }
-        }      
+        }
     }
 }

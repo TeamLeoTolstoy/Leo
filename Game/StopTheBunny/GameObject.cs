@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-
-namespace StopTheBunny
+﻿namespace StopTheBunny
 {
+    using System;
+
     public abstract class GameObject : IDrawable
     {
         private PositionOfElement positionOfElement;
@@ -16,36 +11,49 @@ namespace StopTheBunny
 
         public PositionOfElement PositionOfElement
         {
-            get { return this.positionOfElement; }
+            get 
+            { 
+                return this.positionOfElement; 
+            }
+
             set
             {
-                //TODO: Proverka dali e v poleto
+                // TODO: Proverka dali e v poleto
                 this.positionOfElement = value;
             }
         }
 
         public char[,] ElementImage
         {
-            get { return this.elementImage; }
-             set
+            get 
+            { 
+                return this.elementImage; 
+            }
+
+            set
             {
                 if (value == null)
                 {
                     throw new ArgumentException("The value of sizeOfElement cannot be null");
                 }
+
                 if (value.GetLength(0) == 0 || value.GetLength(1) == 0)
                 {
                     throw new ArgumentException("The dimensions of sizeOfElement cannot be 0");
                 }
-                //TODO:Proverka dali ne e po golqmo ot poleto
 
+                // TODO:Proverka dali ne e po golqmo ot poleto
                 this.elementImage = value;
             }
         }
 
         public ConsoleColor ForegroundColor
         {
-            get { return this.foregroundColor; }
+            get
+            {
+                return this.foregroundColor;
+            }
+
             set
             {
                 this.foregroundColor = value;
@@ -54,7 +62,11 @@ namespace StopTheBunny
 
         public ConsoleColor BackgroundColor
         {
-            get { return this.backgroundColor; }
+            get
+            {
+                return this.backgroundColor;
+            }
+
             set
             {
                 this.backgroundColor = value;
@@ -75,7 +87,8 @@ namespace StopTheBunny
                     Console.Write(this.ElementImage[row, col]);
                 }
             }
-            //Console.ResetColor();
+
+            // Console.ResetColor();
         }
     }
 }
