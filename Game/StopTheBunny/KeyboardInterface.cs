@@ -47,11 +47,19 @@ namespace StopTheBunny
 
                 if (keyInfo.Key.Equals(ConsoleKey.Spacebar))
                 {
-                    if (this.OnActionPressed != null)
+                    if (this.OnBuildPressed != null)
                     {
-                        this.OnActionPressed(this, new EventArgs());
+                        this.OnBuildPressed(this, new EventArgs());
                     }
                 }
+
+                if (keyInfo.Key.Equals(ConsoleKey.U))
+                {
+                    if (this.OnUpgradePressed != null)
+                    {
+                        this.OnUpgradePressed(this, new EventArgs());
+                    }
+                }                
             }
         }
 
@@ -63,6 +71,8 @@ namespace StopTheBunny
 
         public event EventHandler OnDownPressed;
 
-        public event EventHandler OnActionPressed;
+        public event EventHandler OnBuildPressed;
+
+        public event EventHandler OnUpgradePressed;
     }
 }

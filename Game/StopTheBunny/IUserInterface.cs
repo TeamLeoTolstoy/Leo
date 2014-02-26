@@ -17,7 +17,9 @@ namespace StopTheBunny
 
         event EventHandler OnDownPressed;
 
-        event EventHandler OnActionPressed;
+        event EventHandler OnBuildPressed;
+
+        event EventHandler OnUpgradePressed;
 
         void ProcessInput();
 

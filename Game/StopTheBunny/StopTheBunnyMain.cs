@@ -38,10 +38,15 @@ namespace StopTheBunny
                 gameEngine.MovePlayerDown();
             };
 
-            keyboard.OnActionPressed += (sender, eventInfo) =>
+            keyboard.OnBuildPressed += (sender, eventInfo) =>
                 {
                     gameEngine.AddTower();
                 };
+
+            keyboard.OnUpgradePressed += (sender, eventInfo) =>
+            {
+                gameEngine.UpgradeTower();
+            };
 
             gameEngine.StartGame();
             

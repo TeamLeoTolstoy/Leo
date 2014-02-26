@@ -11,7 +11,8 @@ namespace StopTheBunny
 {
     public class GameEngine
     {
-        private int gameTime = 0;
+        private int gameTime;
+        private int bunnyCounter;
         private List<Bunny> bunnies;
         private List<Tower> towers;
         private LogoOfGame logoOfTheGame;
@@ -29,6 +30,8 @@ namespace StopTheBunny
             this.newBase = new Base(new PositionOfElement(7, 61));
             this.player = new Player(new PositionOfElement(0, 0));
             this.userInterface = keyboard;
+            this.gameTime = 0;
+            this.bunnyCounter = 1;
         }
 
         public virtual void MovePlayerLeft()
@@ -65,15 +68,15 @@ namespace StopTheBunny
 
         public void AddTower()
         {
-            towers.Add(new Turret(new PositionOfElement(this.player.PositionOfElement.PositionRow + 1, this.player.PositionOfElement.PositionCol)));
-            towers[towers.Count - 1].Draw();
+            this.towers.Add(new Turret(new PositionOfElement(this.player.PositionOfElement.PositionRow + 1, this.player.PositionOfElement.PositionCol)));
+            this.towers.Last().Draw();
         }
 
-        static void HandleBunnies(List<Bunny> bunnies, int gameCounter)
+        private void HandleBunnies()
         {
-            if (gameCounter % 7 == 0)
+            if (this.gameTime % 7 == 0)
             {
-                foreach (var bunny in bunnies)
+                foreach (var bunny in this.bunnies)
                 {
                     bunny.ClearPreviousPosition();
 
@@ -82,10 +85,22 @@ namespace StopTheBunny
                 }
             }
 
-            if (gameCounter % 28 == 0)
+            if (this.gameTime % 28 == 0)
             {
-                bunnies.Add(new CuteBunny());
-            }
+                if (this.bunnyCounter % 3 == 0)
+                {
+                    this.bunnies.Add(new AngryBunny());
+                }
+                else if (this.bunnyCounter % 5 == 0)
+                {
+                    this.bunnies.Add(new ZombieBunny());
+                }
+                else
+                {
+                    this.bunnies.Add(new CuteBunny());
+                }
+                bunnyCounter++;
+            }            
         }
 
         private static bool IsInRange(Tower tower, Bunny bunny)
@@ -162,7 +177,7 @@ namespace StopTheBunny
 
                 try
                 {
-                    HandleBunnies(bunnies, gameTime);
+                    HandleBunnies();
                 }
                 catch (IndexOutOfRangeException)
                 {
@@ -180,6 +195,17 @@ namespace StopTheBunny
                 RemoveDeadBunnies(this.bunnies);
 
                 Thread.Sleep(100);
+            }
+        }
+
+        public void UpgradeTower()
+        {
+            var currentTower = this.towers.Find(t => t.PositionOfElement.PositionRow == this.player.PositionOfElement.PositionRow + 1 && t.PositionOfElement.PositionCol == this.player.PositionOfElement.PositionCol);
+            if (currentTower != null)
+            {
+                this.towers.Remove(currentTower);
+                this.towers.Add(new AdvancedTurret(new PositionOfElement(this.player.PositionOfElement.PositionRow + 1, this.player.PositionOfElement.PositionCol)));
+                this.towers.Last().Draw();
             }
         }
     }

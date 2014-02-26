@@ -1,28 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace StopTheBunny
+﻿namespace StopTheBunny
 {
+    using System;
+
     public class Turret : Tower
     {
-        private const int DAMAGE = 3;
-        private const int PRICEOFTOWER = 50;
-
-        public Turret(PositionOfElement positionOfElement)
+        private const int TurretDamage = 3;
+        private const int TurretPrice = 50;
+        private const int TurretRange = 6;
+        private static readonly char[,] Image = new char[2, 2]
         {
-            this.ElementImage = new char[2, 2]
-                {
-                    {'*', '*'},
-                    {'*', '*'}
-                };
-            this.PositionOfElement = positionOfElement;
-            this.ForegroundColor = ConsoleColor.Blue;
-            this.BackgroundColor = ConsoleColor.Black;
-            this.Damage = DAMAGE;
-            this.PriceOfTower = PRICEOFTOWER;
-            this.Range = 6;
+            { '*', '*' },
+            { '*', '*' }
+        };
+
+        public Turret(PositionOfElement position) : base(position, ConsoleColor.Blue, Image)
+        {
+            this.Damage = TurretDamage;
+            this.PriceOfTower = TurretPrice;
+            this.Range = TurretRange;
         }
     }
 }
