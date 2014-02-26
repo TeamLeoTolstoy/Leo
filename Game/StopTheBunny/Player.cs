@@ -7,6 +7,8 @@ namespace StopTheBunny
 {
     public class Player : GameObject, IMovable, IDrawable
     {
+        public bool IsBuilding { get; set; }
+
         public Player(PositionOfElement positionOfPlayer)
         {
             this.ElementImage = new char[1, 1] { { 'O' } };
@@ -76,9 +78,9 @@ namespace StopTheBunny
                     this.Clear();
                     this.MoveDown();
                 }
-                if (keyPressed.Key == ConsoleKey.B)
+                if (keyPressed.Key == ConsoleKey.Spacebar)
                 {
-                    this.Build();
+                    this.IsBuilding = true;
                 }
             }
         }

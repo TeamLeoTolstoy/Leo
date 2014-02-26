@@ -13,7 +13,7 @@ namespace StopTheBunny
             if (Console.KeyAvailable)
             {
                 var keyInfo = Console.ReadKey();
-                if (keyInfo.Key.Equals(ConsoleKey.A))
+                if (keyInfo.Key.Equals(ConsoleKey.LeftArrow))
                 {
                     if (this.OnLeftPressed != null)
                     {
@@ -21,7 +21,7 @@ namespace StopTheBunny
                     }
                 }
 
-                if (keyInfo.Key.Equals(ConsoleKey.D))
+                if (keyInfo.Key.Equals(ConsoleKey.RightArrow))
                 {
                     if (this.OnRightPressed != null)
                     {

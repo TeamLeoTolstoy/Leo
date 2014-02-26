@@ -15,8 +15,8 @@ namespace StopTheBunny
         private List<Bunny> bunnies;
         private List<Tower> towers;
         private LogoOfGame logoOfTheGame;
-        private Menu menu;       
-        private Base newBase; 
+        private Menu menu;
+        private Base newBase;
         private Player player;
         private IUserInterface userInterface;
 
@@ -25,7 +25,7 @@ namespace StopTheBunny
             this.bunnies = new List<Bunny>();
             this.towers = new List<Tower>();
             this.logoOfTheGame = new LogoOfGame();
-            this.menu = new Menu();           
+            this.menu = new Menu();
             this.newBase = new Base(new PositionOfElement(7, 61));
             this.player = new Player(new PositionOfElement(0, 0));
             this.userInterface = keyboard;
@@ -114,12 +114,19 @@ namespace StopTheBunny
             menu.ShowMenu();
             Path.Draw();
             newBase.Draw();
+            this.userInterface.ProcessInput();
 
             while (true)
             {
-                gameTime++;
-                player.Move();
-                player.Draw();
+                this.gameTime++;
+                this.player.Move();
+                if (this.player.IsBuilding)
+                {
+                    PositionOfElement positionOfTower = player.Build();
+                    AddTower(positionOfTower);
+                }
+
+                this.player.Draw();
 
                 try
                 {

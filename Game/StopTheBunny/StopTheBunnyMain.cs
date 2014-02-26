@@ -15,8 +15,8 @@ namespace StopTheBunny
         static void Main()
         {         
             ConsoleSetUp(); // *********!!!JUST TO TEST THE GAME HEIGHT AND WIDTH!!!
-
-            GameEngine gameEngine = new GameEngine();
+            IUserInterface keyboard = new KeyboardInterface();
+            GameEngine gameEngine = new GameEngine(keyboard);
             gameEngine.StartGame();
             
         }
