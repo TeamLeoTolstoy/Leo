@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdvancedTurret.cs" />
     <Compile Include="AngryBunny.cs" />
     <Compile Include="Base.cs" />
     <Compile Include="Bunny.cs" />
