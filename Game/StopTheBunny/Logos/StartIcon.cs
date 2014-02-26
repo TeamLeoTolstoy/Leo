@@ -12,7 +12,6 @@
         {
             this.positionCol = 10;
             this.positionRow = 20;
-            ////Console.ForegroundColor = ConsoleColor.Red;
 
             for (int row = 0; row < matrix.GetLength(0); row++)
             {
@@ -27,7 +26,6 @@
                         (row == 3 && col == 4) ||
                         (row == 4 && col == 2) ||
                         (row == 5 && col == 4) ||
-                        ////(row == 6 && col == 5) ||
                         (row == 7 && col == 1) ||
                         (row == 8 && col == 2))
                     {
@@ -39,7 +37,6 @@
                              (row == 3 && col == 2) ||
                              (row == 4 && col == 4) ||
                              (row == 5 && col == 2) ||
-                             ////(row == 6 && col == 1) ||
                              (row == 7 && col == 5) ||
                              (row == 8 && col == 4))
                     {
@@ -109,7 +106,6 @@
         {
             this.positionCol = 10;
             this.positionRow = 20;          
-            ////Console.ForegroundColor = ConsoleColor.Red;
 
             for (int row = 0; row < matrix.GetLength(0); row++)
             {

@@ -18,7 +18,6 @@
 
             set
             {
-                // TODO: Proverka dali e v poleto
                 this.positionOfElement = value;
             }
         }
@@ -42,7 +41,6 @@
                     throw new ArgumentException("The dimensions of sizeOfElement cannot be 0");
                 }
 
-                // TODO:Proverka dali ne e po golqmo ot poleto
                 this.elementImage = value;
             }
         }
@@ -87,8 +85,6 @@
                     Console.Write(this.ElementImage[row, col]);
                 }
             }
-
-            // Console.ResetColor();
         }
     }
 }

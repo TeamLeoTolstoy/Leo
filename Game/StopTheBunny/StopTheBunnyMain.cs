@@ -46,7 +46,6 @@
             gameEngine.StartGame();
         }
 
-        // ******!!!METHOD JUST TO TEST THE GAME HEIGHT AND WIDTH!!!
         private static void ConsoleSetUp()
         {
             Console.WindowWidth = ConsoleWidthMax;

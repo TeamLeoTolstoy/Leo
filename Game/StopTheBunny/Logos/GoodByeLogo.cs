@@ -93,7 +93,6 @@
                               (row == 14 && (col == 4 || col == 13)) ||
                               (row == 15 && col == 16) ||
                               (row == 16 && col == 15) ||
-                              //// (row == 17 && col == 14) ||
                               (row == 18 && col == 9)))
                     {
                         Console.Write("/");

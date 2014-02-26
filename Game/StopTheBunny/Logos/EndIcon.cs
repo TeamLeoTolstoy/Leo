@@ -13,7 +13,6 @@
             this.positionCol = 10;
             this.positionRow = 50; 
          
-            // Console.ForegroundColor = ConsoleColor.Red;
             for (int row = 0; row < matrix.GetLength(0); row++)
             {
                 Console.SetCursorPosition(this.positionRow, this.positionCol);
@@ -102,7 +101,6 @@
             this.positionCol = 10;
             this.positionRow = 50;
            
-            // Console.ForegroundColor = ConsoleColor.Red;
             for (int row = 0; row < matrix.GetLength(0); row++)
             {
                 Console.SetCursorPosition(this.positionRow, this.positionCol);
