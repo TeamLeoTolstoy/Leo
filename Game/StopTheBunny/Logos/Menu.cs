@@ -138,17 +138,17 @@
         {
             Console.SetCursorPosition(0, 0);
 
-            if (File.Exists(@"helpers.txt"))
+            if (File.Exists(@"..\..\helpers.txt"))
             {
                 Console.Clear();
-                StreamReader reader = new StreamReader(@"helpers.txt");
+                StreamReader reader = new StreamReader(@"..\..\helpers.txt");
 
                 int lineNumber = 0;
                 string line = reader.ReadLine();
                 while (line != null)
                 {
                     lineNumber++;
-                    Console.SetCursorPosition(15, 5 + lineNumber);
+                    Console.SetCursorPosition(15, 3 + lineNumber);
                     Console.WriteLine(line);
                     line = reader.ReadLine();
                 }
