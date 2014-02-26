@@ -17,6 +17,32 @@ namespace StopTheBunny
             ConsoleSetUp(); // *********!!!JUST TO TEST THE GAME HEIGHT AND WIDTH!!!
             IUserInterface keyboard = new KeyboardInterface();
             GameEngine gameEngine = new GameEngine(keyboard);
+
+            keyboard.OnLeftPressed += (sender, eventInfo) =>
+            {
+                gameEngine.MovePlayerLeft();
+            };
+
+            keyboard.OnRightPressed += (sender, eventInfo) =>
+            {
+                gameEngine.MovePlayerRight();
+            };
+
+            keyboard.OnUpPressed += (sender, eventInfo) =>
+            {
+                gameEngine.MovePlayerUp();
+            };
+
+            keyboard.OnDownPressed += (sender, eventInfo) =>
+            {
+                gameEngine.MovePlayerDown();
+            };
+
+            keyboard.OnActionPressed += (sender, eventInfo) =>
+                {
+                    gameEngine.AddTower();
+                };
+
             gameEngine.StartGame();
             
         }

@@ -44,45 +44,45 @@ namespace StopTheBunny
             Console.Write(' ');
         }
 
-        public PositionOfElement Build()
-        {
-            return new PositionOfElement(this.PositionOfElement.PositionRow + 1, this.PositionOfElement.PositionCol);
-        }
+        //public PositionOfElement Build()
+        //{
+        //    return new PositionOfElement(this.PositionOfElement.PositionRow + 1, this.PositionOfElement.PositionCol);
+        //}
 
         public void Move()
         {
-            if (Console.KeyAvailable)
-            {
-                ConsoleKeyInfo keyPressed = Console.ReadKey();
-                while (Console.KeyAvailable)
-                {
-                    Console.ReadKey();
-                }
-                if (keyPressed.Key == ConsoleKey.LeftArrow)
-                {
-                    this.Clear();
-                    this.MoveLeft();
-                }
-                if (keyPressed.Key == ConsoleKey.RightArrow)
-                {
-                    this.Clear();
-                    this.MoveRight();
-                }
-                if (keyPressed.Key == ConsoleKey.UpArrow)
-                {
-                    this.Clear();
-                    this.MoveUp();
-                }
-                if (keyPressed.Key == ConsoleKey.DownArrow)
-                {
-                    this.Clear();
-                    this.MoveDown();
-                }
-                if (keyPressed.Key == ConsoleKey.Spacebar)
-                {
-                    this.IsBuilding = true;
-                }
-            }
+            //if (Console.KeyAvailable)
+            //{
+            //    ConsoleKeyInfo keyPressed = Console.ReadKey();
+            //    while (Console.KeyAvailable)
+            //    {
+            //        Console.ReadKey();
+            //    }
+            //    if (keyPressed.Key == ConsoleKey.LeftArrow)
+            //    {
+            //        this.Clear();
+            //        this.MoveLeft();
+            //    }
+            //    if (keyPressed.Key == ConsoleKey.RightArrow)
+            //    {
+            //        this.Clear();
+            //        this.MoveRight();
+            //    }
+            //    if (keyPressed.Key == ConsoleKey.UpArrow)
+            //    {
+            //        this.Clear();
+            //        this.MoveUp();
+            //    }
+            //    if (keyPressed.Key == ConsoleKey.DownArrow)
+            //    {
+            //        this.Clear();
+            //        this.MoveDown();
+            //    }
+            //    if (keyPressed.Key == ConsoleKey.Spacebar)
+            //    {
+            //        this.IsBuilding = true;
+            //    }
+            //}
         }
     }
 }

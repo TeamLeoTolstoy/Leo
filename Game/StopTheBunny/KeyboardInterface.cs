@@ -29,6 +29,22 @@ namespace StopTheBunny
                     }
                 }
 
+                if (keyInfo.Key.Equals(ConsoleKey.UpArrow))
+                {
+                    if (this.OnUpPressed != null)
+                    {
+                        this.OnUpPressed(this, new EventArgs());
+                    }
+                }
+
+                if (keyInfo.Key.Equals(ConsoleKey.DownArrow))
+                {
+                    if (this.OnDownPressed != null)
+                    {
+                        this.OnDownPressed(this, new EventArgs());
+                    }
+                }
+
                 if (keyInfo.Key.Equals(ConsoleKey.Spacebar))
                 {
                     if (this.OnActionPressed != null)
@@ -42,6 +58,10 @@ namespace StopTheBunny
         public event EventHandler OnLeftPressed;
 
         public event EventHandler OnRightPressed;
+
+        public event EventHandler OnUpPressed;
+
+        public event EventHandler OnDownPressed;
 
         public event EventHandler OnActionPressed;
     }

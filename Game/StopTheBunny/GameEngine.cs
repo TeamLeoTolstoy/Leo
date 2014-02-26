@@ -31,9 +31,29 @@ namespace StopTheBunny
             this.userInterface = keyboard;
         }
 
-        public void AddTower(PositionOfElement position)
+        public virtual void MovePlayerLeft()
         {
-            towers.Add(new Turret(position));
+            this.player.MoveLeft();
+        }
+
+        public virtual void MovePlayerRight()
+        {
+            this.player.MoveRight();
+        }
+
+        public virtual void MovePlayerUp()
+        {
+            this.player.MoveUp();
+        }
+
+        public virtual void MovePlayerDown()
+        {
+            this.player.MoveDown();
+        }
+
+        public void AddTower()
+        {
+            towers.Add(new Turret(new PositionOfElement(this.player.PositionOfElement.PositionRow + 1, this.player.PositionOfElement.PositionCol)));
             towers[towers.Count - 1].Draw();
         }
 
@@ -113,18 +133,18 @@ namespace StopTheBunny
             Console.Clear();
             menu.ShowMenu();
             Path.Draw();
-            newBase.Draw();
-            this.userInterface.ProcessInput();
+            newBase.Draw();            
 
             while (true)
             {
                 this.gameTime++;
-                this.player.Move();
-                if (this.player.IsBuilding)
-                {
-                    PositionOfElement positionOfTower = player.Build();
-                    AddTower(positionOfTower);
-                }
+                //this.player.Move();
+                this.userInterface.ProcessInput();
+                //if (this.player.IsBuilding)
+                //{
+                //    PositionOfElement positionOfTower = player.Build();
+                //    AddTower(positionOfTower);
+                //}
 
                 this.player.Draw();
 
