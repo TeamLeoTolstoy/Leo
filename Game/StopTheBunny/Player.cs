@@ -16,6 +16,7 @@ namespace StopTheBunny
             this.PositionOfElement = positionOfPlayer;
             this.ForegroundColor = ConsoleColor.Red;
             this.BackgroundColor = ConsoleColor.Black;
+            this.scoreOfPlayer = new Score();
         }
 
         public void MoveRight()
