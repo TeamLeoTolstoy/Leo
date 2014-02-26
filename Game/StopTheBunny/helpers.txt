@@ -1,0 +1,22 @@
+﻿                    GUIDE                 
+
+
+The main goal of Team Bunny is to go to Mexico
+on a vacation. You have to stop them before 
+they reach the border. To do so, you have one 
+main weapon - towers that throw carrots and 
+lure the bunnies away from their path. Place 
+the towers near the bunny road and upgrade them 
+in order to lure all the different kinds of bunnies.
+
+WEAPONS :            
+1)Tower              
+2)AdvancedTower                        
+ 
+CONTROLS :
+Move left                      [LeftArrow]
+Move right                     [RightArrow]
+Move up                        [UpArrow]
+Move down                      [DownArrow]
+Place tower                    [Spacebar] 
+Upgrade tower                  [U]
