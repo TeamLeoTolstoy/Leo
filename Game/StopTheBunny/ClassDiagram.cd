@@ -15,13 +15,6 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="StopTheBunny.Bunker" Collapsed="true">
-    <Position X="16.5" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAABAACAAAACgBAAAAAQAAAAAAAAAECAAAAAgAIAAQA=</HashCode>
-      <FileName>Bunker.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="StopTheBunny.Bunny" Collapsed="true">
     <Position X="8" Y="2" Width="1.5" />
     <TypeIdentifier>
@@ -30,25 +23,11 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="StopTheBunny.Cannon" Collapsed="true">
-    <Position X="10" Y="1.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAACAAAAAgAAAAAAAAAAAAAAAAEAAAABAAAAAAAA=</HashCode>
-      <FileName>Cannon.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="StopTheBunny.CuteBunny" Collapsed="true">
     <Position X="8" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>CuteBunny.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="StopTheBunny.Flak" Collapsed="true">
-    <Position X="3.25" Y="1.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AgAAAACAAAAAgAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
-      <FileName>Flak.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="StopTheBunny.GameEngine" Collapsed="true">

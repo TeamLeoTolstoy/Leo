@@ -113,19 +113,14 @@ namespace StopTheBunny
             Base newBase = new Base(new PositionOfElement(7, 61));
             Player player = new Player(new PositionOfElement(0, 0));
             Path.Draw();
-            newBase.Draw();
-
-            //List<Bunny> bunnies = new List<Bunny>();
-            //IList<Bunny> tempBunnies = new List<Bunny>();
-            //bunnies.Add(new CuteBunny());
+            newBase.Draw();           
 
             while (true)
             {
-                gameTime++;
-                
-                player.Move();
-                
+                gameTime++;            
+                player.Move();              
                 player.Draw();
+
                 try
                 {
                     HandleBunnies(bunnies, gameTime);

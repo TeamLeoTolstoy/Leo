@@ -44,12 +44,9 @@
     <Compile Include="Airillery.cs" />
     <Compile Include="AngryBunny.cs" />
     <Compile Include="Base.cs" />
-    <Compile Include="Bunker.cs" />
     <Compile Include="Bunny.cs" />
-    <Compile Include="Cannon.cs" />
     <Compile Include="Color.cs" />
     <Compile Include="CuteBunny.cs" />
-    <Compile Include="Flak.cs" />
     <Compile Include="GameEngine.cs" />
     <Compile Include="GameObject.cs" />
     <Compile Include="IDrawable.cs" />
